@@ -10,7 +10,8 @@
 	<title>RDPX - Stealthy</title>
 <script>
 addEventListener("DOMContentLoaded",function(){
-	var q=document.body,
+	var a=location.hash.substr(1).split(","),q=document.body,port=+a[1],
+	vU=q.querySelector("[name=text-url]"),
 	vSZ=q.querySelector("[name=size]"),vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
 	vSP=q.querySelector("[name=span]"),vFU=q.querySelector("[name=full]"),
 	on={
@@ -20,14 +21,18 @@ addEventListener("DOMContentLoaded",function(){
 		}
 	};
 
+	vU.value=a[0];
+
 	q.querySelector("form").onsubmit=function(){
-		var a=location.hash.substr(1).split(","),x=new XMLHttpRequest();
-		x.open("POST","127.0.0.1:"+a[1]);
-		var data=a[0]+"\tcloudflare.com";
-		if(vSP.checked)data+="\tspan";
-		if(vFU.checked)data+="\tfull";
-		if(vSZ.checked)data+="\tsize\t"+vW.value+"\t"+vH.value;
-		x.send(data);
+		var m=/^([^/]+)(.*)$/.exec(vU.value);
+		if(m){
+			var x=new XMLHttpRequest(),d=m[1]+"\tcloudflare.com";
+			x.open("POST","127.0.0.1:"+port+m[2],true);
+			if(vSP.checked)d+="\tspan";
+			if(vFU.checked)d+="\tfull";
+			if(vSZ.checked)d+="\tsize\t"+vW.value+"\t"+vH.value;
+			x.send(d);
+		}
 		return false;
 	};
 
@@ -48,7 +53,7 @@ body{margin:0}
 .app div{position:relative}
 .app button{height:2em}
 .app button,.app input{font-size:1em}
-.app .text-search{display:block}
+.app .text-url{display:block}
 .app .deploy button{padding:0 1em 0 3em;color:#fff}
 .app [type=search]{padding-right:8em;border:0;width:100%;height:2em}
 .app [type=submit]{position:absolute;top:0;right:0;width:8em;height:2em;background:transparent}
@@ -68,7 +73,7 @@ i.vm{background:url('https://api.iconify.design/codicon:vm-running.svg?color=%23
 	<div class="app">
 		<form autocomplete="off">
 			<div class="deploy">
-				<label class="text-search itxt"><b></b><input type="search" placeholder="rdpx link (http://...)"></label>
+				<label class="text-url itxt"><b></b><input type="search" placeholder="rdpx link ( http:// ... )"></label>
 				<button type="submit" class="btn"><b></b><i class="ico vm"></i> <span>Deploy</span></button>
 			</div>
 			<div class="fit">
