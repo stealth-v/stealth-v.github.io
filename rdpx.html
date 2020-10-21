@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>RDPX - Stealthy</title>
+<script>
+addEventListener("DOMContentLoaded",function(){
+	var q=document.body,
+	vSZ=q.querySelector("[name=size]"),vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
+	vSP=q.querySelector("[name=span]"),vFU=q.querySelector("[name=full]"),
+	on={
+		size:function(){
+			var a=this.value.split(" ");
+			vSZ.checked=true;vW.value=a[0];vH.value=a[1];
+		}
+	};
+
+	q.querySelector("form").onsubmit=function(){
+		var a=location.hash.substr(1).split(","),x=new XMLHttpRequest();
+		x.open("POST","127.0.0.1:"+a[1]);
+		var data=a[0]+"\tcloudflare.com";
+		if(vSP.checked)data+="\tspan";
+		if(vFU.checked)data+="\tfull";
+		if(vSZ.checked)data+="\tsize\t"+vW.value+"\t"+vH.value;
+		x.send(data);
+		return false;
+	};
+
+	onclick=function(e){
+		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
+		switch(p.constructor){
+		case HTMLButtonElement:
+			if(p.name in on)on[p.name].call(p);
+			break;
+		}
+	}
+})
+</script>
+<style>
+body{margin:0}
+.logo{position:absolute;right:0;bottom:0}
+.logo img{width:auto;height:2em}
+.app div{position:relative}
+.app button{height:2em}
+.app button,.app input{font-size:1em}
+.app .text-search{display:block}
+.app .deploy button{padding:0 1em 0 3em;color:#fff}
+.app [type=search]{padding-right:8em;border:0;width:100%;height:2em}
+.app [type=submit]{position:absolute;top:0;right:0;width:8em;height:2em;background:transparent}
+.app .ico{position:absolute;display:inline-block;left:.5em;top:.2em;height:1.6em;width:2em;vertical-align:middle}
+.app .fit{display:flex}
+.app .fit label{line-height:2}
+.app .fit label,.app .fit button{flex:0 1 5em}
+.app .fit input[type=text]{width:100%;height:100%;box-sizing:border-box}
+.itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
+.btn{position:relative;border:0;background-color:transparent}
+.btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
+.btn span{position:relative}
+i.vm{background:url('https://api.iconify.design/codicon:vm-running.svg?color=%23fff') no-repeat 50% 50%/contain}
+</style>
+</head>
+<body>
+	<div class="app">
+		<form autocomplete="off">
+			<div class="deploy">
+				<label class="text-search itxt"><b></b><input type="search" placeholder="rdpx link (http://...)"></label>
+				<button type="submit" class="btn"><b></b><i class="ico vm"></i> <span>Deploy</span></button>
+			</div>
+			<div class="fit">
+				<label>
+					<input type="checkbox" name="span"> <span>Span</span>
+				</label>
+				<label>
+					<input type="checkbox" name="full"> <span>Full</span>
+				</label>
+			</div>
+			<div class="fit">
+				<label>
+					<input type="checkbox" name="size"> <span>Size</span>
+				</label>
+				<label>
+					<input type="text" name="w" placeholder="Width">
+				</label>
+				<label>
+					<input type="text" name="h" placeholder="Height">
+				</label>
+				<button type="button" name="size" value="1920 1080">FHD</button>
+				<button type="button" name="size" value="3840 2160">UHD</button>
+			</div>
+		</form>
+	</div>
+	<div class="logo">
+		<a href="/" class="logo"><img src="favicon.svg" alt="Stealthy"></a>
+	</div>
+</body>
+</html>
