@@ -12,12 +12,12 @@
 addEventListener("DOMContentLoaded",function(){
 	var a=location.hash.substr(1).split(","),q=document.body,port=+a[0],
 	vU=q.querySelector("[type=search]"),
-	vSZ=q.querySelector("[name=size]"),vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
+	vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
 	vSP=q.querySelector("[name=span]"),vFU=q.querySelector("[name=full]"),
 	on={
 		size:function(){
 			var a=this.value.split(" ");
-			vSZ.checked=true;vW.value=a[0];vH.value=a[1];
+			vW.value=a[0];vH.value=a[1];
 		}
 	};
 
@@ -30,7 +30,7 @@ addEventListener("DOMContentLoaded",function(){
 			x.open("POST","127.0.0.1:"+port+m[2],true);
 			if(vSP.checked)d+="\tspan";
 			if(vFU.checked)d+="\tfull";
-			if(vSZ.checked)d+="\tsize\t"+vW.value+"\t"+vH.value;
+			if(+vW.value||+vH.value)d+="\tsize\t"+vW.value+"\t"+vH.value;
 			x.send(d);
 		}
 		return false;
@@ -86,14 +86,12 @@ i.vm{background:url('https://api.iconify.design/codicon:vm-running.svg?color=%23
 			</div>
 			<div class="fit">
 				<label>
-					<input type="checkbox" name="size"> <span>Size</span>
-				</label>
-				<label>
 					<input type="text" name="w" placeholder="Width">
 				</label>
 				<label>
 					<input type="text" name="h" placeholder="Height">
 				</label>
+				<button type="button" name="size" value=" ">NONE</button>
 				<button type="button" name="size" value="1920 1080">FHD</button>
 				<button type="button" name="size" value="3840 2160">UHD</button>
 			</div>
