@@ -10,7 +10,7 @@
 	<title>RDPX - Stealthy</title>
 <script>
 addEventListener("DOMContentLoaded",function(){
-	var a=location.hash.substr(1).split(","),q=document.body,port=+a[1],
+	var a=location.hash.substr(1).split(","),q=document.body,port=+a[0],
 	vU=q.querySelector("[type=search]"),
 	vSZ=q.querySelector("[name=size]"),vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
 	vSP=q.querySelector("[name=span]"),vFU=q.querySelector("[name=full]"),
@@ -21,7 +21,7 @@ addEventListener("DOMContentLoaded",function(){
 		}
 	};
 
-	vU.value=a[0];
+	vU.value=a[1];
 
 	q.querySelector("form").onsubmit=function(){
 		var m=/^([^/]+)(.*)$/.exec(vU.value);
@@ -73,7 +73,7 @@ i.vm{background:url('https://api.iconify.design/codicon:vm-running.svg?color=%23
 	<div class="app">
 		<form autocomplete="off">
 			<div class="deploy">
-				<label class="text-url itxt"><b></b><input type="search" placeholder="rdpx link ( http:// ... )"></label>
+				<label class="text-url itxt"><b></b><input type="search" placeholder="rdpx link ( domain/id ... )"></label>
 				<button type="submit" class="btn"><b></b><i class="ico vm"></i> <span>Deploy</span></button>
 			</div>
 			<div class="fit">
