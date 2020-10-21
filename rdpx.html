@@ -27,7 +27,7 @@ addEventListener("DOMContentLoaded",function(){
 		var m=/^([^/]+)(.*)$/.exec(vU.value);
 		if(m){
 			var x=new XMLHttpRequest(),d=m[1]+"\tcloudflare.com";
-			x.open("POST","127.0.0.1:"+port+m[2],true);
+			x.open("POST","http://127.0.0.1:"+port+m[2],true);
 			if(vSP.checked)d+="\tspan";
 			if(vFU.checked)d+="\tfull";
 			if(+vW.value||+vH.value)d+="\tsize\t"+vW.value+"\t"+vH.value;
