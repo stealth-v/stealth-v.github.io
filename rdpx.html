@@ -14,6 +14,7 @@ addEventListener("DOMContentLoaded",function(){
 	vU=q.querySelector("[type=search]"),
 	vW=q.querySelector("[name=w]"),vH=q.querySelector("[name=h]"),
 	vSP=q.querySelector("[name=span]"),vFU=q.querySelector("[name=full]"),
+	bErr=q.querySelector(".sess-err button"),
 	on={
 		size:function(){
 			var a=this.value.split(" ");
@@ -27,12 +28,16 @@ addEventListener("DOMContentLoaded",function(){
 		var m=/^([^/]+)(.*)$/.exec(vU.value);
 		if(m){
 			var x=new XMLHttpRequest(),d=m[1]+"\tcloudflare.com";
+			x.onreadystatechange=function(){
+				if(x.readyState==4&&x.status==0)bErr.className="on";
+			};
 			x.open("POST","http://127.0.0.1:"+port+m[2],true);
 			if(vSP.checked)d+="\tspan";
 			if(vFU.checked)d+="\tfull";
 			if(+vW.value||+vH.value)d+="\tsize\t"+vW.value+"\t"+vH.value;
 			x.send(d);
 		}
+		bErr.removeAttribute("class");
 		return false;
 	};
 
@@ -58,6 +63,8 @@ body{margin:0}
 .app button,.app input{font-size:1em;vertical-align:top}
 .app .text-url{display:block}
 .app .deploy button{padding:0 1em 0 3em;color:#fff}
+.app .sess-err button{padding:0 1em 0 3em;border:0;width:100%;color:#fff;background:#f55;text-align:left}
+.app .sess-err button:not(.on){display:none}
 .app [type=search]{padding-right:8em;border:0;width:100%;height:2em}
 .app [type=submit]{position:absolute;top:0;right:0;width:8em;height:2em;background:transparent}
 .app .ico{position:absolute;display:inline-block;left:.5em;top:.2em;height:1.6em;width:2em;vertical-align:middle}
@@ -72,10 +79,12 @@ body{margin:0}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 .btn span{position:relative}
 i.vm{background:url('https://api.iconify.design/codicon:vm-running.svg?color=%23fff') no-repeat 50% 50%/contain}
+i.err{background:url('https://api.iconify.design/bx:bx-error-alt.svg?color=%23fff') no-repeat 50% 50%/contain}
 </style>
 </head>
 <body>
 	<div class="app">
+		<div class="sess-err"><button><i class="ico err"></i> Session expired</button></div>
 		<form autocomplete="off">
 			<div class="deploy">
 				<label class="text-url itxt"><b></b><input type="search" placeholder="rdpx link ( domain/id ... )"></label>
