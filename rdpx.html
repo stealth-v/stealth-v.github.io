@@ -21,7 +21,7 @@ addEventListener("DOMContentLoaded",function(){
 		}
 	};
 
-	vU.value=a[1];
+	if(a[1])vU.value=a[1];
 
 	q.querySelector("form").onsubmit=function(){
 		var m=/^([^/]+)(.*)$/.exec(vU.value);
@@ -43,7 +43,10 @@ addEventListener("DOMContentLoaded",function(){
 			if(p.name in on)on[p.name].call(p);
 			break;
 		}
-	}
+	};
+	onbeforeunload=function(){
+		navigator.sendBeacon("http://127.0.0.1:"+port+"/","exit");
+	};
 })
 </script>
 <style>
