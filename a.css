@@ -4,7 +4,7 @@ a{color:inherit;text-decoration:none}
 a:hover{color:#36f}
 
 input{position:relative}
-.logo,.nav{display:inline-block;width:4em;height:3em;text-align:center;vertical-align:top}
+.logo,.nav{display:inline-block;min-width:4em;height:3em;text-align:center;vertical-align:top}
 .logo img{width:auto;height:100%}
 .nav{padding:1em 0;width:8em;height:1em;line-height:1}
 .link div{position:relative;height:2em}
