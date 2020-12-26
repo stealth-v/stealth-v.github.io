@@ -6,7 +6,7 @@ a:hover{color:#36f}
 input{position:relative}
 .logo,.nav{display:inline-block;min-width:4em;height:3em;text-align:center;vertical-align:top}
 .logo img{width:auto;height:100%}
-.nav{padding:1em 0;width:8em;height:1em;line-height:1}
+.nav{padding:1em 0;width:10em;height:1em;line-height:1}
 .link div{position:relative;height:2em}
 .link label{display:block}
 .link input{width:100%;background-color:transparent}
@@ -18,5 +18,6 @@ input{position:relative}
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
+i[class]:empty{margin-right:.4em;padding-left:2em}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%/contain}

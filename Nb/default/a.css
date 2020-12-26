@@ -7,3 +7,8 @@ input{position:relative}
 .logo,.nav{display:inline-block;min-width:4em;height:3em;text-align:center;vertical-align:top}
 .logo img{width:auto;height:100%;vertical-align:middle}
 .logo span{padding:0 1em;vertical-align:middle}
+
+i[class]:empty{margin-right:.4em;padding-left:2em}
+i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg') no-repeat 50% 50%/contain}
+i.list{background:url('https://api.iconify.design/fa:list-alt.svg') no-repeat 50% 50%/contain}
+i.forum{background:url('https://api.iconify.design/mdi:cube-send.svg') no-repeat 50% 50%/contain}
