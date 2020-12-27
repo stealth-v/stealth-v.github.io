@@ -9,7 +9,14 @@ nav{display:flex;margin:auto;max-width:32em}
 .logo img{width:auto;height:100%;vertical-align:middle}
 .logo span{padding:0 1em;vertical-align:middle}
 
+aside{position:absolute;width:15em;line-height:2}
+aside a{display:block;padding-left:1em;background:url('https://api.iconify.design/bi:caret-right-fill.svg?color=%2307f') no-repeat 0/1em}
+aside a[href$='&sub']{background:none}
+aside i:not([class]){position:absolute;right:0;font-style:normal}
+aside [name]{padding:.5em 0;border:0;font-size:1em;background:none}
 i[class]:empty{margin-right:.4em;padding-left:2em}
 i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
 i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-repeat 50% 50%/contain}
-i.forum{background:url('https://api.iconify.design/mdi:cube-send.svg') no-repeat 50% 50%/contain}
+i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}
+i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
+i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
