@@ -1,4 +1,3 @@
-:root{--hmnu:4em}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -6,12 +5,14 @@ a:hover{color:#36f}
 input{position:relative}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
-.mt{position:absolute;bottom:0}
-.qk{position:absolute;right:0}
-.qk button,.qk a{float:left;width:2em;height:2em}
+.mnu{position:relative;overflow:hidden}
+.tt{position:absolute;margin:auto;min-width:100%;top:0;left:0;bottom:0;right:0}
+.tu{width:50%}
+.qk{position:absolute;top:0;right:0}
+.qk button,.qk a{float:left;padding:0;border:0;width:2em;height:2em;font-size:1em;background:none}
 
-header,nav{position:relative;height:2em}
-.mnu{position:relative;height:var(--hmnu)}
+header,nav{position:absolute;bottom:0}
+header{bottom:2em}
 .logo{}
 .logo img{}
 .logo span{padding:0 1em}
