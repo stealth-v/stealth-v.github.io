@@ -27,7 +27,8 @@ header{padding:0 2em;top:0;bottom:2em;min-width:16em;color:#fff}
 nav{display:flex;margin:auto;border-radius:1em;max-width:32em;text-align:center;background:#fff7}
 nav a{flex:1;line-height:2}
 
-aside{position:fixed;top:4em;bottom:0;width:15em;line-height:2}
+aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
+aside:not(.on){left:-15em}
 aside a{display:block;padding-left:1em;background:url('https://api.iconify.design/bi:caret-right-fill.svg?color=%2307f') no-repeat 0/1em}
 aside a[href$='s']{background:none}
 aside i:not([class]){position:absolute;right:0;font-style:normal}
@@ -42,4 +43,5 @@ i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-
 i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
 i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
 i.note{background:url('https://api.iconify.design/fxemoji:emptynote.svg') no-repeat 50% 50%/contain}
+i.list{background:url('https://api.iconify.design/bi:card-list.svg') no-repeat 50% 50%/contain}
 i.cat{background:url('https://api.iconify.design/emojione:cat.svg') no-repeat 50% 50%/contain}
