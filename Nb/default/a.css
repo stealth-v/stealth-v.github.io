@@ -5,8 +5,8 @@ a:hover{color:#36f}
 input{position:relative}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
+.mc button,.mc a{padding:0;border:0;width:2em;height:2em;font-size:1em;background:transparent}
 .mnu{position:relative;min-height:8em;background:#000;overflow:hidden}
-.mnu button,.mnu a{padding:0;border:0;width:2em;height:2em;font-size:1em;background:transparent}
 .tt{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
 .tu{width:50%;vertical-align:top}
 .qk{position:absolute;border-radius:.5em 0 0 .5em;top:0;right:0;background:#fffa}
@@ -17,7 +17,7 @@ input{position:relative}
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{border-radius:50%;width:auto;height:100%;border:.5em solid transparent;box-sizing:border-box}
 .logo span{position:absolute;bottom:4.5em;left:100%;white-space:nowrap}
-.opt{display:inline-block;padding-top:2em;vertical-align:top}
+.opt{display:inline-block;padding-top:3em;vertical-align:top}
 .opt div{font-size:.8em}
 .opt a{padding:.5em 0}
 .opt a i{font-size:1.5em}
