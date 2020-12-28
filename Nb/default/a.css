@@ -4,19 +4,20 @@ a{color:inherit;text-decoration:none}
 a:hover{color:#36f}
 input{position:relative}
 
-.z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
+.z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
 .mnu{position:relative;min-height:8em;overflow:hidden}
 .tt{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
 .tu{width:50%;vertical-align:top}
 .qk{position:absolute;top:0;right:0;background:#fff}
+.qk i{vertical-align:middle}
 .qk button{background:none}
 .qk button,.qk a{float:left;padding:0;border:0;width:2em;height:2em;font-size:1em}
 
-.logo{}
-.logo img{}
-.logo span{padding:0 1em}
+.logo{position:relative;padding-right:1em;vertical-align:-2.5em}
+.logo img{width:auto;height:100%;border:.5em solid transparent;box-sizing:border-box}
+.logo span{position:absolute;bottom:4em;left:100%;white-space:nowrap}
 header,nav{position:absolute;bottom:0;left:0;right:0}
-header{bottom:2em}
+header{padding:0 2em;top:0;bottom:2em;color:#fff}
 nav{display:flex;margin:auto;max-width:32em;text-align:center;background:#fff7}
 nav a{flex:1;line-height:2}
 
@@ -33,3 +34,4 @@ i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repea
 i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
 i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
 i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
+i.cat{background:url('https://api.iconify.design/emojione:cat.svg') no-repeat 50% 50%/contain}
