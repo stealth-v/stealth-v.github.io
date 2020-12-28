@@ -4,15 +4,18 @@ iframe{border:0}
 a{color:inherit;text-decoration:none}
 a:hover{color:#36f}
 input{position:relative}
+
+.mt{position:absolute;bottom:0}
+.qk{position:absolute;right:0}
+
 header,nav{position:relative;height:2em}
 .mnu{position:relative;height:var(--hmnu)}
-.mt{position:absolute;bottom:0}
-.z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
+.z{float:left;width:2em;height:2em;background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
 .logo{}
 .logo img{}
 .logo span{padding:0 1em}
 nav{display:flex;margin:auto;max-width:32em}
-nav a{flex:1}
+nav a{flex:1;line-height:2}
 
 aside{position:fixed;top:4em;bottom:0;width:15em;line-height:2}
 aside a{display:block;padding-left:1em;background:url('https://api.iconify.design/bi:caret-right-fill.svg?color=%2307f') no-repeat 0/1em}
@@ -26,3 +29,4 @@ i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-re
 i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}
 i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
 i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
+i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
