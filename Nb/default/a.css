@@ -5,12 +5,13 @@ a{color:inherit;text-decoration:none}
 a:hover{color:#36f}
 input{position:relative}
 
+.z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
 .mt{position:absolute;bottom:0}
 .qk{position:absolute;right:0}
+.qk button,.qk a{float:left;width:2em;height:2em}
 
 header,nav{position:relative;height:2em}
 .mnu{position:relative;height:var(--hmnu)}
-.z{float:left;width:2em;height:2em;background:url(https://apx.kr/Nb/favicon.svg) no-repeat 0/contain}
 .logo{}
 .logo img{}
 .logo span{padding:0 1em}
