@@ -17,7 +17,8 @@
 				}else return 1;
 			}
 		}
-	},wq=html.querySelector("[src$='_.js']");
+	},wq=html.querySelector("[src$='_.js']").src;
+	wq=wq.substr(0,wq.length-4);
 	app.language();
 	EndDOM(function(){
 		attach();
