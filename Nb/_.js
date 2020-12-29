@@ -47,7 +47,7 @@ function rpc(a,b,c){
 }
 function css(a,b){
 	var i=document.createElement("link");
-	i.rel="stylesheet 0";
+	i.rel="stylesheet";
 	i.href=a;
 	if(b)i.onerror=b;
 	head.insertBefore(i,title);
