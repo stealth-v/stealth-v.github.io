@@ -2,7 +2,7 @@ var loc=location,doc=document,html=doc.documentElement(0),head,title,body;
 function EndDOM(a){
 	doc.addEventListener("DOMContentLoaded",function(){
 		head=doc.head;
-		title=doc.querySelector("title");
+		title=head.querySelector("title");
 		body=doc.body;
 		a();
 	})
@@ -44,6 +44,13 @@ function rpc(a,b,c){
 			if(k&&(k=a[i][++j]))k();
 		}
 	},b,c);
+}
+function src(a,b){
+	var i=document.createElement("script");
+	i.src=a;
+	if(b)i.onerror=b;
+	head.insertBefore(i,title);
+	return i;
 }
 function css(a,b){
 	var i=document.createElement("link");

@@ -1,4 +1,4 @@
-var $app=(function(){
+(function(){
 	var module={},app={
 		module:module,
 		load:load,
@@ -17,15 +17,23 @@ var $app=(function(){
 				}else return 1;
 			}
 		}
-	};
+	},wq=html.querySelector("[src$='_.js']");
 	app.language();
+	EndDOM(function(){
+		attach();
+	});
+
 	function load(dir,self,target){
 
 	}
+	function attach(){
+		for(var n,a=doc.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
+			if(a[i].onunload)continue;
+			n=a[i].getAttribute("data-module");
+			if(module[n])module[n].entry(a[i]);
+			else{
 
-	return {
-		attach:function(){
-
+			}
 		}
 	}
 })()
