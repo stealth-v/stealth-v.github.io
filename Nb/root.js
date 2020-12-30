@@ -9,15 +9,11 @@ function EndDOM(a){
 }
 function got(cb){
 	var x=new XMLHttpRequest();
-	x.onreadystatechange=function(){if(this.readyState==4)fin()};
-	x.ontimeout=x.onerror=err;
+	if(cb){
+		x.onreadystatechange=function(){cb.call(x,x.status/100|2)};
+		x.ontimeout=x.onerror=function(e){cb.call(x,0,e)};
+	}
 	return x;
-	function fin(){if(cb)switch(x.status/100|0){
-		case 1:case 3:break;
-		case 2:cb.call(x);break;
-		default:cb.call(x,x.status)
-	}}
-	function err(e){cb.call(x,e)}
 }
 function get(a,b,c){
 	var x=got(a);
@@ -47,24 +43,26 @@ function rpc(a,b,c){
 }
 function src(a,b){
 	var i=document.createElement("script");
+	hev(i);
 	i.src=a;
-	if(b)i.onerror=b;
 	head.insertBefore(i,title);
 	return i;
 }
 function css(a,b){
 	var i=document.createElement("link");
+	hev(i);
 	i.rel="stylesheet";
 	i.href=a;
-	if(b)i.onerror=b;
 	head.insertBefore(i,title);
 	return i;
 }
-function cssi(a){
-
-}
-function cssd(a){
-
+function hev(a,b){
+	if(a){
+		a.onload=b;
+		a.onerror=function(e){
+			b(a,e);
+		};
+	}
 }
 function cookie(key,val,path,expire){
 	switch(val){

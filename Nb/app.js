@@ -1,6 +1,6 @@
 (function(){
-	var module={},app={
-		module:module,
+	var module={},lang="en-US	English\nko-KR	한국어,Korean",app={
+		module:module,lang:lang,
 		load:load,
 		language:function(a){
 			if(!a)a=cookie("lang",0,"/");
@@ -27,13 +27,15 @@
 	function load(dir,self,target){
 
 	}
-	function attach(){
-		for(var n,a=doc.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
+	function attach(div){
+		div=div||doc;
+		for(var n,p,a=div.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
 			if(a[i].onunload)continue;
 			n=a[i].getAttribute("data-module");
+			p=wq+n;
 			if(module[n])module[n].entry(a[i]);
 			else{
-
+				src(p+".js")
 			}
 		}
 	}
