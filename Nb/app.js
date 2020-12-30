@@ -17,8 +17,8 @@
 				}else return 1;
 			}
 		}
-	},wq=html.querySelector("[src$='_.js']").src;
-	wq=wq.substr(0,wq.length-4);
+	},wq=html.querySelector("[src$='root.js']").src;
+	wq=wq.substr(0,wq.length-7);
 	app.language();
 	EndDOM(function(){
 		attach();
