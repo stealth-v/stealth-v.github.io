@@ -1,4 +1,4 @@
-var loc=location,doc=document,html=doc.documentElement(0),head,title,body;
+var loc=location,doc=document,html=doc.documentElement,head,title,body;
 function EndDOM(a){
 	doc.addEventListener("DOMContentLoaded",function(){
 		head=doc.head;
