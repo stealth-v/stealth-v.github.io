@@ -67,27 +67,16 @@ function cssd(a){
 
 }
 function cookie(key,val,path,expire){
-	var f,s,m;
-	try{
-		if(path){
-			f=doc.createElement("iframe");
-			f.style.cssText="z-index:-1;position:absolute;top:0;left:0";
-			f.src=path;
-			body.appendChild(f);
-			s=f.contentDocument;
-		}else s=doc;
-		if(val===null){
-			s.cookie=key+"=; path="+path+"; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0";
-		}else if(val){
-			s.cookie=key+"="+encodeURIComponent(val)+"; path="+path+
-				(expire?"; expire="+new Date(expire*1000)+"; max-age="+(expire|0)
-				:"; expires=Fri, 31 Dec 9999 23:59:59 GMT; max-age=31536000");
-		}else{
-			if(m=new RegExp(key+"=([^ ;]+)").exec(s.cookie))return decodeURIComponent(m[1]);
-		}
-	}catch(e){
-	}finally{
-		if(f)body.removeChild(f);
+	switch(val){
+	case 0:
+		doc.cookie=key+"=; path="+path+"; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0";
+		break;
+	case undefined:
+		var m=new RegExp(key+"=([^ ;]+)").exec(s.cookie);
+		if(m)return decodeURIComponent(m[1]);
+		break;
+	default:
+		doc.cookie=key+"="+encodeURIComponent(val)+"; path="+path+(expire?"; expire="+new Date(expire*1000)+"; max-age="+expire:"; expires=Fri, 31 Dec 9999 23:59:59 GMT; max-age=31536000");
 	}
 }
 function clkevt(p,n){
