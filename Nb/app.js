@@ -1,6 +1,6 @@
 (function(){
 	var module={},lang="en-US	English\nko-KR	한국어,Korean",app={
-		module:module,lang:lang,langtxt:0,pskin:0,
+		module:module,lang:lang,langtxt:0,pjs:0,pskin:0,
 		load:load,
 		deploy:deploy,
 		attach:attach,
@@ -19,7 +19,7 @@
 				}else return 1;
 			}
 		},
-		src:function(a){return src(this.pskin+a+".js")},
+		src:function(a){return src(this.pjs+a+".js")},
 		css:function(a){return css(this.pskin+a+".css")},
 		cssl:function(a){
 			return css(this.pskin+a+"+"+app.lang+".css",function(a,b){
@@ -35,7 +35,8 @@
 	EndDOM(function(){
 		var a=body.querySelector(".mnu"),b=html.querySelector("[src$='root.js']").src
 		b=b.substr(0,b.length-7);
-		app.pskin=b+a.getAttribute("data-skin")+"/";
+		app.pjs=a.getAttribute("data-skin")+"/";
+		app.pskin=b+app.pjs;
 		a.removeAttribute("data-skin");
 		deploy();
 	});
