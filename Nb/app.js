@@ -72,7 +72,7 @@
 		if(module[n])module[n].entry(a[i]);
 		else{
 			m=module[n]={
-				src:app.src(n+".js",function(){
+				src:app.src(n,function(){
 					
 				}),
 				css:null,lang:null,
