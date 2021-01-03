@@ -19,6 +19,7 @@
 				}else return 1;
 			}
 		},
+		src:function(a){return src(this.pskin+a+".js")},
 		css:function(a){return css(this.pskin+a+".css")},
 		cssl:function(a){
 			return css(this.pskin+a+"+"+app.lang+".css",function(a,b){
@@ -27,8 +28,7 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
-		},
-		src:function(a){return src(this.pskin+a+".js")}
+		}
 	};
 
 	app.language();
@@ -72,7 +72,7 @@
 		if(module[n])module[n].entry(a[i]);
 		else{
 			m=module[n]={
-				src:src(p+".js",function(){
+				src:app.src(n+".js",function(){
 					
 				}),
 				css:null,lang:null,
