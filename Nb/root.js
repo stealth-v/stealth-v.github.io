@@ -57,7 +57,7 @@ function css(a,b){
 	return i;
 }
 function hev(a,b){
-	if(a){
+	if(b){
 		a.onload=b;
 		a.onerror=function(e){
 			b(a,e);
