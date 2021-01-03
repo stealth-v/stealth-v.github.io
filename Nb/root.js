@@ -7,11 +7,11 @@ function EndDOM(a){
 		a();
 	})
 }
-function got(cb){
+function got(a){
 	var x=new XMLHttpRequest();
-	if(cb){
-		x.onreadystatechange=function(){cb.call(x,x.status/100|2)};
-		x.ontimeout=x.onerror=function(e){cb.call(x,0,e)};
+	if(a){
+		x.onreadystatechange=function(){a.call(x,x.status/100|2)};
+		x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
 	}
 	return x;
 }
