@@ -1,1 +1,1 @@
-section .cc a:after{border:solid #eee}
+section .cc a:after{content:"";border:solid #eee}
