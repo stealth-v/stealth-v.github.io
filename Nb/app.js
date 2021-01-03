@@ -65,8 +65,7 @@
 			attach(a[i],div.getAttribute("data-target"));
 		}
 	}
-	function attach(div,target,loaded){
-		if(div.onunload)continue;
+	function attach(div,target){
 		var m,n=div.getAttribute("data-module");
 		div.removeAttribute("data-module");
 
