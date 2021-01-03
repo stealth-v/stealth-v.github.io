@@ -62,7 +62,7 @@
 	}
 	function deploy(){
 		for(var a=doc.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
-			attach(a[i],div.getAttribute("data-target"));
+			attach(a[i],a[i].getAttribute("data-target"));
 		}
 	}
 	function attach(div,target){
