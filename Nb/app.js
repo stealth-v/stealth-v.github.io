@@ -33,10 +33,10 @@
 
 	app.language();
 	EndDOM(function(){
-		var a=body.querySelector(".mnu"),b=html.querySelector("[src$='root.js']").src
+		var a=body.querySelector(".mnu"),b=html.querySelector("[src$='root.js']").src;
 		b=b.substr(0,b.length-7);
-		app.pjs=a.getAttribute("data-skin")+"/";
-		app.pskin=b+app.pjs;
+		app.pjs=b;
+		app.pskin=b+a.getAttribute("data-skin")+"/";
 		a.removeAttribute("data-skin");
 		deploy();
 	});
