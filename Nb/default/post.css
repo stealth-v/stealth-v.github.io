@@ -1,1 +1,3 @@
-section .cc a:after{content:"";border:solid #eee}
+section .cc{overflow:hidden}
+section .cc a{position:relative;padding:.5em 1em}
+section .cc a:after{content:"";position:absolute;top:2px;right:2px;bottom:2px;left:2px;border:1px solid currentColor}
