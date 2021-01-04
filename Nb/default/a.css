@@ -5,7 +5,7 @@ a:hover{color:#36f}
 input{position:relative}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
-.mc button,.mc a{padding:0;border:0;width:2em;height:2em;font-size:1em;background-color:transparent}
+.mc button,.mc a{position:relative;padding:0;border:0;width:2em;height:2em;font-size:1em;background-color:transparent}
 .mnu{position:relative;min-height:8em}
 .tt{position:absolute;width:100%;top:0;bottom:-2em;background:#000;overflow:hidden}
 .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
