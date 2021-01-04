@@ -25,8 +25,11 @@ input{position:relative}
 .opt a i,.opt a span{vertical-align:middle}
 header,nav{position:absolute;bottom:0;left:0;right:0}
 header{padding:0 2em;top:0;bottom:2em;min-width:16em;color:#fff}
-nav{display:flex;margin:auto;border-radius:1em;max-width:32em;text-align:center;background:#fff7}
+nav{display:flex;margin:auto;max-width:32em;color:#fff;text-align:center}
 nav a{flex:1;line-height:2}
+nav a:after{content:"";border:1px solid currentColor}
+nav a:first-child::after{border-radius:1em 0 0 1em}
+nav a:last-child::after{border-radius:0 1em 1em 0}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
