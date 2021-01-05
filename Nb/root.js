@@ -43,14 +43,14 @@ function rpc(a,b,c){
 }
 function src(a,b){
 	var i=document.createElement("script");
-	hev(i);
+	hev(i,b);
 	i.src=a;
 	head.insertBefore(i,title);
 	return i;
 }
 function css(a,b){
 	var i=document.createElement("link");
-	hev(i);
+	hev(i,b);
 	i.rel="stylesheet";
 	i.href=a;
 	head.insertBefore(i,title);
