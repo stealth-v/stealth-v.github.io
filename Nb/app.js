@@ -75,7 +75,8 @@
 				css:null,lang:null,
 				entry:null,
 				reload:null,
-				content:null
+				content:null,
+				show:null
 			};
 			m[target||"content"]=div;
 			return m;
@@ -86,10 +87,12 @@
 			p(b,app);
 			if(b.reload)b.reload();
 		};
+		b.show=function(){
+			a.removeAttribute("data-module");
+		};
 	}
 })();
 function t(a,b){
 	var c=body.querySelector("[data-module='"+a+"']");
-	c.removeAttribute("data-module");
 	c.onload(b);
 }
