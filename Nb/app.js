@@ -19,11 +19,12 @@
 				}else return 1;
 			}
 		},
-		src:function(a){return src(this.pjs+a+".js")},
-		css:function(a){return css(this.pskin+a+".css")},
-		cssl:function(a){
-			return css(this.pskin+a+"+"+app.lang+".css",function(a,b){
-				if(b){
+		src:function(a,b){return src(this.pjs+a+".js",b)},
+		css:function(a,b){return css(this.pskin+a+".css",b)},
+		cssl:function(a,b){
+			return css(this.pskin+a+"+"+app.lang+".css",function(a,c){
+				b(a,c);
+				if(c){
 					a.onerror=null;
 					a.src=this.pskin+a+"+en-US.css";
 				}
