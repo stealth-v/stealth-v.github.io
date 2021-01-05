@@ -1,1 +1,1 @@
-.ll-posts{content:"Posts"}
+.ll-posts::after{content:"Posts"}
