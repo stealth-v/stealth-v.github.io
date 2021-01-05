@@ -1,1 +1,3 @@
 .ll-posts::after{content:"포스트"}
+.ll-forum::after{content:"포럼"}
+.ll-search::after{content:"검색"}
