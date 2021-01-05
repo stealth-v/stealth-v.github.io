@@ -74,6 +74,7 @@
 				}),
 				css:null,lang:null,
 				entry:null,
+				reload:null,
 				content:null
 			};
 			m[target||"content"]=div;
@@ -83,6 +84,7 @@
 	function t(a,b){
 		a.onload=function(p){
 			p(b,app);
+			if(b.reload)b.reload();
 		};
 	}
 })();
