@@ -43,26 +43,47 @@ function rpc(a,b,c){
 }
 function src(a,b){
 	var i=document.createElement("script");
-	hev(i,b);
+	hhv(i,b);
 	i.src=a;
 	head.insertBefore(i,title);
 	return i;
 }
 function css(a,b){
 	var i=document.createElement("link");
-	hev(i,b);
+	hhv(i,b);
 	i.rel="stylesheet";
 	i.href=a;
 	head.insertBefore(i,title);
 	return i;
 }
-function hev(a,b){
+function hhv(a,b){
 	if(b){
 		a.onload=b;
 		a.onerror=function(e){
 			b(a,e);
 		};
 	}
+}
+function clk(a,b,c){
+	a.onchange=a.onclick=function(e){
+		for(var f,m,r,w,g=/[^;]+/g,p=e.target,i=16;p&&i>=0;p=p.parentNode,i--)
+		switch(p.constructor){
+		case HTMLButtonElement:
+		case HTMLInputElement:
+		case HTMLSelectElement:
+			w=p.name;
+			while(m=g.exec(w)){
+				m=m[0].split(" ");
+				if(f=b[m.shift()]){
+					m.push(e);
+					switch(r=f.apply(p,m)){
+					case "end":return;
+					}
+				}
+			}
+			return r;
+		}
+	};
 }
 function cookie(key,val,path,expire){
 	switch(val){
