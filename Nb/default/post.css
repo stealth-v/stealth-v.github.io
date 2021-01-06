@@ -6,5 +6,7 @@ section article h1{margin:0;line-height:1.5}
 section article div{position:relative;line-height:1.5}
 section article p{margin:0}
 section article p+p{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden}
-section .navp label{width:2em}
-section .navp input{padding:0;width:100%;text-align:center}
+section .navp{display:flex}
+section .navp label,section .navp button{flex:1;padding:0}
+section .navp label{}
+section .navp input{padding:0;width:100%}
