@@ -84,7 +84,7 @@
 	}
 	function t(a,b){
 		a.onload=function(p){
-			p(b,app);
+			p.call(a,b,app);
 			if(b.reload)b.reload();
 		};
 		b.show=function(){
