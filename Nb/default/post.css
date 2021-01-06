@@ -9,4 +9,4 @@ section article p+p{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hid
 section .navp{display:flex}
 section .navp label,section .navp button{flex:1;padding:0}
 section .navp label{}
-section .navp input{padding:0;width:100%}
+section .navp input{padding:0;width:100%;text-align:center}
