@@ -7,7 +7,7 @@ t("post",function(m,app){
 		switch(p.tagName){
 		case "ARTICLE":
 			p.querySelector("a").click();
-			break;
+			return;
 		}
 	}
 	m.reload=function(){
