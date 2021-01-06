@@ -6,7 +6,7 @@ section article i{display:block;font-size:.7em;text-align:right}
 section article div{position:relative;line-height:1.5;overflow:hidden}
 section article h1{margin:0}
 section article p{position:absolute;right:0;left:0;margin:0;overflow:hidden}
-section article hr{font-size:3em;visibility:hidden}
+section article p+div{font-size:3em}
 section .navp{display:flex}
 section .navp label,section .navp button{flex:1;padding:0}
 section .navp label{}
