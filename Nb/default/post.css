@@ -3,10 +3,10 @@ section .cc a{display:inline-block;padding:0 .5em;line-height:2}
 section .cc a::after{content:"";position:absolute;top:2px;right:2px;bottom:2px;left:2px;border:1px solid currentColor;opacity:.3}
 section article{padding:.5em 0;cursor:pointer}
 section article i{display:block;font-size:.7em;text-align:right}
-section article h1{margin:0;line-height:1.5}
 section article div{position:relative;line-height:1.5}
+section article h1{margin:0}
 section article hr{font-size:3em;visibility:hidden}
-section article hr+p{position:absolute;top:0;right:0;bottom:0;left:0;font-size:1rem;overflow:hidden}
+section article hr+p{position:absolute;right:0;bottom:0;left:0;overflow:hidden}
 section .navp{display:flex}
 section .navp label,section .navp button{flex:1;padding:0}
 section .navp label{}
