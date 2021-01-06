@@ -5,4 +5,4 @@ section article i{display:block;font-size:.7em;text-align:right}
 section article h1{margin:0;line-height:1.5}
 section article div{position:relative;line-height:1.5}
 section article p{margin:0}
-section article p+div{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden}
+section article p+p{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden}
