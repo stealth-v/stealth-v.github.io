@@ -7,7 +7,7 @@ section article div{line-height:1.5;overflow:hidden}
 section article h1{margin:0}
 section article p{position:relative;margin:0;font-size:5em}
 section article span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
-section article img{position:absolute;padding:.5em;top:0;right:0;width:auto;height:100%;box-sizing:border-box}
+section article img{position:absolute;margin:auto;padding:.5em;top:0;right:0;bottom:0;width:10em;height:auto;box-sizing:border-box}
 section article img+div{padding-right:10em}
 section .navp{display:flex}
 section .navp label,section .navp button{flex:1;padding:0}
