@@ -5,7 +5,7 @@ section article{padding:.5em 0;cursor:pointer}
 section article i{display:block;font-size:.7em;text-align:right}
 section article div{position:relative;padding-right:10em;line-height:1.5;overflow:hidden}
 section article h1{margin:0}
-section article p{position:relative;margin:0;font-size:3em}
+section article p{position:relative;margin:0;font-size:5em}
 section article span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
 section article img{position:absolute;padding:.5em;top:0;right:0;width:auto;height:100%;box-sizing:border-box}
 section .navp{display:flex}
