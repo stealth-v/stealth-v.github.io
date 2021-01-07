@@ -1,13 +1,14 @@
 section .cc{overflow:hidden;color:#fff}
 section .cc a{display:inline-block;padding:0 .5em;line-height:2}
 section .cc a::after{content:"";position:absolute;top:2px;right:2px;bottom:2px;left:2px;border:1px solid currentColor;opacity:.3}
-section article{padding:.5em 0;cursor:pointer}
-section article i{display:block;font-size:.7em;text-align:right}
-section article div{position:relative;padding-right:10em;line-height:1.5;overflow:hidden}
+section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
+section article i{position:absolute;top:0;right:.5em;font-size:.7em;text-align:right}
+section article div{line-height:1.5;overflow:hidden}
 section article h1{margin:0}
 section article p{position:relative;margin:0;font-size:5em}
 section article span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
 section article img{position:absolute;padding:.5em;top:0;right:0;width:auto;height:100%;box-sizing:border-box}
+section article img+div{padding-right:10em}
 section .navp{display:flex}
 section .navp label,section .navp button{flex:1;padding:0}
 section .navp label{}
