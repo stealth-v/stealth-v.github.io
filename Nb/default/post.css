@@ -4,7 +4,7 @@ section .cc a::after{content:"";position:absolute;top:2px;right:2px;bottom:2px;l
 section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 section article::after{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
 section article i{font-size:.8em;font-style:normal}
-section article i:last-child{position:absolute;top:0;right:.5em;font-size:.7em;text-align:right}
+section article b{position:absolute;top:0;right:.5em;font-size:.7em;font-weight:normal;text-align:right}
 section article div{line-height:1.5;overflow:hidden}
 section article div:not(.i0){padding-right:10em}
 section article h1{margin:0;overflow:hidden;text-overflow:ellipsis}
