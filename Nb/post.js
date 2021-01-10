@@ -1,6 +1,14 @@
 t("post",function(m,app){
-	var i=0,on={
-
+	var t=this,i=0,self={
+		page:1,
+		update:function(){
+			var a=t.querySelectorAll(".navp"),b;
+			b=a[1].children;
+			a=a[0].children;
+			app.page(this.page,function(i){
+				a[i].textContent=b[i].textContent=i;
+			});
+		}
 	};
 	this.onclick=function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
@@ -14,6 +22,7 @@ t("post",function(m,app){
 		m.css=app.css("post",load);
 		m.lang=app.cssl("post",load);
 	};
+	self.update();
 	function load(){
 		if(i++>0)m.show();
 	}
