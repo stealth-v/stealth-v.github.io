@@ -21,7 +21,9 @@
 		},
 		page:function(rt,i){
 			var a,b,m=7,h=Math.round(m/2+.5);
-			for(a=i<h?(i=1,b=m):(h/=2,i=i-h,b=i+h);i<=b;i++)rt(i);
+			if(i<h)a=1,b=m;
+			else{h/=2;a=i-h;b=i+h}
+			for(;a<=b;a++)rt(a);
 		},
 		ctl:function(a,b){return post(b,this.pjs+a)},
 		src:function(a,b){return src(this.pjs+a+".js",b)},
