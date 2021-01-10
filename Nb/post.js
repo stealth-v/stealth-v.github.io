@@ -5,9 +5,9 @@ t("post",function(m,app){
 			var a=t.querySelectorAll(".navp"),b;
 			b=a[1].children;
 			a=a[0].children;
-			app.page(this.page,function(i){
+			app.page(function(i){
 				a[i].textContent=b[i].textContent=i;
-			});
+			},this.page);
 		}
 	};
 	this.onclick=function(e){
