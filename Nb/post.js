@@ -2,11 +2,12 @@ t("post",function(m,app){
 	var t=this,i=0,self={
 		page:1,
 		update:function(){
-			var a=t.querySelectorAll(".navp"),b;
+			var a=t.querySelectorAll(".navp"),b,i=0;
 			b=a[1].children;
 			a=a[0].children;
-			app.page(function(i){
-				a[i].textContent=b[i].textContent=i;
+			app.page(function(j){
+				a[i].textContent=b[i].textContent=j;
+				i++;
 			},this.page);
 		}
 	};
