@@ -64,24 +64,27 @@ function hhv(a,b){
 		};
 	}
 }
+function ncall(a,p,e){
+	var g=/[^;]+/g,m,r,p;
+	while(m=g.exec(p.name)){
+		m=m[0].split(" ");
+		if(p=a[m.shift()]){
+			m.push(e);
+			switch(r=p.apply(p,m)){
+			case "end":return;
+			}
+		}
+	}
+	return r;
+}
 function clk(a,b,c){
 	a.onchange=a.onclick=function(e){
-		for(var f,m,r,w,g=/[^;]+/g,p=e.target,i=16;p&&i>=0;p=p.parentNode,i--)
+		for(var p=e.target,i=16;p&&i>=0;p=p.parentNode,i--)
 		switch(p.constructor){
 		case HTMLButtonElement:
 		case HTMLInputElement:
 		case HTMLSelectElement:
-			w=p.name;
-			while(m=g.exec(w)){
-				m=m[0].split(" ");
-				if(f=b[m.shift()]){
-					m.push(e);
-					switch(r=f.apply(p,m)){
-					case "end":return;
-					}
-				}
-			}
-			return r;
+			return ncall(b,p,e);
 		}
 	};
 }
