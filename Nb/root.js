@@ -65,12 +65,12 @@ function hhv(a,b){
 	}
 }
 function ncall(a,p,e){
-	var g=/[^;]+/g,m,r,p;
+	var g=/[^;]+/g,m,r,q;
 	while(m=g.exec(p.name)){
 		m=m[0].split(" ");
-		if(p=a[m.shift()]){
+		if(q=a[m.shift()]){
 			m.push(e);
-			switch(r=p.apply(p,m)){
+			switch(r=q.apply(p,m)){
 			case "end":return;
 			}
 		}
