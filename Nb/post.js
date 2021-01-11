@@ -2,16 +2,18 @@ t("post",function(m,app){
 	var t=this,i=0,self={
 		pagi:1,
 		update:function(){
-			var a=t.querySelectorAll(".navp"),b,i=0;
+			var a=t.querySelectorAll(".navp"),b,h=this.pagi,i=0;
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
 				a[i].textContent=b[i].textContent=j;
-				a[i].name=b[i].name="page "+j;
+				a[i].name=b[i].name=h==j?"go":"page "+j;
 				i++;
 			},this.pagi);
 		},page:function(i,e){
 console.log(i,this,e);
+		},go:function(){
+			
 		}
 	};
 	this.onclick=function(e){
