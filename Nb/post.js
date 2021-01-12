@@ -51,7 +51,7 @@ t("post",function(m,app){
 
 		}
 	};
-	art.remoteAttribute("class");
+	art.removeAttribute("class");
 	art=app.parset(art);
 	this.onclick=function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
