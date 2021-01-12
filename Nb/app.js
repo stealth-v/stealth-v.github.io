@@ -63,7 +63,7 @@
 						q=w[p[0]].childNodes[p[1]];
 						d2.innerHTML=tts(p);
 						p=q.parentNode;
-						while(d2.children.length)p.insertBefore(d2.children[0],q);
+						while(d2.childNodes.length)p.insertBefore(d2.childNodes[0],q);
 						p.removeChild(q);
 					}
 				}
