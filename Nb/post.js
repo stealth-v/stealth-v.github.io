@@ -1,5 +1,8 @@
 t("post",function(m,app){
-	var content=this,i=0,art=this.querySelector("article.t").cloneNode(true),self={
+	var content=this,i=0,
+	art=this.querySelector("article.t").cloneNode(true),
+	aside=doc.querySelector("aside"),
+	self={
 		pagi:1,
 		update:function(){
 			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
@@ -46,8 +49,8 @@ t("post",function(m,app){
 				return 1;
 			},a).send();
 		},cc:function(){
-			var a=content.querySelector("aside"),b=a.className;
-			if(/ on$/.test(b))a.className=b.substr(0,b.length-3);
+			var a=aside.className;
+			if(/ on$/.test(a))a.className=a.substr(0,a.length-3);
 			else a.className+=" on";
 		},go:function(){
 
