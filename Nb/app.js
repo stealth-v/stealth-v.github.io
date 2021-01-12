@@ -54,7 +54,7 @@
 				var w,du=ht.cloneNode(true),d1=doc.createElement("div"),d2=doc.createElement("div");
 
 				d1.appendChild(du);
-				w=du.querySelectorAll("*");
+				w=d1.querySelectorAll("*");
 
 				for(var p,q,i=0,c=rep.length;i<c;i++){
 					p=rep[i];
