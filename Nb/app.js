@@ -20,9 +20,9 @@
 			}
 		},
 		page:function(rt,i){
-			var a,b,m=7,h=Math.round(m/2+.5);
+			var a,b,m=7,h=m/2|0;
 			if(i<h)a=1,b=m;
-			else{h/=2;a=i-h;b=i+h}
+			else{;a=i-h;b=i+h}
 			for(;a<=b;a++)rt(a);
 		},
 		ctl:function(a,b){return post(b,this.pjs+a)},
