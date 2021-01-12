@@ -29,7 +29,7 @@ t("post",function(m,app){
 					"a.VISS":k.VISS?"":" h",
 					"a.CNTC":k.CNTC,
 					"a.CNTS":k.CNTS,
-					"a.CNTI":l.CNTI
+					"a.CNTI":k.CNTI
 				}));
 			}
 		},page:function(i,e){
