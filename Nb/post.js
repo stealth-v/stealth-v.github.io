@@ -1,8 +1,8 @@
 t("post",function(m,app){
-	var t=this,i=0,art=app.parset(this.querySelector("article.t")),self={
+	var content=this,i=0,art=app.parset(this.querySelector("article.t")),self={
 		pagi:1,
 		update:function(){
-			var a=t.querySelectorAll(".navp"),b,h=this.pagi,i=0;
+			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
@@ -11,7 +11,7 @@ t("post",function(m,app){
 				i++;
 			},this.pagi);
 		},reload:function(j){
-			var l=t.querySelector(".lip"),r=l.children[0];
+			var l=content.querySelector(".lip"),r=l.children[0];
 			l.textContent="";
 			l.appendChild(r);
 			for(var d,k,i=0,c=j.length;i<c;i++){
@@ -37,7 +37,7 @@ t("post",function(m,app){
 			if(m)u+=m[0]+"&";
 			post(function(s,e){
 				if(this.readyState==4){
-					t.reload(JSON.parse(this.response));
+					self.reload(JSON.parse(this.response));
 				}else if(e){
 
 				}else{
