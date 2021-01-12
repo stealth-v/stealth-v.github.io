@@ -50,10 +50,16 @@
 			}
 
 			return function(j){
-				for(var p,i=0,c=rep.length;i<c;i++){
+				for(var p,q,g=doc.createElement("div"),i=0,c=rep.length;i<c;i++){
 					p=rep[i];
 					if(p[1]<0)o[p[0]].className=tts(p);
-					else o[p[0]].childNodes[p[1]].textContent=tts(p);
+					else{
+						q=o[p[0]].childNodes[p[1]];
+						g.innerHTML=tts(p);
+						p=q.parentNode;
+						while(g.children.length)p.insertBefore(g.children[0],p);
+						p.removeChild(q);
+					}
 				}
 				return z;
 				function tts(arg){

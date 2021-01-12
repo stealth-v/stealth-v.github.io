@@ -11,7 +11,27 @@ t("post",function(m,app){
 				i++;
 			},this.pagi);
 		},reload:function(j){
+			var l=t.querySelector(".lip"),r=l.children[0];
+			l.textContent="";
+			l.appendChild(r);
+			for(var d,k,i=0,c=j.length;i<c;i++){
+				k=j[i];
+				d=new Date(k.DATE);
 
+				l.appendChild(art({
+					TITLE:k.TITLE,CONTENT:k.CONTENT,
+					"a.IMG":k.IMG?"<img src=\""+k.IMG+"\">":"",
+					"a.YYYY":d.getFullYear(),
+					"a.MM":("0"+(d.getMonth()+1)).substr(-2),
+					"a.DD":("0"+d.getDate()).substr(-2),
+					"a.NUM":k.NUM,
+					"a.VISC":k.VISC?"":" h",
+					"a.VISS":k.VISS?"":" h",
+					"a.CNTC":k.CNTC,
+					"a.CNTS":k.CNTS,
+					"a.CNTI":l.CNTI
+				}));
+			}
 		},page:function(i,e){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
