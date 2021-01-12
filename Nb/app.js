@@ -56,7 +56,7 @@
 					else{
 						q=o[p[0]].childNodes[p[1]];
 						g.innerHTML=tts(p);
-						p=q.parentNode;
+						p=o[p[0]].parentNode;
 						while(g.children.length)p.insertBefore(g.children[0],p);
 						p.removeChild(q);
 					}
