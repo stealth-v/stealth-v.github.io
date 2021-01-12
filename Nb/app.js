@@ -37,8 +37,8 @@
 				}
 			})
 		},parset:function(ht){
-			var o,y=doc.createElement("div"),z=ht.cloneNode(true),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
-			y.appendChild(z);
+			var o,y=doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+			y.appendChild(ht);
 			o=y.querySelectorAll("*");
 
 			for(var i=0,c=o.length;i<c;i++){
@@ -61,7 +61,7 @@
 						p.removeChild(q);
 					}
 				}
-				return z;
+				return ht;
 				function tts(arg){
 					for(var r="",i=2,c=arg.length;i<c;i++){
 						r+=arg[i][0]==" "?arg[i].substr(1):j[arg[i].substr(1)];

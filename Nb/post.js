@@ -1,5 +1,5 @@
 t("post",function(m,app){
-	var content=this,i=0,art=app.parset(this.querySelector("article.t")),self={
+	var content=this,i=0,art=this.querySelector("article.t").cloneNode(true),self={
 		pagi:1,
 		update:function(){
 			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
@@ -51,6 +51,8 @@ t("post",function(m,app){
 
 		}
 	};
+	art.remoteAttribute("class");
+	art=app.parset(art);
 	this.onclick=function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 			switch(p.tagName){
