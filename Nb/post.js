@@ -9,7 +9,8 @@ t("post",function(m,app){
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
-				a[i].textContent=b[i].textContent=j;
+				b[i].textContent=a[i].textContent=j;
+				b[i].href=a[i].href="/?p="+j;
 				i++;
 			},this.pagi);
 		},reload:function(j){
