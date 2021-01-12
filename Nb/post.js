@@ -14,7 +14,7 @@ t("post",function(m,app){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
 			post(function(s){
-				console.log(s,this.response);
+				console.log(this.readyState,s,this.response);
 			},u+"p="+i).send();
 		},cc:function(){
 
