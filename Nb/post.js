@@ -46,7 +46,9 @@ t("post",function(m,app){
 				return 1;
 			},a).send();
 		},cc:function(){
-
+			var a=content.querySelector("aside"),b=a.className;
+			if(/ on$/.test(b))a.className=b.substr(0,b.length-3);
+			else a.className+=" on";
 		},go:function(){
 
 		}
@@ -67,9 +69,12 @@ t("post",function(m,app){
 	}
 	var navp=this.querySelectorAll(".navp");
 	navp[0].onclick=navp[1].onclick=function(e){
-		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
+		for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
 		switch(p.constructor){
-		case HTMLAnchorElement:self.page(p.getAttribute("href"));break;
+		case HTMLAnchorElement:
+			self.page(a=p.getAttribute("href"));
+			history.pushState("","",a);
+			break;
 		}
 		return false;
 	};
