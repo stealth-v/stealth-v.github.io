@@ -32,13 +32,11 @@ t("post",function(m,app){
 					"a.CNTI":k.CNTI
 				}));
 			}
-		},page:function(i,e){
-			var u="/?",m=/c=\d+/.exec(location);
-			if(m)u+=m[0]+"&";
+		},page:function(a){
 			post(function(s,e){
 				if(this.readyState==4){
 					self.reload(JSON.parse(this.response));
-					self.pagi=+i;
+					self.pagi=+a.match(/p=(\d+)/)[1];
 					self.update();
 				}else if(e){
 
@@ -46,7 +44,7 @@ t("post",function(m,app){
 
 				}
 				return 1;
-			},u+"p="+i).send();
+			},a).send();
 		},cc:function(){
 
 		},go:function(){
@@ -67,6 +65,14 @@ t("post",function(m,app){
 			}
 		}
 	}
+	var navp=this.querySelectorAll(".navp");
+	navp[0].onclick=navp[1].onclick=function(e){
+		for(var p=e.target,i=16;p&&p>0;p=p.parentNode,i--)
+		switch(p.constructor){
+		case HTMLAnchorElement:self.page(p.getAttribute("href"));break;
+		}
+		return false;
+	};
 	m.reload=function(){
 		m.css=app.css("post",load);
 		m.lang=app.cssl("post",load);
