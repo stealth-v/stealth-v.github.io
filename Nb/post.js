@@ -13,9 +13,9 @@ t("post",function(m,app){
 		},page:function(i,e){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
-			post(function(){
-				console.log(this.response);
-			},u+"p="+i);
+			post(function(s){
+				console.log(s,this.response);
+			},u+"p="+i).send();
 		},cc:function(){
 
 		},go:function(){
