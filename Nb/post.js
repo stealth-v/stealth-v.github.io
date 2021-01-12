@@ -13,8 +13,13 @@ t("post",function(m,app){
 		},page:function(i,e){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
-			post(function(s){
-				console.log(this.readyState,s,this.response);
+			post(function(s,e){
+				if(s==2){
+					console.log(this.response);
+				}else if(e){
+
+				}
+				return 1;
 			},u+"p="+i).send();
 		},cc:function(){
 
