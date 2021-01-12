@@ -14,10 +14,12 @@ t("post",function(m,app){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
 			post(function(s,e){
-				if(s==2){
+				if(this.readyState==4){
 					console.log(this.response);
 				}else if(e){
 
+				}else{
+					
 				}
 				return 1;
 			},u+"p="+i).send();

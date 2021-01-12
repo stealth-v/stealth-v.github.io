@@ -8,12 +8,9 @@ function EndDOM(a){
 	})
 }
 function got(a){
-	var i,x=new XMLHttpRequest();
+	var x=new XMLHttpRequest();
 	if(a){
-		x.onreadystatechange=function(){
-			if(i&&this.readyState!=4)return;
-			i=a.call(x,x.status/100|2);
-		};
+		x.onreadystatechange=function(){a.call(x,x.status/100|2)};
 		x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
 	}
 	return x;
