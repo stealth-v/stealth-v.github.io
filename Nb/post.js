@@ -1,5 +1,5 @@
 t("post",function(m,app){
-	var content=this,i=0,art=this.querySelector("article.t").cloneNode(true),self={
+	var content=this,i=0,art=this.querySelector("article.t"),self={
 		pagi:1,
 		update:function(){
 			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
