@@ -38,6 +38,8 @@ t("post",function(m,app){
 			post(function(s,e){
 				if(this.readyState==4){
 					self.reload(JSON.parse(this.response));
+					self.pagi=i;
+					self.update();
 				}else if(e){
 
 				}else{
