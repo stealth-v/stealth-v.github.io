@@ -67,7 +67,7 @@ t("post",function(m,app){
 	}
 	var navp=this.querySelectorAll(".navp");
 	navp[0].onclick=navp[1].onclick=function(e){
-		for(var p=e.target,i=16;p&&p>0;p=p.parentNode,i--)
+		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
 		switch(p.constructor){
 		case HTMLAnchorElement:self.page(p.getAttribute("href"));break;
 		}
