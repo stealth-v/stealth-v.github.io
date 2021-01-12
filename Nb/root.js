@@ -65,7 +65,7 @@ function hhv(a,b){
 	}
 }
 function ncall(a,p,e){
-	var g=/[^;]+/g,m,r,q;
+	var g=/[^;]+/g,m,q,r;
 	while(m=g.exec(p.name)){
 		m=m[0].split(" ");
 		if(q=a[m.shift()]){

@@ -19,3 +19,10 @@ section .navp{display:flex;height:2em}
 section .navp button{flex:1;padding:0;border:0;background:none}
 section .navp label{}
 section .navp input{padding:0;width:100%;text-align:center}
+
+aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
+aside:not(.on){left:-15em}
+aside a{display:block;padding-left:1em;background:url('https://api.iconify.design/bi:caret-right-fill.svg?color=%2307f') no-repeat 0/1em}
+aside a[href$='s']{background:none}
+aside i:not([class]){position:absolute;right:0;font-style:normal}
+aside [name]{border:0;height:2em;font-size:1em;background:none}

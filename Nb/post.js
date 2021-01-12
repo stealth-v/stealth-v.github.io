@@ -11,9 +11,15 @@ t("post",function(m,app){
 				i++;
 			},this.pagi);
 		},page:function(i,e){
-console.log(i,this,e);
+			var u="/?",m=/c=\d+/.exec(location);
+			if(m)u+=m[0]+"&";
+			post(function(){
+				console.log(this.response);
+			},u+"p="+i);
+		},cc:function(){
+
 		},go:function(){
-			
+
 		}
 	};
 	this.onclick=function(e){
