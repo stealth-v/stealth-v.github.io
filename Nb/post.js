@@ -10,7 +10,6 @@ t("post",function(m,app){
 			a=a[0].children;
 			app.page(function(j){
 				a[i].textContent=b[i].textContent=j;
-				a[i].name=b[i].name=h==j?"go":"page "+j;
 				i++;
 			},this.pagi);
 		},reload:function(j){
