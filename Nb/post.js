@@ -1,5 +1,5 @@
 t("post",function(m,app){
-	var t=this,i=0,self={
+	var t=this,i=0,art=app.parset(this.querySelector("article.t")),self={
 		pagi:1,
 		update:function(){
 			var a=t.querySelectorAll(".navp"),b,h=this.pagi,i=0;
@@ -10,16 +10,18 @@ t("post",function(m,app){
 				a[i].name=b[i].name=h==j?"go":"page "+j;
 				i++;
 			},this.pagi);
+		},reload:function(j){
+
 		},page:function(i,e){
 			var u="/?",m=/c=\d+/.exec(location);
 			if(m)u+=m[0]+"&";
 			post(function(s,e){
 				if(this.readyState==4){
-					console.log(this.response);
+					t.reload(JSON.parse(this.response));
 				}else if(e){
 
 				}else{
-					
+
 				}
 				return 1;
 			},u+"p="+i).send();

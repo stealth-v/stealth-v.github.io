@@ -36,6 +36,46 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
+		},parset:function(ht){
+			var o,y=doc.createElement("div"),z=ht.cloneNode(true),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+			y.appendChild(z);
+			o=y.querySelectorAll("*");
+
+			for(var i=0,c=o.length;i<c;i++){
+				trs([i,-1],o[i].className);
+				for(var p=o[i].childNodes,j=0,d=p.length;j<d;j++)
+				switch(p[j].constructor){
+				case Text:trs([i,j],p[j].textContent);break;
+				}
+			}
+
+			return function(j){
+				for(var p,i=0,c=rep.length;i<c;i++){
+					p=rep[i];
+					if(p[1]<0)o[p[0]].className=tts(p);
+					else o[p[0]].childNodes[p[1]].textContent=tts(p);
+				}
+				return z;
+				function tts(arg){
+					for(var r="",i=2,c=arg.length;i<c;i++){
+						r+=arg[i][0]==" "?arg[i].substr(1):j[arg[i].substr(1)];
+					}
+					return r;
+				}
+			};
+
+			function trs(arg,text){
+				var i=0;
+				text.replace(rx,function(a,b,c){
+					if(b)arg.push(" "+b);
+					else{
+						arg.push(c);
+						i++;
+					}
+					return "";
+				});
+				if(i)rep.push(arg);
+			}
 		}
 	};
 
