@@ -50,8 +50,8 @@ t("post",function(m,app){
 			},a).send();
 		},cc:function(){
 			var a=aside.className;
-			if(/ on$/.test(a))a.className=a.substr(0,a.length-3);
-			else a.className+=" on";
+			if(/ on$/.test(a))aside.className=a.substr(0,a.length-3);
+			else aside.className+=" on";
 		},go:function(){
 
 		}
