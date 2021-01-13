@@ -34,11 +34,11 @@ t("post",function(m,app){
 					"a.CNTI":k.CNTI
 				}));
 			}
-		},page:function(a){
+		},page:function(a,i){
 			post(function(s,e){
 				if(this.readyState==4){
 					self.reload(JSON.parse(this.response));
-					self.update(+a.match(/p=(\d+)/)[1]);
+					self.update(i);
 				}else if(e){
 
 				}else{
@@ -70,11 +70,18 @@ t("post",function(m,app){
 	}
 	var navp=this.querySelectorAll(".navp");
 	navp[0].onclick=navp[1].onclick=function(e){
-		for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
+		for(var a,b,m,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
 		switch(p.constructor){
 		case HTMLAnchorElement:
-			self.page(a=p.getAttribute("href"));
-			history.pushState("","",a);
+			a=p.getAttribute("href");
+			b=+/p=(\d+)/.exec(a)[1];
+			m=/p=(\d+)/.exec(location);
+			if(b==(m?+m[1]:1)){
+
+			}else{
+				self.page(a,b);
+				history.pushState("","",a);
+			}
 			break;
 		}
 		return false;
