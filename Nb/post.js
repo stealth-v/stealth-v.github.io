@@ -85,7 +85,7 @@ t("post",function(m,app){
 		m.css=app.css("post",load);
 		m.lang=app.cssl("post",load);
 	};
-	self.update();
+
 	function load(){
 		if(i++>0)m.show();
 	}
