@@ -3,7 +3,7 @@ t("post",function(m,app){
 	art=this.querySelector("article.t").cloneNode(true),
 	aside=doc.querySelector("aside"),
 	self={
-		pagi:1,
+		pagi:+a.match(/p=(\d+)/)[1],
 		update:function(){
 			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
 			b=a[1].children;
