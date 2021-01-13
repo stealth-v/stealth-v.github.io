@@ -3,16 +3,15 @@ t("post",function(m,app){
 	art=this.querySelector("article.t").cloneNode(true),
 	aside=doc.querySelector("aside"),
 	self={
-		pagi:+a.match(/p=(\d+)/)[1],
-		update:function(){
-			var a=content.querySelectorAll(".navp"),b,h=this.pagi,i=0;
+		update:function(page){
+			var a=content.querySelectorAll(".navp"),b,i=0;
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
 				b[i].textContent=a[i].textContent=j;
 				b[i].href=a[i].href="/?p="+j;
 				i++;
-			},this.pagi);
+			},page);
 		},reload:function(j){
 			var l=content.querySelector(".lip"),r=l.children[0];
 			l.textContent="";
@@ -39,8 +38,7 @@ t("post",function(m,app){
 			post(function(s,e){
 				if(this.readyState==4){
 					self.reload(JSON.parse(this.response));
-					self.pagi=+a.match(/p=(\d+)/)[1];
-					self.update();
+					self.update(+a.match(/p=(\d+)/)[1]);
 				}else if(e){
 
 				}else{
