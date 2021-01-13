@@ -39,12 +39,13 @@ i[class]:empty{padding-left:2em}
 i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
 i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-repeat 50% 50%/contain}
 i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}
-i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
-i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
 i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
+i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
+i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
 i.note{background:url('https://api.iconify.design/fxemoji:emptynote.svg') no-repeat 50% 50%/contain}
 i.list{background:url('https://api.iconify.design/emojione:clipboard.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.cat{background:url('https://api.iconify.design/emojione:cat.svg') no-repeat 50% 50%/contain}
 i.photo{background:url('https://api.iconify.design/openmoji:picture.svg') no-repeat 50% 50%/contain}
 i.up{background:url('https://api.iconify.design/emojione-v1:up-right-arrow.svg') no-repeat 50% 50%/contain}
 i.cmt{background:url('https://api.iconify.design/emojione-v1:two-speech-bubbles.svg') no-repeat 50% 50%/contain}
+i.page{background:url('https://api.iconify.design/carbon:page-scroll.svg') no-repeat 50% 50%/contain}
