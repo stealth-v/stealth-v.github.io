@@ -36,6 +36,10 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
+		},sh:function(z){
+			var a=z.className;
+			if(/ on$/.test(a))z.className=a.substr(0,a.length-3);
+			else z.className+=" on";
 		},parset:function(ht){
 			var o,y=doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
 
