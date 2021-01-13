@@ -22,7 +22,7 @@ t("post",function(m,app){
 
 				l.appendChild(art({
 					TITLE:k.TITLE,CONTENT:k.CONTENT,
-					"a.IMG":k.IMG?"<img src=\""+k.IMG+"?type=ffn300_300\">":"",
+					"a.IMG":(k.CNTI>0?"<img src=\""+k.IMG+"?type=ffn300_300\">":""),
 					"a.YYYY":d.getFullYear(),
 					"a.MM":("0"+(d.getMonth()+1)).substr(-2),
 					"a.DD":("0"+d.getDate()).substr(-2),
