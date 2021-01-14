@@ -38,7 +38,8 @@ t("post",function(m,app){
 		},page:function(a,i){
 			post(function(s,e){
 				if(this.readyState==4){
-					self.reload(JSON.parse(this.response));
+					if(this.response)self.reload(JSON.parse(this.response));
+					else self.reload([]);
 					self.update(i);
 				}else if(e){
 
@@ -85,6 +86,15 @@ t("post",function(m,app){
 				history.pushState("","",a);
 			}
 			break;
+		}
+		return false;
+	};
+	go.onsubmit=function(){
+		var a=this.querySelector("input");
+		if(a.placeholder!=a.value){
+			a=a.value;
+			self.page("/?p="+a,+a);
+			history.pushState("","",a);
 		}
 		return false;
 	};
