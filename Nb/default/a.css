@@ -16,7 +16,7 @@ input{position:relative}
 .qk i{vertical-align:middle}
 .qk button{background:none}
 .qk button,.qk a{float:left}
-.bm ::after{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
+.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{border-radius:50%;width:auto;height:100%;border:.5em solid transparent;box-sizing:border-box}
@@ -30,9 +30,9 @@ header,nav{position:absolute;bottom:0;left:0;right:0}
 header{padding:0 2em;top:0;bottom:2em;min-width:16em;color:#fff}
 nav{display:flex;margin:auto;max-width:32em;color:#fff;text-align:center}
 nav a{flex:1;line-height:2}
-nav a::after{content:"";right:0}
-nav a:first-child::after{border-radius:1em 0 0 1em}
-nav a:last-child::after{border-radius:0 1em 1em 0}
+nav a::before{content:"";right:0}
+nav a:first-child::before{border-radius:1em 0 0 1em}
+nav a:last-child::before{border-radius:0 1em 1em 0}
 
 .category{position:absolute;top:2em;bottom:0;width:100%;overflow:auto}
 i.l{margin-right:.4em}

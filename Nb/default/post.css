@@ -1,9 +1,9 @@
 section .cc{overflow:hidden;color:#fff}
 section .cc a{display:inline-block;padding:0 .5em;line-height:2}
-section .cc a::after{content:"";opacity:.3}
+section .cc a::before{content:"";opacity:.3}
 section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 section article.t{display:none}
-section article::after{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
+section article::before{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
 section article i{font-size:.8em;font-style:normal}
 section article i:not(:empty){padding:0 .2em}
 section article a{position:absolute;top:0;right:.5em;font-size:.7em;font-weight:normal;text-align:right}
@@ -20,7 +20,8 @@ section .go:not(.on){display:none}
 section .go div{display:flex;margin-left:auto;height:2em;max-width:20em;background:#fff}
 section .go label{flex:1}
 section .go button{padding:0;border:0;width:2rem;background:none}
-section .go label::after,section .go button::after{content:""}
+section .go input{position:relative;background:none}
+section .go label::before,section .go button::before{content:""}
 section .navp{display:flex;height:2em;line-height:2;text-align:center}
 section .navp a{flex:1;padding:0;border:0;background:none}
 section .navp label{}
