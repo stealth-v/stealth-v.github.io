@@ -50,8 +50,10 @@ t("post",function(m,app){
 		},cc:function(){
 			app.sh(aside);
 		},go:function(i){
-			go.querySelector("input").placeholder=i;
+			var a=go.querySelector("input");
+			a.placeholder=i;
 			app.sh(go);
+			a.focus();
 		}
 	};
 	art.removeAttribute("class");
