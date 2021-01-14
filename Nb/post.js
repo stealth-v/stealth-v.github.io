@@ -53,9 +53,11 @@ t("post",function(m,app){
 			app.sh(aside);
 		},go:function(i){
 			var a=go.querySelector("input");
-			a.placeholder=i;
 			app.sh(go);
-			a.focus();
+			if(i>0){
+				a.placeholder=i;
+				a.focus();
+			}
 		}
 	};
 	art.removeAttribute("class");
@@ -96,6 +98,7 @@ t("post",function(m,app){
 			a=a.value;
 			self.page("/?p="+a,+a);
 			history.pushState("","",a);
+			app.go();
 		}
 		return false;
 	};
