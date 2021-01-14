@@ -20,7 +20,7 @@ section .go:not(.on){display:none}
 section .go div{display:flex;margin-left:auto;height:2em;max-width:20em;background:#fff}
 section .go label{flex:1;display:flex}
 section .go button{padding:0;border:0;width:2rem;background:none}
-section .go input{flex:1;padding-left:.5em;border:0;background:none}
+section .go input{flex:1;padding:0 .5em;border:0;background:none}
 section .go label,section .go button{position:relative}
 section .go label::before,section .go button::before{content:""}
 section .navp{display:flex;height:2em;line-height:2;text-align:center}
