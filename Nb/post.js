@@ -49,7 +49,8 @@ t("post",function(m,app){
 			},a).send();
 		},cc:function(){
 			app.sh(aside);
-		},go:function(){
+		},go:function(i){
+			go.querySelector("input").placeholder=i;
 			app.sh(go);
 		}
 	};
@@ -76,7 +77,7 @@ t("post",function(m,app){
 			b=+/p=(\d+)/.exec(a)[1];
 			m=/p=(\d+)/.exec(location);
 			if(b==(m?+m[1]:1)){
-				self.go();
+				self.go(b);
 			}else{
 				self.page(a,b);
 				history.pushState("","",a);
