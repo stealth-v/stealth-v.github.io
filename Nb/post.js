@@ -5,12 +5,13 @@ t("post",function(m,app){
 	aside=doc.querySelector("aside"),
 	self={
 		update:function(page){
-			var a=content.querySelectorAll(".navp"),b,i=0;
+			var a=content.querySelectorAll(".navp"),b,c=/c=(\d+)/.exec(location),i=0;
+			c=c?"&c="+c[1]:"";
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
 				b[i].textContent=a[i].textContent=j;
-				b[i].href=a[i].href="/?p="+j;
+				b[i].href=a[i].href="/?p="+j+c;
 				i++;
 			},page);
 		},reload:function(j){
