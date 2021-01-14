@@ -25,6 +25,7 @@ section .go label,section .go button{position:relative}
 section .go label::before,section .go button::before{content:""}
 section .navp{display:flex;height:2em;line-height:2;text-align:center}
 section .navp a{flex:1;padding:0;border:0;background:none}
+section .navp a::before{content:""}
 section .navp label{}
 section .navp input{padding:0;width:100%;text-align:center}
 
