@@ -38,6 +38,7 @@ t("post",function(m,app){
 			}
 		},page:function(a,i){
 			var c=/c=(\d+)/.exec(location);
+			if(c)a+="&"+c[0];
 			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
