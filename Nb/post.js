@@ -98,7 +98,7 @@ t("post",function(m,app){
 			a=a.value;
 			self.page("/?p="+a,+a);
 			history.pushState("","",a);
-			app.go();
+			self.go();
 		}
 		return false;
 	};
