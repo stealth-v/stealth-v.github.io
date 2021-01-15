@@ -4,14 +4,14 @@ t("post",function(m,app){
 	go=this.querySelector(".go"),
 	aside=doc.querySelector("aside"),
 	self={
-		update:function(page){
-			var a=content.querySelectorAll(".navp"),b,c=/c=(\d+)/.exec(location),i=0;
-			c=c?"&c="+c[1]:"";
+		update:function(page,cat){
+			var a=content.querySelectorAll(".navp"),b,i=0;
+			cat=cat?"&c="+cat[1]:"";
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
 				b[i].textContent=a[i].textContent=j;
-				b[i].href=a[i].href="/?p="+j+c;
+				b[i].href=a[i].href="/?p="+j+cat;
 				i++;
 			},page);
 		},reload:function(j){
@@ -37,11 +37,13 @@ t("post",function(m,app){
 				}));
 			}
 		},page:function(a,i){
+			var c=/c=(\d+)/.exec(location);
+			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
 					if(this.response)self.reload(JSON.parse(this.response));
 					else self.reload([]);
-					self.update(i);
+					self.update(i,c);
 				}else if(e){
 
 				}else{
@@ -86,7 +88,6 @@ t("post",function(m,app){
 				self.go(b);
 			}else{
 				self.page(a,b);
-				history.pushState("","",a);
 			}
 			break;
 		}
@@ -98,7 +99,6 @@ t("post",function(m,app){
 			b=a.value;
 			a="/?p="+b;
 			self.page(a,+b);
-			history.pushState("","",a);
 			self.go();
 		}
 		return false;
