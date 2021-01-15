@@ -93,10 +93,11 @@ t("post",function(m,app){
 		return false;
 	};
 	go.onsubmit=function(){
-		var a=this.querySelector("input");
+		var a=this.querySelector("input"),b;
 		if(a.placeholder!=a.value){
-			a=a.value;
-			self.page("/?p="+a,+a);
+			b=a.value;
+			a="/?p="+b;
+			self.page(a,+b);
 			history.pushState("","",a);
 			self.go();
 		}
