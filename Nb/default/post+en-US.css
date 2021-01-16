@@ -1,3 +1,4 @@
 .ll-posts::after{content:"Posts"}
 .ll-forum::after{content:"Forum"}
 .ll-search::after{content:"Search"}
+.ll-empty::after{content:"No posts."}

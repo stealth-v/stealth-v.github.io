@@ -38,7 +38,7 @@ t("post",function(m,app){
 			}
 			if(j.length==0){
 				l.appendChild(art({
-					TITLE:k.TITLE,CONTENT:k.CONTENT,
+					TITLE:"<span class=\"ll-empty\"></span>",CONTENT:"...",
 					"a.IMG":"",
 					"a.YYYY":"0000",
 					"a.MM":"00",
