@@ -2,7 +2,7 @@
 	var module={},langlist="en-US	English\nko-KR	한국어,Korean",app={
 		module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		reload:function(){
-			this.lang=this.cssl("app",load);
+			this.lang=this.cssl("app");
 		},
 		load:load,
 		deploy:deploy,
