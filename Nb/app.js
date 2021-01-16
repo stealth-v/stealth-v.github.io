@@ -1,6 +1,9 @@
 (function(){
-	var module={},lang="en-US	English\nko-KR	한국어,Korean",app={
-		module:module,lang:lang,langtxt:0,pjs:0,pskin:0,
+	var module={},langlist="en-US	English\nko-KR	한국어,Korean",app={
+		module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
+		reload:function(){
+			this.lang=this.cssl("app",load);
+		},
 		load:load,
 		deploy:deploy,
 		attach:attach,
@@ -12,9 +15,9 @@
 			}
 			for(var l=navigator.languages,i=0,c=l.length;i<c&&ch(l[i]);i++){}
 			function ch(a){
-				var m=new RegExp("^("+a+"[^\t]*)\t(.*)","im").exec(lang);
+				var m=new RegExp("^("+a+"[^\t]*)\t(.*)","im").exec(langlist);
 				if(m){
-					cookie("lang",app.lang=m[1],"/");
+					cookie("lang",app.langcur=m[1],"/");
 					app.langtxt=m[2];
 				}else return 1;
 			}
@@ -29,7 +32,7 @@
 		src:function(a,b){return src(this.pjs+a+".js",b)},
 		css:function(a,b){return css(this.pskin+a+".css",b)},
 		cssl:function(a,b){
-			return css(this.pskin+a+"+"+app.lang+".css",function(a,c){
+			return css(this.pskin+a+"+"+app.langcur+".css",function(a,c){
 				b(a,c);
 				if(c){
 					a.onerror=null;
@@ -102,6 +105,7 @@
 		app.pjs=b;
 		app.pskin=b+a.getAttribute("data-skin")+"/";
 		a.removeAttribute("data-skin");
+		app.reload();
 		deploy();
 	});
 
