@@ -32,9 +32,10 @@
 		src:function(a,b){return src(this.pjs+a+".js",b)},
 		css:function(a,b){return css(this.pskin+a+".css",b)},
 		cssl:function(a,b){
-			return css(this.pskin+a+"+"+app.langcur+".css",function(a,c){
-				b(a,c);
-				if(c){
+			return css(this.pskin+a+"+"+app.langcur+".css",function(a,e){
+				if(b)b(a,e);
+
+				if(e){
 					a.onerror=null;
 					a.src=this.pskin+a+"+en-US.css";
 				}
