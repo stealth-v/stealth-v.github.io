@@ -51,7 +51,8 @@
 			o=y.querySelectorAll("*");
 
 			for(var i=0,c=o.length;i<c;i++){
-				trs([i,-1],o[i].className);
+				for(var l=o[i].attributes,j=0,d=l.length;j<d;j++)trs([i,l[j]],o[i][l[j]]);
+
 				for(var p=o[i].childNodes,j=0,d=p.length;j<d;j++)
 				switch(p[j].constructor){
 				case Text:trs([i,j],p[j].textContent);break;
@@ -66,13 +67,15 @@
 
 				for(var p,q,i=0,c=rep.length;i<c;i++){
 					p=rep[i];
-					if(p[1]<0)w[p[0]].className=tts(p);
-					else{
+					if(p[1]>=0){
 						q=w[p[0]].childNodes[p[1]];
 						d2.innerHTML=tts(p);
 						p=q.parentNode;
 						while(d2.childNodes.length)p.insertBefore(d2.childNodes[0],q);
 						p.removeChild(q);
+					}
+					else{
+						w[p[0]][p[1]]=tts(p);
 					}
 				}
 				return du;
