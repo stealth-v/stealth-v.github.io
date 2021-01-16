@@ -51,7 +51,7 @@
 			o=y.querySelectorAll("*");
 
 			for(var i=0,c=o.length;i<c;i++){
-				for(var l=o[i].attributes,j=0,d=l.length;j<d;j++)trs([i,l[j]],o[i][l[j]]);
+				for(var l=o[i].attributes,j=0,d=l.length;j<d;j++)trs([i,l[j]],o[i].getAttribute(l[j]));
 
 				for(var p=o[i].childNodes,j=0,d=p.length;j<d;j++)
 				switch(p[j].constructor){
@@ -75,7 +75,7 @@
 						p.removeChild(q);
 					}
 					else{
-						w[p[0]][p[1]]=tts(p);
+						w[p[0]].setAttribute(p[1],tts(p));
 					}
 				}
 				return du;
