@@ -1,5 +1,5 @@
 t("post",function(m,app){
-	var content=this,i=0,
+	var content=this,
 	art=this.querySelector("article.t").cloneNode(true),
 	go=this.querySelector(".go"),
 	aside=doc.querySelector("aside"),
@@ -122,10 +122,8 @@ t("post",function(m,app){
 		return false;
 	};
 	m.reload=function(){
-		m.css=app.css("post",load);
+		m.css=app.css("post",function(){
+			m.show();
+		});
 	};
-
-	function load(){
-		if(i++>0)m.show();
-	}
 });
