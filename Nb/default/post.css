@@ -1,5 +1,5 @@
 section .cc{overflow:hidden;color:#fff}
-section .cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2eem;line-height:2}
+section .cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
 section .cc a::before{content:"";opacity:.3}
 section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 section article.t{display:none}
