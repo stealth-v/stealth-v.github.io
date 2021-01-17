@@ -111,6 +111,13 @@ t("post",function(m,app){
 		}
 		return false;
 	};
+	sc.onsubmit=function(){
+		var a=this.querySelector("input"),b;
+		if(b=a.value){
+			self.page("/?q=",1);
+		}
+		return false;
+	};
 	go.onsubmit=function(){
 		var a=this.querySelector("input"),b;
 		if(a.placeholder!=a.value){
