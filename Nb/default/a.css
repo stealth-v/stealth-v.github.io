@@ -7,7 +7,7 @@ input{position:relative}
 [data-module]{display:none}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
-.mc button,.mc a{position:relative;padding:0;border:0;width:2em;height:2em;font-size:1em;background-color:transparent}
+.mc button,.mc a{position:relative;padding:0;border:0;width:2em;height:2em;font-size:1em;color:inherit;background-color:transparent}
 .mnu{position:relative;min-height:8em}
 .tt{position:absolute;width:100%;top:0;bottom:-2em;background:#000;overflow:hidden}
 .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
@@ -16,7 +16,7 @@ input{position:relative}
 .qk i{vertical-align:middle}
 .qk button{background:none}
 .qk button,.qk a{float:left}
-.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;color:inherit;opacity:.5}
+.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{border-radius:50%;width:auto;height:100%;border:.5em solid transparent;box-sizing:border-box}
