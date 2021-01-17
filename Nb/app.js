@@ -114,11 +114,12 @@
 		a.removeAttribute("data-skin");
 		app.reload();
 		deploy();
+
+		body.querySelector(".mnu").onclick=function(e){
+			for(var a=body.querySelectorAll(".-evt-mnu"),i=0,c=a.length;i<c;i++)a[i].onclick(e);
+		};
 	});
 
-	body.querySelector(".mnu").onclick=function(e){
-		for(var a=body.querySelectorAll(".-evt-mnu"),i=0,c=a.length;i<c;i++)a[i].onclick(e);
-	};
 
 	function load(dir,node){
 		var f,x=post(function(a,e){
