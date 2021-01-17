@@ -51,7 +51,7 @@
 			o=y.querySelectorAll("*");
 
 			for(var i=0,c=o.length;i<c;i++){
-				for(var l=o[i].attributes,j=0,d=l.length;j<d;j++)trs([i,l[j].name],l[j].value);
+				for(var attr=o[i].attributes,j=0,d=attr.length;j<d;j++)trs([i,attr[j].name],attr[j].value);
 
 				for(var p=o[i].childNodes,j=0,d=p.length;j<d;j++)
 				switch(p[j].constructor){

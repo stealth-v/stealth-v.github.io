@@ -1,6 +1,7 @@
 t("post",function(m,app){
 	var content=this,
 	art=this.querySelector("article.t").cloneNode(true),
+	sc=this.querySelector(".sc"),
 	go=this.querySelector(".go"),
 	aside=doc.querySelector("aside"),
 	self={
