@@ -116,6 +116,10 @@
 		deploy();
 	});
 
+	body.querySelector(".mnu").onclick=function(e){
+		for(var a=body.querySelectorAll(".-evt-mnu"),i=0,c=a.length;i<c;i++)a[i].onclick(e);
+	};
+
 	function load(dir,node){
 		var f,x=post(function(a,e){
 			if(e){
@@ -149,6 +153,7 @@
 				css:null,lang:null,
 				entry:null,
 				reload:null,
+				unload:null,
 				show:null
 			};
 			return m;
@@ -156,6 +161,7 @@
 	}
 	function t(a,b){
 		a.onload=function(p){
+			b.entry=p;
 			p.call(a,b,app);
 			if(b.reload)b.reload();
 		};
