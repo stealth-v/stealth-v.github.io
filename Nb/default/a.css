@@ -29,10 +29,10 @@ input{position:relative}
 header,nav{position:absolute;bottom:0;left:0;right:0}
 header{padding:0 2em;top:0;bottom:2em;min-width:16em;color:#fff}
 nav{display:flex;margin:auto;max-width:32em;color:#fff;text-align:center}
-nav a,nav button{flex:1;line-height:2}
-nav ::before{content:"";right:0}
-nav :first-child::before{border-radius:1em 0 0 1em}
-nav :last-child::before{border-radius:0 1em 1em 0}
+.nav{flex:1;line-height:2}
+.nav::before{content:"";right:0}
+.nav:first-child::before{border-radius:1em 0 0 1em}
+.nav:last-child::before{border-radius:0 1em 1em 0}
 
 .category{position:absolute;top:2em;bottom:0;width:100%;overflow:auto}
 i.l{margin-right:.4em}
