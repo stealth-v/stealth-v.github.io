@@ -44,6 +44,9 @@
 			var a=z.className;
 			if(/ on$/.test(a))z.className=a.substr(0,a.length-3);
 			else z.className+=" on";
+		},foci:function(a,b){
+			if(b)a.placeholder=b;
+			a.focus();
 		},parset:function(ht){
 			var o,y=doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
 

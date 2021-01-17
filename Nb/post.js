@@ -68,15 +68,14 @@ t("post",function(m,app){
 				}
 				return 1;
 			},a).send();
+		},sc:function(){
+			app.sh(sc);
+			app.foci(sc.querySelector("input"));
 		},cc:function(){
 			app.sh(aside);
 		},go:function(i){
-			var a=go.querySelector("input");
 			app.sh(go);
-			if(i>0){
-				a.placeholder=i;
-				a.focus();
-			}
+			if(i>0)app.foci(go.querySelector("input"),i);
 		},href:function(a){
 			if(a.textContent)a.click();
 		}
