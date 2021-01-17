@@ -7,8 +7,8 @@ section .up div{display:flex;margin-left:auto;height:2em;max-width:20em;backgrou
 section .up label{flex:1;display:flex}
 section .up button{padding:0;border:0;width:2rem;background:none}
 section .up input{flex:1;padding:0 .5em;border:0;background:none}
-section .up label,section .go button{position:relative}
-section .up label::before,section .go button::before{content:""}
+section .up label,section .up button{position:relative}
+section .up label::before,section .up button::before{content:""}
 section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 section article.t{display:none}
 section article::before{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
