@@ -23,8 +23,8 @@ section article h1{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:n
 section article p{position:relative;margin:0;font-size:5em;overflow:hidden;text-overflow:ellipsis}
 section article p span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
 section article img{position:absolute;margin:auto;padding:.8em;border-radius:1em;top:0;right:0;bottom:0;max-width:10em;max-height:100%;box-sizing:border-box}
-section .sc label{align-items:center}
-section .sc input[type=radio]{margin:0}
+section .sc label{align-items:baseline}
+section .sc input[type=radio]{margin:0 .5em}
 section .navp{display:flex;height:2em;line-height:2;text-align:center}
 section .navp a{flex:1;position:relative;padding:0;border:0;background:none}
 section .navp a::before{content:""}
