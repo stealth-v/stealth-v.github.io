@@ -54,7 +54,8 @@ t("post",function(m,app){
 			}
 		},page:function(a,i){
 			var c;
-			if(!/\bc=/.test(a)&&(c=/\bc=(\d+)/.exec(location)))a+="&"+c[0];
+			if(!/\bc=/.test(a)&&(c=/\bc=\d+/.exec(location)))a+="&"+c[0];
+			if(c=/\bq=\d+/.exec(location))a+="&"+c[0];
 			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
