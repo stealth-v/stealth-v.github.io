@@ -52,13 +52,9 @@ t("post",function(m,app){
 					"a.CNTI":0
 				}));
 			}
-		},page:function(a,i,q,s){
+		},page:function(a,i){
 			var c;
 			if(!/\bc=/.test(a)&&(c=/\bc=(\d+)/.exec(location)))a+="&"+c[0];
-			if(q){
-				a+="&q="+q;
-				if(s)a+="&s=1";
-			}
 			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
@@ -118,7 +114,8 @@ t("post",function(m,app){
 	sc.onsubmit=function(){
 		var a=this.querySelector("input"),b;
 		if(b=a.value){
-			self.page("/?q=",1,b,this.querySelector(":checked").value);
+			if(this.querySelector(":checked").value)b+="&s=1";
+			self.page("/?q="+b,1);
 		}
 		return false;
 	};
