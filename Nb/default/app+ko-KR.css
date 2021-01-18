@@ -2,3 +2,5 @@
 .ll-forum::after{content:"포럼"}
 .ll-search::after{content:"검색"}
 .ll-empty::after{content:"등록된 글이 없습니다."}
+.ll-relate::after{content:"관련도"}
+.ll-newest::after{content:"최근날짜"}
