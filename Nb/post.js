@@ -6,6 +6,7 @@ t("post",function(m,app){
 	aside=doc.querySelector("aside"),
 	self={
 		update:function(page,url){
+			if(!(/\b=\d+/.test(url)))url=url.replace("?","?p=1&");
 			var a=content.querySelectorAll(".navp"),b,i=0;
 			b=a[1].children;
 			a=a[0].children;
