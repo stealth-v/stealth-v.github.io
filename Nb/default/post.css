@@ -1,14 +1,14 @@
 section .cc{overflow:hidden;color:#fff}
 section .cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
 section .cc a::before{content:"";opacity:.3}
-section .up{z-index:1;position:absolute;left:0;right:0;background:#0008}
-section form.up:not(.on){display:none}
-section .up div{display:flex;margin-left:auto;height:2em;max-width:20em;background:#fff}
-section .up label{flex:1;display:flex;line-height:2}
-section .up button{padding:0;border:0;width:2rem;background:none}
-section .up input:not([type=radio]){flex:1;padding:0 .5em;border:0;background:none}
-section .up label,section .up button{position:relative}
-section .up label::before,section .up button::before{content:""}
+section .uu{z-index:1;position:absolute;left:0;right:0;background:#0008}
+section .uu:not(.on){display:none}
+section .uu div{display:flex;margin-left:auto;height:2em;max-width:20em;background:#fff}
+section .uu label{flex:1;display:flex;line-height:2}
+section .uu button{padding:0;border:0;width:2rem;background:none}
+section .uu input:not([type=radio]){flex:1;padding:0 .5em;border:0;background:none}
+section .uu label,section .uu button{position:relative}
+section .uu label::before,section .uu button::before{content:""}
 section article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 section article.t{display:none}
 section article::before{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
