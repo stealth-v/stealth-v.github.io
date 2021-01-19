@@ -7,7 +7,7 @@ t("post",function(m,app){
 	self={
 		update:function(page,cat){
 			var a=content.querySelectorAll(".navp"),b,i=0;
-			cat=cat?"&c="+cat[1]:"";
+			cat=cat?"&"+cat[0]:"";
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
@@ -55,7 +55,6 @@ t("post",function(m,app){
 		},page:function(a,i){
 			var c;
 			if(!/\bc=/.test(a)&&(c=/\bc=\d+/.exec(location)))a+="&"+c[0];
-			if(c=/\bq=[^&]+/.exec(location))a+="&"+c[0];
 			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
