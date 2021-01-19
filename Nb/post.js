@@ -13,8 +13,8 @@ t("post",function(m,app){
 			app.page(function(j){
 				b[i].textContent=a[i].textContent=j;
 				b[i].href=a[i].href=url.replace(/\bp=\d+/,"p="+j);
-				if(page==j)b[i].className="on";
-				else if(!(b[i].className=b[i].className.replace(" on","")))b[i].removeAttribute("class");
+				if(page==j)b[i].className=a[i].className="on";
+				else b[i].removeAttribute("class"),a[i].removeAttribute("class");
 				i++;
 			},page);
 		},reload:function(j){
