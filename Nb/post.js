@@ -5,14 +5,13 @@ t("post",function(m,app){
 	go=this.querySelector(".go"),
 	aside=doc.querySelector("aside"),
 	self={
-		update:function(page,cat){
+		update:function(page,url){
 			var a=content.querySelectorAll(".navp"),b,i=0;
-			cat=cat?"&"+cat[0]:"";
 			b=a[1].children;
 			a=a[0].children;
 			app.page(function(j){
 				b[i].textContent=a[i].textContent=j;
-				b[i].href=a[i].href="/?p="+j+cat;
+				b[i].href=a[i].href=url.replace(/\bp=\d+/,"p="+j);
 				i++;
 			},page);
 		},reload:function(j){
@@ -53,14 +52,12 @@ t("post",function(m,app){
 				}));
 			}
 		},page:function(a,i){
-			var c;
-			if(!/\bc=/.test(a)&&(c=/\bc=\d+/.exec(location)))a+="&"+c[0];
 			history.pushState("","",a);
 			post(function(s,e){
 				if(this.readyState==4){
 					if(this.response)self.reload(JSON.parse(this.response));
 					else self.reload([]);
-					self.update(i,c);
+					self.update(i,a);
 				}else if(e){
 
 				}else{
