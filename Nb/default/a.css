@@ -1,7 +1,7 @@
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
-a:hover{color:#36f}
+a:hover,a.on{color:#36f}
 input{position:relative}
 
 [data-module]{display:none}
