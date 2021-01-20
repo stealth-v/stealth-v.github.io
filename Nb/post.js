@@ -69,11 +69,13 @@ t("post",function(m,app){
 				return 1;
 			},a).send();
 		},sc:function(){
+			app.sh(go,1);
 			app.sh(sc);
-			app.foci(sc.querySelector("input"));
+			app.foci(sc.querySelector("[type=serach"));
 		},cc:function(){
 			app.sh(aside);
 		},go:function(i){
+			app.sh(sc,1);
 			app.sh(go);
 			if(i>0)app.foci(go.querySelector("input"),i);
 		},href:function(a){

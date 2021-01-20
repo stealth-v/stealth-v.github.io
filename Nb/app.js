@@ -40,9 +40,9 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
-		},sh:function(z){
+		},sh:function(z,a){
 			var a=z.className;
-			if(/ on$/.test(a))z.className=a.substr(0,a.length-3);
+			if(a||/ on$/.test(a))z.className=a.substr(0,a.length-3);
 			else z.className+=" on";
 		},foci:function(a,b){
 			if(b)a.placeholder=b;
