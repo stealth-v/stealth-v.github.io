@@ -26,12 +26,15 @@ input{position:relative}
 .opt a{padding:.5em 0}
 .opt a i{font-size:1.5em}
 .opt a i,.opt a span{vertical-align:middle}
-header{position:absolute;padding:0 2em;top:0;left:0;bottom:4em;right:0;min-width:16em;color:#fff}
-nav{display:flex;margin:auto;max-width:32em;color:#fff;text-align:center}
+header{position:absolute;padding:0 2em;top:0;right:0;bottom:4em;left:0;;min-width:16em;color:#fff}
+nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
 .nav{flex:1;line-height:2}
 .nav::before{content:"";right:0}
+.cc{overflow:hidden;color:#fff}
+.cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
+.cc a::before{content:"";opacity:.3}
 
 .category{position:absolute;top:2em;bottom:0;width:100%;overflow:auto}
 i.l{margin-right:.4em}
