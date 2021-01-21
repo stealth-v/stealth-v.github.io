@@ -19,7 +19,7 @@ input{position:relative}
 .bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
-.logo img{border-radius:50%;width:auto;height:100%;border:.5em solid transparent;box-sizing:border-box}
+.logo img{width:auto;height:100%;border:.5em solid transparent;border-radius:50%;box-sizing:border-box}
 .logo span{position:absolute;bottom:4em;left:100%;white-space:nowrap}
 .opt{display:inline-block;margin-bottom:.5em;vertical-align:bottom}
 .opt div{font-size:.8em}
