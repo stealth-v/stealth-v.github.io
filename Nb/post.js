@@ -3,7 +3,6 @@ t("post",function(m,app){
 	art=this.querySelector("article.t").cloneNode(true),
 	sc=this.querySelector(".sc"),
 	go=this.querySelector(".go"),
-	aside=doc.querySelector("aside"),
 	self={
 		update:function(page,url){
 			if(!(/\b=\d+/.test(url)))url=url.replace("?","?p=1&");
@@ -72,8 +71,6 @@ t("post",function(m,app){
 			app.sh(go,1);
 			app.sh(sc);
 			app.foci(sc.querySelector("[type=serach"));
-		},cc:function(){
-			app.sh(aside);
 		},go:function(i){
 			app.sh(sc,1);
 			app.sh(go);
@@ -84,7 +81,7 @@ t("post",function(m,app){
 	};
 	art.removeAttribute("class");
 	art=app.parset(art);
-	aside.onclick=this.onclick=function(e){
+	this.onclick=function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 			switch(p.tagName){
 			case "ARTICLE":
@@ -95,7 +92,7 @@ t("post",function(m,app){
 			case HTMLButtonElement:ncall(self,p,e);return;
 			}
 		}
-	}
+	};
 	var navp=this.querySelectorAll(".navp");
 	navp[0].onclick=navp[1].onclick=function(e){
 		for(var a,b,m,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)

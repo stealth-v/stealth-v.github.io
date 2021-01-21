@@ -1,5 +1,7 @@
 (function(){
-	var module={},langlist="en-US	English\nko-KR	한국어,Korean",app={
+	var module={},langlist="en-US	English\nko-KR	한국어,Korean",
+	aside=doc.querySelector("aside"),
+	app={
 		module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		reload:function(){
 			this.lang=this.cssl("app");
@@ -40,6 +42,8 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
+		},cc:function(){
+			app.sh(aside);
 		},sh:function(z,a){
 			var a=z.className;
 			if(a||/ on$/.test(a))z.className=a.substr(0,a.length-3);
