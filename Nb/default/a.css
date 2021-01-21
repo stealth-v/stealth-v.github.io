@@ -36,7 +36,15 @@ nav .b::before{border-radius:0 1em 1em 0}
 .cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
 .cc a::before{content:"";opacity:.3}
 
+aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
+aside:not(.on){left:-15em}
+aside a{display:block;padding-left:1em;background:url('https://api.iconify.design/bi:caret-right-fill.svg?color=%2307f') no-repeat 0/1em}
+aside a[href="/"]{position:absolute;top:0;left:2em;right:0;height:2em}
+aside a[href$="s"]{background:none}
+aside i:not([class]){position:absolute;right:0;font-style:normal}
+aside [name]{border:0;height:2em;font-size:1em;background:none}
 .category{position:absolute;top:2em;bottom:0;width:100%;overflow:auto}
+
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em}
 i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
