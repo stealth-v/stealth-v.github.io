@@ -133,4 +133,5 @@ t("post",function(m,app){
 			m.show();
 		});
 	};
+	return self;
 })
