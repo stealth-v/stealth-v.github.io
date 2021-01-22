@@ -1,7 +1,6 @@
 (function(){
 	var module={},langlist="en-US	English\nko-KR	한국어,Korean",aside,
 	on={
-		sc:null,
 		cc:function(){
 			app.shw(aside);
 		}
@@ -142,8 +141,8 @@
 			switch(p.constructor){
 			case HTMLButtonElement:
 				ncall(on,p,e);
-				//z(app.header);
-				//z(app.content);
+				z(app.header);
+				z(app.content);
 				break;
 			}
 		}

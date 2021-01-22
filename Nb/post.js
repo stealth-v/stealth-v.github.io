@@ -88,9 +88,6 @@ t("post",function(m,app){
 				if(a.textContent)a.click();
 				return;
 			}
-			switch(p.constructor){
-			case HTMLButtonElement:ncall(on,p,e);return;
-			}
 		}
 	};
 	var navp=this.querySelectorAll(".navp");
