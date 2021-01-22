@@ -9,7 +9,15 @@ var xu={
 
 		}
 		x.prototype.module=[];
-		x.prototype.attach=function(x,tar){
+		x.prototype.load=function(){
+
+		};
+		x.prototype.deploy=function(){
+			for(var a=body.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
+				t(a[i],this.attach(a[i],a[i].getAttribute("data-target")));
+			}
+		};
+		x.prototype.attach=function(dom,tar){
 
 		};
 		x.prototype.detach=function(tar){

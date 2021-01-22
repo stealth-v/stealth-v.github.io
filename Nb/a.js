@@ -171,8 +171,8 @@
 			t(a[i],app.attach(a[i],a[i].getAttribute("data-target")));
 		}
 	}
-	function attach(div,target){
-		var n=div.getAttribute("data-module"),m=module[n];
+	function attach(dom,target){
+		var n=dom.getAttribute("data-module"),m=module[n];
 
 		if(m){
 			m.entry.call(a[i],m,app);
@@ -182,36 +182,40 @@
 				src:app.src(n,function(){
 					
 				}),
+				entry:entry,
 				css:null,lang:null,
-				entry:null,
 				onload:null,
 				onreload:null,
 				onunload:null,
 				show:null
 			};
 
-		if(target){
-			detach(target);
-			app[target]=m;
-		}
+		if(target)detach(target);
 
 		return m;
+
+		function entry(dom,p){
+			this.entry=p;
+			var a=p.call(dom,this,app);
+			if(target)app[target]=a;
+		}
 	}
 	function detach(target){
-		if(a=app[target]){
+		var a=app[target];
+		if(a){
 			a.onunload();
 			app[target]=0;
 		}
 	}
-	function t(a,b){
-		a.onload=function(p){
+	function t(dom,m){
+		dom.onload=function(p){
 			this.onload=null;
-			(b.entry=p).call(a,b,app);
-			if(b.onload)b.onload();
-			if(b.onreload)b.onreload();
+			m.entry(dom,p);
+			if(m.onload)m.onload();
+			if(m.onreload)m.onreload();
 		};
-		b.show=function(){
-			a.removeAttribute("data-module");
+		m.show=function(){
+			dom.removeAttribute("data-module");
 		};
 	}
 })();
