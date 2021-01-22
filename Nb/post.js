@@ -102,7 +102,7 @@ t("post",function(m,app){
 			b=+/p=(\d+)/.exec(a)[1];
 			m=/p=(\d+)/.exec(location);
 			if(b==(m?+m[1]:1)){
-				self.go(b);
+				self.on.go(b);
 			}else{
 				self.page(a,b);
 			}
