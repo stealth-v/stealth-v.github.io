@@ -198,9 +198,10 @@
 		return m;
 	}
 	function detach(target){
-		a=app[target];
-		a.onunload();
-		app[target]=0;
+		if(a=app[target]){
+			a.onunload();
+			app[target]=0;
+		}
 	}
 	function t(a,b){
 		a.onload=function(p){
