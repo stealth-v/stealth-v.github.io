@@ -6,7 +6,7 @@ t("post",function(m,app){
 	on={
 		sc:function(){
 			app.shw(sc);
-			app.foci(sc.querySelector("[type=serach"));
+			app.foci(sc.querySelector("[type=search"));
 		},go:function(i){
 			app.shw(go);
 			if(i>0)app.foci(go.querySelector("input"),i);
