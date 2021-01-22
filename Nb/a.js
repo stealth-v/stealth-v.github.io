@@ -142,8 +142,8 @@
 			switch(p.constructor){
 			case HTMLButtonElement:
 				ncall(on,p,e);
-				z(app.header);
-				z(app.content);
+				//z(app.header);
+				//z(app.content);
 				break;
 			}
 		}
