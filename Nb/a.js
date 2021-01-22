@@ -3,7 +3,7 @@
 	on={
 		sc:null,
 		cc:function(){
-			app.sh(aside);
+			app.shw(aside);
 		}
 	},
 	app={
