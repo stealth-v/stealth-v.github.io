@@ -1,8 +1,13 @@
 (function(){
 	var module={},langlist="en-US	English\nko-KR	한국어,Korean",
 	aside=doc.querySelector("aside"),
+	on={
+		cc:function(){
+			app.sh(aside);
+		}
+	},
 	app={
-		module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
+		on:on,module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		reload:function(){
 			this.lang=this.cssl("app");
 		},
@@ -42,8 +47,6 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
-		},cc:function(){
-			app.sh(aside);
 		},sh:function(z,a){
 			var a=z.className;
 			if(a||/ on$/.test(a))z.className=a.substr(0,a.length-3);
@@ -111,19 +114,27 @@
 
 	app.language();
 	EndDOM(function(){
-		var a=body.querySelector(".mnu"),b=html.querySelector("[src$='root.js']").src;
+		var r=html.querySelector("[src$='root.js']"),a=body.querySelector(".mnu"),b=r.src;
 		b=b.substr(0,b.length-7);
 		app.pjs=b;
 		app.pskin=b+a.getAttribute("data-skin")+"/";
 		a.removeAttribute("data-skin");
+
+		b=doc.createElement("style");
+		b.textContent="[data-module]{display:none}";
+		head.insertBefore(b,r);
+
 		app.reload();
 		deploy();
-
-		body.querySelector(".mnu").onclick=function(e){
-			for(var a=body.querySelectorAll(".-evt-mnu"),i=0,c=a.length;i<c;i++)a[i].onclick(e);
-		};
 	});
 
+	addEventListener("click",function(e){
+		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
+			switch(p.constructor){
+			case HTMLButtonElement:ncall(on,p,e);break;
+			}
+		}
+	});
 
 	function load(dir,node){
 		var f,x=post(function(a,e){
