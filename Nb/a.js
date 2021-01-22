@@ -1,18 +1,20 @@
 (function(){
 	var module={},langlist="en-US	English\nko-KR	한국어,Korean",aside,
 	on={
+		sc:null,
 		cc:function(){
 			app.sh(aside);
 		}
 	},
 	app={
 		on:on,module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
+		header:0,content:0,
 		reload:function(){
 			this.lang=this.cssl("app");
 		},
 		load:load,
 		deploy:deploy,
-		attach:attach,
+		attach:attach,detach:detach,
 		language:function(a){
 			if(!a)a=cookie("lang",0,"/");
 			if(a){
@@ -46,10 +48,16 @@
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			})
-		},sh:function(z,a){
-			var a=z.className;
-			if(a||/ on$/.test(a))z.className=a.substr(0,a.length-3);
-			else z.className+=" on";
+		},shw0:0,shw:function(z,f){
+			var a=z.className,b=this.shw0;
+			if(f||/ on$/.test(a)){
+				z.className=a.replace(/\son/g,"");
+				this.shw0=0;
+			}else{
+				if(b)this.shw(b,1);
+				z.className+=" on";
+				this.shw0=z;
+			}
 		},foci:function(a,b){
 			if(b)a.placeholder=b;
 			a.focus();
@@ -114,7 +122,7 @@
 	app.language();
 	EndDOM(function(){
 		var r=html.querySelector("[src$='root.js']"),a=body.querySelector(".mnu"),b=r.src;
-		b=b.substr(0,b.length-7);
+		b=b.replace(/[^\/]+$/,"");
 		app.pjs=b;
 		app.pskin=b+a.getAttribute("data-skin")+"/";
 		a.removeAttribute("data-skin");
@@ -132,9 +140,14 @@
 	addEventListener("click",function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 			switch(p.constructor){
-			case HTMLButtonElement:ncall(on,p,e);break;
+			case HTMLButtonElement:
+				ncall(on,p,e);
+				z(app.header);
+				z(app.content);
+				break;
 			}
 		}
+		function z(a){if(a)ncall(a.on,p,e)}
 	});
 
 	function load(dir,node){
@@ -145,7 +158,7 @@
 				f=doc.createDocumentFragment();
 				f.innerHTML=this.response;
 				for(var a=f.querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
-					t(a[i],attach(a[i],function(){
+					t(a[i],app.attach(a[i],function(){
 						node.parentNode.replaceChild(node,f);
 					}));
 				}
@@ -155,32 +168,46 @@
 	}
 	function deploy(){
 		for(var a=body.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
-			t(a[i],attach(a[i],a[i].getAttribute("data-target")));
+			t(a[i],app.attach(a[i],a[i].getAttribute("data-target")));
 		}
 	}
-	function attach(div){
-		var m,n=div.getAttribute("data-module");
+	function attach(div,target){
+		var n=div.getAttribute("data-module"),m=module[n];
 
-		if(module[n])module[n].entry(a[i]);
-		else{
+		if(m){
+			m.entry.call(a[i],m,app);
+			if(m.onload)m.onload();
+		}else
 			m=module[n]={
 				src:app.src(n,function(){
 					
 				}),
 				css:null,lang:null,
 				entry:null,
-				reload:null,
-				unload:null,
+				onload:null,
+				onreload:null,
+				onunload:null,
 				show:null
 			};
-			return m;
+
+		if(target){
+			detach(target);
+			app[target]=m;
 		}
+
+		return m;
+	}
+	function detach(target){
+		a=app[target];
+		a.onunload();
+		app[target]=0;
 	}
 	function t(a,b){
 		a.onload=function(p){
-			b.entry=p;
-			p.call(a,b,app);
-			if(b.reload)b.reload();
+			this.onload=null;
+			(b.entry=p).call(a,b,app);
+			if(b.onload)b.onload();
+			if(b.onreload)b.onreload();
 		};
 		b.show=function(){
 			a.removeAttribute("data-module");

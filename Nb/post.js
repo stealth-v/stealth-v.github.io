@@ -3,7 +3,16 @@ t("post",function(m,app){
 	art=this.querySelector("article.t").cloneNode(true),
 	sc=this.querySelector(".sc"),
 	go=this.querySelector(".go"),
-	self={
+	on={
+		sc:function(){
+			app.shw(sc);
+			app.foci(sc.querySelector("[type=serach"));
+		},go:function(i){
+			app.shw(go);
+			if(i>0)app.foci(go.querySelector("input"),i);
+		}
+	},
+	self={on:on,
 		update:function(page,url){
 			if(!(/\b=\d+/.test(url)))url=url.replace("?","?p=1&");
 			var a=content.querySelectorAll(".navp"),b,i=0;
@@ -67,29 +76,20 @@ t("post",function(m,app){
 				}
 				return 1;
 			},a).send();
-		},sc:function(){
-			app.sh(go,1);
-			app.sh(sc);
-			app.foci(sc.querySelector("[type=serach"));
-		},go:function(i){
-			app.sh(sc,1);
-			app.sh(go);
-			if(i>0)app.foci(go.querySelector("input"),i);
-		},href:function(a){
-			if(a.textContent)a.click();
 		}
 	};
 	art.removeAttribute("class");
 	art=app.parset(art);
 	this.onclick=function(e){
-		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
+		for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 			switch(p.tagName){
 			case "ARTICLE":
-				self.href(p.querySelector("a"));
+				a=p.querySelector("a");
+				if(a.textContent)a.click();
 				return;
 			}
 			switch(p.constructor){
-			case HTMLButtonElement:ncall(self,p,e);return;
+			case HTMLButtonElement:ncall(on,p,e);return;
 			}
 		}
 	};
@@ -128,7 +128,7 @@ t("post",function(m,app){
 		}
 		return false;
 	};
-	m.reload=function(){
+	m.onreload=function(){
 		m.css=app.css("post",function(){
 			m.show();
 		});
