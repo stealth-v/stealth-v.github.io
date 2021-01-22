@@ -1,6 +1,5 @@
 (function(){
-	var module={},langlist="en-US	English\nko-KR	한국어,Korean",
-	aside=doc.querySelector("aside"),
+	var module={},langlist="en-US	English\nko-KR	한국어,Korean",aside,
 	on={
 		cc:function(){
 			app.sh(aside);
@@ -123,6 +122,8 @@
 		b=doc.createElement("style");
 		b.textContent="[data-module]{display:none}";
 		head.insertBefore(b,r);
+
+		aside=doc.querySelector("aside");
 
 		app.reload();
 		deploy();
