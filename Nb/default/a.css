@@ -19,11 +19,7 @@ input{position:relative}
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
 .logo span{padding-left:.5em;font-size:1.5em;white-space:nowrap;vertical-align:middle}
-.opt{display:inline-block;margin-left:.5em;vertical-align:middle}
-.opt div{font-size:.8em}
-.opt a{padding:.5em 0}
-.opt a i{font-size:1.5em}
-.opt a i,.opt a span{vertical-align:middle}
+[href="/subscribe"]{position:absolute;margin:auto;top:0;right:0;bottom:0}
 header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:4.5em;left:0;color:#fff}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
