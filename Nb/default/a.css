@@ -17,14 +17,14 @@ input{position:relative}
 .bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
-.logo img{width:auto;height:100%;border:.5em solid transparent;border-radius:50%;box-sizing:border-box}
-.logo span{position:absolute;bottom:4em;left:100%;white-space:nowrap}
+.logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
+.logo span{padding-left:.5em;font-size:1.5em;white-space:nowrap;vertical-align:middle}
 .opt{display:inline-block;margin-bottom:.5em;vertical-align:bottom}
 .opt div{font-size:.8em}
 .opt a{padding:.5em 0}
 .opt a i{font-size:1.5em}
 .opt a i,.opt a span{vertical-align:middle}
-header{position:absolute;padding:0 2em;top:0;right:0;bottom:4em;left:0;;min-width:16em;color:#fff}
+header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:3.5em;left:0;min-width:16em;color:#fff}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
