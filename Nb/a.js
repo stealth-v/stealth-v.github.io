@@ -9,7 +9,7 @@
 		on:on,module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		header:0,content:0,
 		reload:function(){
-			this.lang=this.cssl("app");
+			this.lang=this.cssl("a");
 		},
 		load:load,
 		deploy:deploy,
