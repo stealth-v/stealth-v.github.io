@@ -28,6 +28,7 @@ header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:4.5em;left:0;colo
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
+nav .c{flex:4em 0}
 .nav{flex:1;line-height:2}
 .nav::before{content:"";right:0}
 
