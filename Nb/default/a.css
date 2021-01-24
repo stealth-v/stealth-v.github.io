@@ -30,9 +30,6 @@ nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
 .nav{flex:1;line-height:2}
 .nav::before{content:"";right:0}
-.cc{overflow:hidden;color:#fff}
-.cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
-.cc a::before{content:"";opacity:.3}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
