@@ -21,7 +21,7 @@ section article div:not(.i0){padding-right:10em}
 section article div:not(.i0) .photo
 section article div:not(.i0) .photo+i{display:none}
 section article h1{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-section article h1 em{color:#07f;font-style:normal}
+section article h1 em{color:var(--fore);font-style:normal}
 section article p{position:relative;margin:0;font-size:5em;overflow:hidden;text-overflow:ellipsis}
 section article p span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
 section article img{position:absolute;margin:auto;padding:.8em;border-radius:1em;top:0;right:0;bottom:0;max-width:10em;max-height:100%;box-sizing:border-box}
