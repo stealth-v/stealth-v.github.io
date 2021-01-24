@@ -21,7 +21,7 @@ input{position:relative}
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
 .logo span{padding-left:.5em;white-space:nowrap;vertical-align:middle}
-[href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:0;bottom:0;width:2em;height:2em;text-align:center;line-height:2}
+[href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:4em;bottom:0;width:2em;height:2em;text-align:center;line-height:2}
 header{position:absolute;top:0;right:0;bottom:4em;left:0;color:#fff}
 header button:hover{color:var(--fore)}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
@@ -43,7 +43,7 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 @media (min-width:401px){
 	.logo span{font-size:1.5em}
 	header{padding:0 2em;top:.5em;bottom:4.5em}
-	[href="/subscribe"]{right:4em;width:8em}
+	[href="/subscribe"]{width:8em}
 }
 
 i.l{margin-right:.4em}
