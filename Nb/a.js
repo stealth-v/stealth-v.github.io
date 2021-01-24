@@ -1,9 +1,6 @@
 (function(){
-	var module={},langlist="en-US	English\nko-KR	한국어,Korean",aside,
+	var module={},langlist="en-US	English\nko-KR	한국어,Korean",
 	on={
-		cc:function(){
-			app.shw(aside);
-		}
 	},
 	app={
 		on:on,module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
@@ -129,8 +126,6 @@
 		b=doc.createElement("style");
 		b.textContent="[data-module]{display:none}";
 		head.insertBefore(b,r);
-
-		aside=doc.querySelector("aside");
 
 		app.reload();
 		deploy();

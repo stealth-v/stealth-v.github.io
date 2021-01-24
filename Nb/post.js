@@ -1,10 +1,13 @@
 t("post",function(m,app){
 	var content=this,
 	art=this.querySelector("article.t").cloneNode(true),
+	aside=doc.querySelector("aside"),
 	sc=this.querySelector(".sc"),
 	go=this.querySelector(".go"),
 	on={
-		sc:function(){
+		cc:function(){
+			app.shw(aside);
+		},sc:function(){
 			app.shw(sc);
 			app.foci(sc.querySelector("[type=search"));
 		},go:function(i){
