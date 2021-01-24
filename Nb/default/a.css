@@ -2,7 +2,7 @@
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
-a:hover,button:hover,a.on{color:var(--fore)}
+a:hover,a.on{color:var(--fore)}
 input{position:relative}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
@@ -23,6 +23,7 @@ input{position:relative}
 .logo span{padding-left:.5em;font-size:1.5em;white-space:nowrap;vertical-align:middle}
 [href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:4em;bottom:0;width:8em;height:2em;text-align:center;line-height:2}
 header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:4.5em;left:0;color:#fff}
+header button:hover{color:var(--fore)}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
