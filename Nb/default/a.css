@@ -6,7 +6,7 @@ input{position:relative}
 
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
 .mc button,.mc a{position:relative;padding:0;border:0;width:2em;height:2em;font-size:1em;color:inherit;background-color:transparent}
-.mnu{position:relative;min-height:8em}
+.mnu{position:relative;min-height:4em}
 .tu{width:40%;vertical-align:top;visibility:hidden}
 .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
 .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
@@ -24,7 +24,7 @@ input{position:relative}
 .opt a{padding:.5em 0}
 .opt a i{font-size:1.5em}
 .opt a i,.opt a span{vertical-align:middle}
-header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:3.5em;left:0;min-width:16em;color:#fff}
+header{position:absolute;padding:0 2em;top:.5em;right:0;bottom:4.5em;left:0;min-width:16em;color:#fff}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
