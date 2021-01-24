@@ -19,7 +19,7 @@ input{position:relative}
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
 .logo span{padding-left:.5em;font-size:1.5em;white-space:nowrap;vertical-align:middle}
-.opt{display:inline-block;margin-bottom:.5em;vertical-align:bottom}
+.opt{display:inline-block;margin-left:.5em;vertical-align:middle}
 .opt div{font-size:.8em}
 .opt a{padding:.5em 0}
 .opt a i{font-size:1.5em}
