@@ -8,15 +8,11 @@ input{position:relative}
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
 .mc button{color:inherit;background-color:transparent}
 .mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
-.mnu{position:relative;min-height:4em}
-.tu{width:40%;min-height:2em;vertical-align:top;visibility:hidden}
-.tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
-.tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
+.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 .qk{position:absolute;border-radius:.5em 0 0 .5em;top:0;right:0;background:#fffa}
 .qk i{vertical-align:middle}
 .qk button{background:none}
 .qk button,.qk a{float:left}
-.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
@@ -30,6 +26,11 @@ nav .b::before{border-radius:0 1em 1em 0}
 nav .c{flex:4em 0}
 .nav{flex:1;line-height:2}
 .nav::before{content:"";right:0}
+
+.mnu{position:relative;min-height:4em}
+.mnu .tu{width:40%;min-height:2em;vertical-align:top;visibility:hidden}
+.mnu .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
+.mnu .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
