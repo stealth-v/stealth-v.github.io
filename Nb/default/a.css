@@ -45,7 +45,11 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 @media (min-width:401px){
 	.logo span{font-size:1.5em}
 	.mnu header{padding:0 2em;top:.5em;bottom:4.5em}
+	.mn1 header{height:inherit}
 	[href="/subscribe"]{width:8em}
+}
+@media (min-width:760px){
+	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
 }
 
 i.l{margin-right:.4em}
