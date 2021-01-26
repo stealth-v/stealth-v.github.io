@@ -5,7 +5,7 @@
 	app={
 		on:on,module:module,lang:0,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		header:0,content:0,
-		reload:function(){
+		onreload:function(){
 			this.lang=this.cssl("a");
 		},
 		load:load,
@@ -117,7 +117,7 @@
 
 	app.language();
 	EndDOM(function(){
-		var r=html.querySelector("[src$='root.js']"),a=body.querySelector(".mnu"),b=r.src;
+		var r=html.querySelector("[src$='root.js']"),a=body.querySelector("[data-skin]"),b=r.src;
 		b=b.replace(/[^\/]+$/,"");
 		app.pjs=b;
 		app.pskin=b+a.getAttribute("data-skin")+"/";
@@ -127,7 +127,7 @@
 		b.textContent="[data-module]{display:none}";
 		head.insertBefore(b,r);
 
-		app.reload();
+		app.onreload();
 		deploy();
 	});
 
