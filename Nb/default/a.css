@@ -35,6 +35,7 @@ nav .c{flex:4em 0}
 .mn1{position:relative;height:4em}
 .mn1::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
 .mn1 header{height:2em}
+.mn1 .logo span{font-size:1em}
 .mn1 [href="/subscribe"]{bottom:auto}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
