@@ -17,7 +17,7 @@ input{position:relative}
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
 .logo span{padding-left:.5em;white-space:nowrap;vertical-align:middle}
-[href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:5em;bottom:0;width:2em;height:2em;text-align:center;line-height:2}
+[href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:4.5em;bottom:0;width:2em;height:2em;text-align:center;line-height:2}
 header button:hover{color:var(--fore)}
 nav{display:flex;margin:auto;bottom:-2em;max-width:32em;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
@@ -53,6 +53,7 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 	.mn1{height:2em}
 	.mn1 header{height:inherit}
 	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
+	[href="/subscribe"]{bottom:auto}
 }
 
 i.l{margin-right:.4em}
