@@ -31,9 +31,9 @@ nav .c{flex:4em 0}
 .mnu .tu{width:40%;min-height:2em;vertical-align:top;visibility:hidden}
 .mnu .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
 .mnu .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
-.mn1{position:relative;height:3em}
+.mn1{position:relative;height:4em}
 .mn1::after{content:"";z-index:-1;position:absolute;left:0;bottom:0;right:0;border-top:1px solid}
-.mn1 header{height:inherit}
+.mn1 header{height:2em}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
@@ -50,6 +50,8 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 	[href="/subscribe"]{width:8em}
 }
 @media (min-width:760px){
+	.mn1{height:2em}
+	.mn1 header{height:inherit}
 	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
 }
 
