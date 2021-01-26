@@ -54,6 +54,7 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 }
 @media (min-width:760px){
 	.mn1{height:2em}
+	.mn1 .logo{display:inline-block;padding-right:0;height:inherit;width:10em;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
 	.mn1 header{height:inherit}
 	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
 }
