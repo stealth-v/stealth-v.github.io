@@ -35,6 +35,7 @@ nav .c{flex:4em 0}
 .mn1{position:relative;height:4em}
 .mn1::after{content:"";z-index:-1;position:absolute;left:0;bottom:0;right:0;border-top:1px solid}
 .mn1 header{height:2em}
+.mn1 [href="/subscribe"]{bottom:auto}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
@@ -54,7 +55,6 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 	.mn1{height:2em}
 	.mn1 header{height:inherit}
 	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
-	[href="/subscribe"]{bottom:auto}
 }
 
 i.l{margin-right:.4em}
