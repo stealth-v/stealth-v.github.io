@@ -18,16 +18,16 @@ input{position:relative}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
 .logo span{padding-left:.5em;white-space:nowrap;vertical-align:middle}
 [href="/subscribe"]{position:absolute;margin:auto;border:1px solid var(--fore);border-radius:.2em;top:0;right:4em;bottom:0;width:2em;height:2em;text-align:center;line-height:2}
-header{position:absolute;top:0;right:0;bottom:4em;left:0;color:#fff}
+header{position:absolute;top:0;right:0;bottom:4em;left:0}
 header button:hover{color:var(--fore)}
-nav{display:flex;margin:auto;bottom:-2em;max-width:32em;color:#fff;text-align:center}
+nav{display:flex;margin:auto;bottom:-2em;max-width:32em;text-align:center}
 nav .a::before{border-radius:1em 0 0 1em}
 nav .b::before{border-radius:0 1em 1em 0}
 nav .c{flex:4em 0}
 .nav{flex:1;line-height:2}
 .nav::before{content:"";right:0}
 
-.mnu{position:relative;min-height:4em}
+.mnu{position:relative;min-height:4em;color:#fff}
 .mnu .tu{width:40%;min-height:2em;vertical-align:top;visibility:hidden}
 .mnu .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
 .mnu .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
