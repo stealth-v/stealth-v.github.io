@@ -23,4 +23,6 @@
 .postview article .lay-table-5 tr:first-child{border-bottom:1px solid #aaa}
 .postview article .lay-table-6 tr:first-child{border-bottom:2px solid #333}
 .postview article .lay-table-6 tr:not(:first-child){border-bottom:1px solid #eee}
-.postview article .lay-table-7{}
+.postview article .lay-table-7 tr{border:solid #eee;border-width:1px 0}
+.postview article .lay-table-7 tr:first-child{background:#eee}
+.postview article .lay-table-7 tr:nth-child(odd){background:#f7f7f7}
