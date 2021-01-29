@@ -9,7 +9,8 @@
 .postview article .lay-table-1{border:2px solid #ddd}
 .postview article .lay-table-0 td,
 .postview article .lay-table-1 td{border:1px solid #ddd}
-.postview article .lay-table-2{}
+.postview article .lay-table-2{border:1px solid #ddd}
+.postview article .lay-table-2 td{border:1px dashed #ddd}
 .postview article .lay-table-3{}
 .postview article .lay-table-4{}
 .postview article .lay-table-5{}
