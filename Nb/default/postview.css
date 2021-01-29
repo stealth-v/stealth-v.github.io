@@ -5,3 +5,13 @@
 .postview article h4,
 .postview article h5,
 .postview article h6{margin:.5em 0}
+.postview article table{border-collapse:collapse}
+.postview article table tr,td{border:inherit}
+.postview article .lay-table-0{}
+.postview article .lay-table-1{}
+.postview article .lay-table-2{}
+.postview article .lay-table-3{}
+.postview article .lay-table-4{}
+.postview article .lay-table-5{}
+.postview article .lay-table-6{}
+.postview article .lay-table-7{}
