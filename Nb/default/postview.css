@@ -11,8 +11,10 @@
 .postview article .lay-table-1 td{border:1px solid #ddd}
 .postview article .lay-table-2{border:1px solid #ddd}
 .postview article .lay-table-2 td{border:1px dashed #ddd}
-.postview article .lay-table-3{}
-.postview article .lay-table-4{}
+.postview article .lay-table-3{border:solid #888;border-width:2px 0}
+.postview article .lay-table-3 tr:not(:first-child):last-child td{border-top:3px double;border-color:inherit}
+.postview article .lay-table-4{border:solid #888;border-width:1px 0}
+.postview article .lay-table-4 td{border:solid #eee;border-width:1px 0}
 .postview article .lay-table-5{}
 .postview article .lay-table-6{}
 .postview article .lay-table-7{}
