@@ -1,1 +1,7 @@
-.postview article p{margin:0}
+.postview article p{margin:.25em 0}
+.postview article h1,
+.postview article h2,
+.postview article h3,
+.postview article h4,
+.postview article h5,
+.postview article h6{margin:.5em 0}
