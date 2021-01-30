@@ -1,7 +1,7 @@
 t("post",function(m,app){
 	var content=this,
 	art=this.querySelector("article.t").cloneNode(true),
-	aside=doc.querySelector("aside"),
+	aside=this.parentNode.querySelector("aside"),
 	sc=this.querySelector(".sc"),
 	go=this.querySelector(".go"),
 	on={
