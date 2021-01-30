@@ -30,3 +30,9 @@
 .postview article .lay-table-7 tr{border:solid #eee;border-width:1px 0}
 .postview article .lay-table-7 tr:nth-child(odd){background:#f7f7f7}
 .postview article .lay-table-7 tr:first-child{background:#e3e3e3}
+.postview article blockquote.default{}
+.postview article blockquote.line{}
+.postview article blockquote.bubble{}
+.postview article blockquote.underline{}
+.postview article blockquote.postit{}
+.postview article blockquote.corner{}

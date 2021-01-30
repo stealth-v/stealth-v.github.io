@@ -161,7 +161,7 @@
 		x.send();
 	}
 	function deploy(){
-		for(var a=body.querySelectorAll(".-module"),i=a.length-1;i>=0;i--){
+		for(var a=body.querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
 			t(a[i],app.attach(a[i],a[i].getAttribute("data-target")));
 		}
 	}
