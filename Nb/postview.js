@@ -23,8 +23,8 @@ xu.t("postview",function(m,app){
 			if(app.viewport){
 
 			}
-			if(sourcecode)sourcecode=xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js",self.load_code,"sourcecode");
-			else self.load_code();
+			if(sourcecode)self.load_code();
+			else sourcecode=xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js",self.load_code,"sourcecode");
 			xu.stylesheet.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css",0,"sourcecode");
 		}
 
