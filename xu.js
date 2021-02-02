@@ -52,7 +52,6 @@ var xu={
 		function x(content,app){
 			this.content=content;
 			this.app=app;
-			this.load();
 		}
 		x.prototype.url_prefix=null;
 		x.prototype.template=function(p,path){
