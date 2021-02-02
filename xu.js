@@ -78,7 +78,7 @@ var xu={
 				t=this;
 				wait=[];
 				m=xu.module[n]={
-					src:xu.script.new(n,function(a,e){
+					src:xu.script.new(this.url_prefix?this.url_prefix(n):n,function(a,e){
 						if(e)delete xu.module[n];
 					}),
 					exports:function(){
@@ -115,7 +115,7 @@ var xu={
 		};
 		x.prototype.load=function(dom,target){
 			for(var a=(dom||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
-				this.procedure(this.url_prefix?this.url_prefix(a[i]):a[i],target);
+				this.procedure(a[i],target);
 			}
 		};
 		x.prototype.unload=function(name){
