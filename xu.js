@@ -230,7 +230,7 @@ var xu={
 		var t=this,z={},y={};
 		return {
 			new:function(a,b){
-				var s=doc.createElement("script");
+				var s=xu.doc.createElement("script");
 				t.hhv(s,b);
 				s.src=a;
 				xu.head.insertBefore(s,xu.style0);
@@ -264,7 +264,7 @@ var xu={
 		var t=this,z={},y={};
 		return {
 			new:function(a,b){
-				var s=doc.createElement("link");
+				var s=xu.doc.createElement("link");
 				t.hhv(s,b);
 				s.rel="stylesheet";
 				s.href=a;
