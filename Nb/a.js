@@ -14,9 +14,16 @@ xu.r(function(){
 		unload:function(){
 			xu.stylesheet.unload("a");
 		},
-		attach:function(path,node,target){
+		attach:function(path,target){
 			x.template(function(f){
+				var p,ex=app[target];
 				x.load(f,target);
+				if(ex){
+					p=ex.freg.parentNode;
+					p.insertBefore(f,ex.freg);
+					p.removeChild(ex.freg);
+					if(ex.unload)ex.unload();
+				}
 				x.refrash();
 			},path);
 		},

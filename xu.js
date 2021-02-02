@@ -66,13 +66,16 @@ var xu={
 			},path);
 			x.send();
 		};
-		x.prototype.procedure=function(dom,target){
+		x.prototype.procedure=function(dom,target,freg){
 			var t,a,wait,n=dom.getAttribute("data-module"),m=xu.module[n];
 
 			if(m){
 				if(m.exports){
 					a=m.exports.call(dom);
-					if(target)this.app[target]=a;
+					if(target){
+						this.app[target]=a;
+						if(a)a.freg=freg;
+					}
 				}
 			}else{
 				t=this;
@@ -107,15 +110,18 @@ var xu={
 							if(!b)a.removeAttribute("class");
 
 							b=ex.call(a);
-							if(target)t.app[target]=b;
+							if(target){
+								t.app[target]=b;
+								if(b)b.freg=freg;
+							}
 						}
 					}
 				};
 			}
 		};
-		x.prototype.load=function(dom,target){
-			for(var a=(dom||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
-				this.procedure(a[i],target||a[i].getAttribute("data-target"));
+		x.prototype.load=function(freg,target){
+			for(var a=(freg||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
+				this.procedure(a[i],target||a[i].getAttribute("data-target"),freg);
 			}
 		};
 		x.prototype.unload=function(name){

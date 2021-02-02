@@ -16,7 +16,7 @@ xu.t("post",function(m,app){
 				if(i>0)xu.focus(go.querySelector("input"),i);
 			}
 		},
-		self={on:on,
+		self={on:on,freg:null,
 			update:function(page,url){
 				if(!(/\b=\d+/.test(url)))url=url.replace("?","?p=1&");
 				var a=content.querySelectorAll(".navp"),b,i=0;
