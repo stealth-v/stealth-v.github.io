@@ -94,7 +94,7 @@ var xu={
 				dom.onload=function(proc){
 					this.onload=null;
 
-					proc(m,this.app);
+					proc(m,t.app);
 					if(m.reload)m.reload();
 					if(m.task)m.task(fin);
 					else fin();
