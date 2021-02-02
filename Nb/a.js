@@ -42,7 +42,7 @@ xu.r(function(){
 	xu.lang.apply();
 
 	var r=xu.html.querySelector("[src$='xu.js']"),a=xu.body.querySelector("[data-skin]");
-	app.pjs=r.src.replace(/[^\/]+$/,"");
+	app.pjs=r.src.replace(/[^\/]+$/,"")+"Nb/";
 	app.pskin=app.pjs+a.getAttribute("data-skin")+"/";
 	a.removeAttribute("data-skin");
 
