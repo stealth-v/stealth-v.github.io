@@ -1,12 +1,8 @@
 xu.t("postview",function(m,app){
 	m.exports=function(){
-		var content=this;
-		
-		m.reload=function(){
-			m.css=app.css("postview",function(){
-				m.show();
-			});
-		};
+		var content=this,
+		self={};
+
 		return self;
 	};
 
