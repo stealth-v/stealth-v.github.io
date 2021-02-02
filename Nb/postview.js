@@ -16,16 +16,14 @@ xu.t("postview",function(m,app){
 				}
 			},
 			load_code1:function(){
-				var idx=0;
-				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js",l,"clike");
-				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js",l,"xml");
-				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js",l,"javascript");
-				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js",function(a,e){
-					if(!e)xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js",l,"htmlmixed");
-				},"css");
+				var i1=0,i2=0;
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js",l1,"clike");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js",l2,"xml");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js",l2,"javascript");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js",l2,"css");
 
-				function l(){
-					if(++idx>3){
+				function l1(a,e){
+					if(!e&&++i1>1){
 						for(var editor,i=code.length-1;i>=0;i--){
 							editor=CodeMirror.fromTextArea(code[i],{
 								lineNumbers:true,
@@ -34,6 +32,11 @@ xu.t("postview",function(m,app){
 								mode:"text/x-c++src"
 							});
 						}
+					}
+				}
+				function l2(a,e){
+					if(!e&&++i2>2){
+						xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js",l1,"htmlmixed");
 					}
 				}
 			}
