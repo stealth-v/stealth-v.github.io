@@ -41,7 +41,7 @@ xu.r(function(){
 		}
 	});
 
-	x.url_prefix=function(a){return this.pjs+a+"js"};
+	x.url_prefix=function(a){return app.pjs+a+"js"};
 	x.load();
 
 	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
