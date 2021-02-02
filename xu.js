@@ -128,7 +128,9 @@ var xu={
 				if(!body.querySelector("[data-module='"+n+"']"))this.unload(n);
 			}
 		};
-		return x;
+		return function(){
+			return new Function.prototype.bind.apply(x,arguments);
+		}
 	})(),
 	template:function(src){
 		var o,y=doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
