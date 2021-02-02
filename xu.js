@@ -227,11 +227,11 @@ var xu={
 		},b,c);
 	},
 	script:(function(){
-		var t=this,z={},y={};
+		var z={},y={};
 		return {
 			new:function(a,b){
 				var s=xu.doc.createElement("script");
-				t.hhv(s,b);
+				xu.hhv(s,b);
 				s.src=a;
 				xu.head.insertBefore(s,xu.style0);
 				return s;
@@ -261,11 +261,11 @@ var xu={
 		}
 	})(),
 	stylesheet:(function(){
-		var t=this,z={},y={};
+		var z={},y={};
 		return {
 			new:function(a,b){
 				var s=xu.doc.createElement("link");
-				t.hhv(s,b);
+				xu.hhv(s,b);
 				s.rel="stylesheet";
 				s.href=a;
 				head.insertBefore(s,xu.style0);
