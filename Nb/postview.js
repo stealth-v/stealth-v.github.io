@@ -13,7 +13,8 @@ xu.t("postview",function(m,app){
 			load_code:function(){
 				for(var editor,i=code.length-1;i>=0;i--){
 					editor=CodeMirror.fromTextArea(code[i],{
-						lineNumbers:true
+						lineNumbers:true,
+						readonly:true
 					});
 				}
 			}
