@@ -13,7 +13,7 @@ var xu={
 			xu.head=xu.doc.head;
 			xu.title=xu.head.querySelector("title");
 			xu.body=xu.doc.body;
-			var a=xu.style0=doc.createElement("style");
+			var a=xu.style0=xu.doc.createElement("style");
 			a.textContent=".xu-loading{display:none}";
 			xu.head.appendChild(a);
 			for(var i=a.length-1;i>=0;i--)a[i]();
