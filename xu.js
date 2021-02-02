@@ -21,7 +21,7 @@ var xu={
 		}
 	})([]),
 	t:function(a,b){
-		for(var z=body.querySelectorAll("[data-module='"+a+"']"),i=z.length-1;i>=0;i--){
+		for(var z=xu.body.querySelectorAll("[data-module='"+a+"']"),i=z.length-1;i>=0;i--){
 			if(z[i].onload)z[i].onload(b);
 		}
 	},
