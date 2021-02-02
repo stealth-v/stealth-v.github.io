@@ -42,7 +42,7 @@ var xu={
 			function z(a){
 				if(m=new RegExp("^("+a+"[^\t]*)\t(.*)","im").exec(t.set)){
 					xu.doc.cookie="lang="+m[1];
-					t.currrent=m[1];
+					t.current=m[1];
 					t.text=m[2];
 				}else return 1;
 			}
