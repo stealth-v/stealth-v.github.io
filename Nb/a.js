@@ -48,7 +48,7 @@ xu.r(function(){
 		}
 	});
 
-	app.viewport=xu.head.querySelector("name=viewport");
+	app.viewport=xu.head.querySelector("[name=viewport]");
 
 	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
