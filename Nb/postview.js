@@ -14,7 +14,8 @@ xu.t("postview",function(m,app){
 				for(var editor,i=code.length-1;i>=0;i--){
 					editor=CodeMirror.fromTextArea(code[i],{
 						lineNumbers:true,
-						readonly:true
+						tabSize:2,
+						readOnly:true
 					});
 				}
 			}
