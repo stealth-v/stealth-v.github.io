@@ -115,7 +115,7 @@ var xu={
 		};
 		x.prototype.load=function(dom,target){
 			for(var a=(dom||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
-				this.procedure(a[i],target);
+				this.procedure(a[i],target||a[i].getAttribute("data-target"));
 			}
 		};
 		x.prototype.unload=function(name){
