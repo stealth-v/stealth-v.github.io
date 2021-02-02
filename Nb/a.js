@@ -41,8 +41,8 @@ xu.r(function(){
 	xu.lang.set+="\nko-KR	한국어,Korean";
 	xu.lang.apply();
 
-	var r=xu.html.querySelector("[src$='xu.js']"),a=xu.body.querySelector("[data-skin]");
-	app.pjs=r.src.replace(/[^\/]+$/,"")+"Nb/";
+	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
+	app.pjs=r.src.replace(/[^\/]+$/,"");
 	app.pskin=app.pjs+a.getAttribute("data-skin")+"/";
 	a.removeAttribute("data-skin");
 
