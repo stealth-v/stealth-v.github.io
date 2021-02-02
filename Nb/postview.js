@@ -21,7 +21,7 @@ xu.t("postview",function(m,app){
 						lineNumbers:true,
 						tabSize:2,
 						readOnly:true,
-						mode:"clike"
+						mode:"text/x-c++src"
 					});
 				}
 				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js","clike");
