@@ -334,7 +334,7 @@ var xu={
 		a.focus();
 	},
 	toggle0:0,
-	toggle:function(f,z){
+	toggle:function(z,f){
 		var a=z.className,b=this.toggle0;
 		if(f||/ on$/.test(a)){
 			z.className=a.replace(/\son/g,"");
