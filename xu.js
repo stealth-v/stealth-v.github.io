@@ -1,5 +1,6 @@
 var xu={
-	win:window,loc:location,doc:document,html:document.documentElement,head:0,title:0,body:0,
+	win:window,loc:location,doc:document,html:document.documentElement,
+	head:0,title:0,body:0,
 	style0:0,
 	r:(function(a){
 		document.addEventListener("DOMContentLoaded",y);
@@ -13,9 +14,9 @@ var xu={
 			xu.head=xu.doc.head;
 			xu.title=xu.head.querySelector("title");
 			xu.body=xu.doc.body;
-			var a=xu.style0=xu.doc.createElement("style");
-			a.textContent=".xu-loading{display:none}";
-			xu.head.appendChild(a);
+			var b=xu.style0=xu.doc.createElement("style");
+			b.textContent=".xu-loading{display:none}";
+			xu.head.appendChild(b);
 			for(var i=a.length-1;i>=0;i--)a[i]();
 		}
 	})([]),
