@@ -133,7 +133,7 @@ var xu={
 		}
 	})(),
 	template:function(src){
-		var o,y=doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+		var o,y=xu.doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
 
 		y.appendChild(src);
 		o=y.querySelectorAll("*");
@@ -148,7 +148,7 @@ var xu={
 		}
 
 		return function(j){
-			var w,du=src.cloneNode(true),d1=doc.createElement("div"),d2=doc.createElement("div");
+			var w,du=src.cloneNode(true),d1=xu.doc.createElement("div"),d2=xu.doc.createElement("div");
 
 			d1.appendChild(du);
 			w=d1.querySelectorAll("*");
