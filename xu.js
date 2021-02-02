@@ -114,7 +114,7 @@ var xu={
 			}
 		};
 		x.prototype.load=function(dom,target){
-			for(var a=(dom||body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
+			for(var a=(dom||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
 				this.procedure(a[i],target);
 			}
 		};
@@ -125,7 +125,7 @@ var xu={
 		};
 		x.prototype.refrash=function(){
 			for(var n in this.module){
-				if(!body.querySelector("[data-module='"+n+"']"))this.unload(n);
+				if(!xu.body.querySelector("[data-module='"+n+"']"))this.unload(n);
 			}
 		};
 		return function(content,app){
