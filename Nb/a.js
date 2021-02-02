@@ -41,15 +41,14 @@ xu.r(function(){
 		}
 	});
 
-	x.url_prefix=function(a){return app.pjs+a+"js"};
-	x.load();
-
 	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
 	app.pskin=app.pjs+a.getAttribute("data-skin")+"/";
 	a.removeAttribute("data-skin");
 
 	app.reload();
+	x.url_prefix=function(a){return app.pjs+a+"js"};
+	x.load();
 
 	addEventListener("click",function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
