@@ -78,7 +78,7 @@ var xu={
 				t=this;
 				wait=[];
 				m=xu.module[n]={
-					src:xu.script.new(n,function(a,e){
+					src:xu.script.new(n+".js",function(a,e){
 						if(e)delete xu.module[n];
 					}),
 					exports:function(){

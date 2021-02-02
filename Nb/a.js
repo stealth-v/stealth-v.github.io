@@ -24,8 +24,8 @@ xu.r(function(){
 			for(;a<=b;a++)rt(a);
 		},
 		ctl:function(a,b){return xu.post(b,this.pjs+a)},
-		src:function(a,b){return xu.script.new(this.pjs+a+".js",b,a)},
-		css:function(a,b){return xu.stylesheet.new(this.pskin+a+".css",b,a)},
+		src:function(a,b){return xu.script.new(this.pjs+a+".js",b)},
+		css:function(a,b){return xu.stylesheet.new(this.pskin+a+".css",b)},
 		cssl:function(a,b){
 			return xu.stylesheet.new(this.pskin+a+"+"+xu.lang.current+".css",function(a,e){
 				if(b)b(a,e);
