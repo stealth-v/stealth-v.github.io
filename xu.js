@@ -2,6 +2,7 @@ var xu={
 	win:window,loc:location,doc:document,html:document.documentElement,
 	head:0,title:0,body:0,
 	style0:0,
+	module:{},
 	r:(function(a){
 		document.addEventListener("DOMContentLoaded",y);
 		return z;
@@ -53,7 +54,6 @@ var xu={
 			this.app=app;
 			this.load();
 		}
-		x.prototype.module=[];
 		x.prototype.template=function(p,path){
 			var f,x=post(function(a,e){
 				if(e){
@@ -67,7 +67,7 @@ var xu={
 			x.send();
 		};
 		x.prototype.procedure=function(dom,target){
-			var t,a,wait,n=dom.getAttribute("data-module"),m=this.module[n];
+			var t,a,wait,n=dom.getAttribute("data-module"),m=xu.module[n];
 
 			if(m){
 				if(m.exports){
@@ -77,9 +77,9 @@ var xu={
 			}else{
 				t=this;
 				wait=[];
-				m=this.module[n]={
-					src:xu.script.load(n,function(a,e){
-						if(e)delete this.module[n];
+				m=xu.module[n]={
+					src:xu.script.new(n,function(a,e){
+						if(e)delete xu.module[n];
 					}),
 					exports:function(){
 						this.className=(this.className+" xu-loading").trim();
@@ -119,12 +119,12 @@ var xu={
 			}
 		};
 		x.prototype.unload=function(name){
-			var m=this.module[name];
+			var m=xu.module[name];
 			if(m.unload)m.unload();
-			delete this.module[name];
+			delete xu.module[name];
 		};
 		x.prototype.refrash=function(){
-			for(var n in this.module){
+			for(var n in xu.module){
 				if(!xu.body.querySelector("[data-module='"+n+"']"))this.unload(n);
 			}
 		};
