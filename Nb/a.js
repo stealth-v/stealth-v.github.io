@@ -2,7 +2,7 @@ xu.r(function(){
 	var module={},langlist="en-US	English\nko-KR	한국어,Korean",
 	on={
 	},
-	app,x=xu.new(body,app={
+	app,x=xu.new(xu.body,app={
 		on:on,module:module,langcur:0,langlist:langlist,langtxt:0,pjs:0,pskin:0,
 		header:0,content:0,
 		reload:function(){
@@ -59,4 +59,4 @@ xu.r(function(){
 		}
 		function z(a){if(a)xu.ncall(a.on,p,e)}
 	});
-})()
+})
