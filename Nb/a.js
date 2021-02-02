@@ -1,4 +1,7 @@
 xu.r(function(){
+	xu.lang.set+="\nko-KR	한국어,Korean";
+	xu.lang.apply();
+
 	var module={},
 	on={
 	},
@@ -38,8 +41,9 @@ xu.r(function(){
 		}
 	});
 
-	xu.lang.set+="\nko-KR	한국어,Korean";
-	xu.lang.apply();
+	x.url_prefix=function(a){
+		return this.pjs+a+"js";
+	};
 
 	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
