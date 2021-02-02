@@ -268,7 +268,7 @@ var xu={
 				xu.hhv(s,b);
 				s.rel="stylesheet";
 				s.href=a;
-				head.insertBefore(s,xu.style0);
+				xu.head.insertBefore(s,xu.style0);
 				return s;
 			},
 			delete:function(a){
