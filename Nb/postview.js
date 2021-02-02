@@ -16,7 +16,7 @@ xu.t("postview",function(m,app){
 				}
 			},
 			load_code1:function(){
-				var i=0;
+				var idx=0;
 				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js",l,"clike");
 				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js",l,"xml");
 				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js",l,"javascript");
@@ -25,7 +25,7 @@ xu.t("postview",function(m,app){
 				},"css");
 
 				function l(){
-					if(++i>3){
+					if(++idx>3){
 						for(var editor,i=code.length-1;i>=0;i--){
 							editor=CodeMirror.fromTextArea(code[i],{
 								lineNumbers:true,
