@@ -68,7 +68,7 @@ xu.t("post",function(m,app){
 				}
 			},page:function(a,i){
 				history.pushState("","",a);
-				post(function(s,e){
+				xu.post(function(s,e){
 					if(this.readyState==4){
 						if(this.response)self.reload(JSON.parse(this.response));
 						else self.reload([]);
