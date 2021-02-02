@@ -1,5 +1,5 @@
 var xu={
-	win:window,loc:location,doc:document,html:doc.documentElement,head:0,title:0,body:0,
+	win:window,loc:location,doc:document,html:document.documentElement,head:0,title:0,body:0,
 	style0:0,
 	r:(function(a){
 		doc.addEventListener("DOMContentLoaded",y);
