@@ -11,7 +11,6 @@ xu.r(function(){
 		unload:function(){
 			xu.stylesheet.unload("a");
 		},
-		load:load,
 		attach:function(path,node,target){
 			x.template(function(f){
 				x.load(f,target);
