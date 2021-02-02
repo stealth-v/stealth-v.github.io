@@ -7,6 +7,11 @@ xu.t("postview",function(m,app){
 			unload:function(){
 				if(code.length){
 					xu.script.unload("sourcecode");
+					xu.script.unload("clike");
+					xu.script.unload("xml");
+					xu.script.unload("javascript");
+					xu.script.unload("htmlmixed");
+					xu.script.unload("css");
 					xu.stylesheet.unload("sourcecode");
 				}
 			},
@@ -15,9 +20,16 @@ xu.t("postview",function(m,app){
 					editor=CodeMirror.fromTextArea(code[i],{
 						lineNumbers:true,
 						tabSize:2,
-						readOnly:true
+						readOnly:true,
+						mode:"clike"
 					});
 				}
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js","clike");
+					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js","xml");
+					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js","javascript");
+					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js","css",function(a,e){
+						if(!e)xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js","htmlmixed");
+					});
 			}
 		};
 
