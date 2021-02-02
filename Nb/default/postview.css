@@ -37,4 +37,4 @@
 .postview article blockquote.postit{}
 .postview article blockquote.corner{}
 .postview article .sourcecode{display:block;width:100%;box-sizing:border-box}
-.postview article .CodeMirror{height:auto}
+.postview article .CodeMirror{margin:2px 0;border:solid;border-width:1px 0;height:auto}
