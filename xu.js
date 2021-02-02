@@ -2,7 +2,7 @@ var xu={
 	win:window,loc:location,doc:document,html:document.documentElement,head:0,title:0,body:0,
 	style0:0,
 	r:(function(a){
-		doc.addEventListener("DOMContentLoaded",y);
+		xu.doc.addEventListener("DOMContentLoaded",y);
 		return z;
 		function z(o){
 			a.push(o);
