@@ -6,7 +6,7 @@ xu.r(function(){
 	on={
 	},
 	app,x=xu.new(xu.body,app={
-		on:on,module:module,pjs:0,pskin:0,
+		on:on,module:module,pjs:0,pskin:0,viewport:0,
 		header:0,content:0,
 		reload:function(){
 			this.cssl("a");
@@ -40,6 +40,8 @@ xu.r(function(){
 			},a,1)
 		}
 	});
+
+	app.viewport=xu.head.querySelector("name=viewport");
 
 	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
