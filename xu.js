@@ -128,8 +128,8 @@ var xu={
 				if(!body.querySelector("[data-module='"+n+"']"))this.unload(n);
 			}
 		};
-		return function(){
-			return new Function.prototype.bind.apply(x,arguments);
+		return function(content,app){
+			return new x(content,app);
 		}
 	})(),
 	template:function(src){
