@@ -36,3 +36,4 @@
 .postview article blockquote.underline{}
 .postview article blockquote.postit{}
 .postview article blockquote.corner{}
+.postview article .sourcecode{display:block;width:100%;box-sizing:border-box}
