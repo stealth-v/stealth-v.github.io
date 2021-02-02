@@ -47,7 +47,7 @@ xu.r(function(){
 	a.removeAttribute("data-skin");
 
 	app.reload();
-	x.url_prefix=function(a){return app.pjs+a+"js"};
+	x.url_prefix=function(a){return app.pjs+a+".js"};
 	x.load();
 
 	addEventListener("click",function(e){
