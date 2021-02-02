@@ -257,11 +257,12 @@ var xu={
 				z[id]=i+1;
 				return y[id]=this.new(a,b);
 			},
-			unload:function(id){
+			unload:function(id,proc){
 				if(--z[id]<1){
 					this.delete(y[id]);
 					delete z[id];
 					delete y[id];
+					if(proc)proc();
 				}
 			}
 		}
