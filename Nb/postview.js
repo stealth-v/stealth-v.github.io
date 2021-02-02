@@ -15,21 +15,27 @@ xu.t("postview",function(m,app){
 					xu.stylesheet.unload("sourcecode");
 				}
 			},
-			load_code:function(){
-				for(var editor,i=code.length-1;i>=0;i--){
-					editor=CodeMirror.fromTextArea(code[i],{
-						lineNumbers:true,
-						tabSize:2,
-						readOnly:true,
-						mode:"text/x-c++src"
-					});
+			load_code1:function(){
+				var i=0;
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js",l,"clike");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js",l,"xml");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js",l,"javascript");
+				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js",function(a,e){
+					if(!e)xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js",l,"htmlmixed");
+				},"css");
+
+				function l(){
+					if(++i>3){
+						for(var editor,i=code.length-1;i>=0;i--){
+							editor=CodeMirror.fromTextArea(code[i],{
+								lineNumbers:true,
+								tabSize:2,
+								readOnly:true,
+								mode:"text/x-c++src"
+							});
+						}
+					}
 				}
-				xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/clike/clike.min.js",0,"clike");
-					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/xml/xml.min.js",0,"xml");
-					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/javascript/javascript.min.js",0,"javascript");
-					xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/css/css.min.js",function(a,e){
-						if(!e)xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/mode/htmlmixed/htmlmixed.min.js","htmlmixed");
-					},"css");
 			}
 		};
 
@@ -37,8 +43,8 @@ xu.t("postview",function(m,app){
 			if(app.viewport){
 
 			}
-			if(sourcecode)self.load_code();
-			else sourcecode=xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js",self.load_code,"sourcecode");
+			if(sourcecode)self.load_code1();
+			else sourcecode=xu.script.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.js",self.load_code1,"sourcecode");
 			xu.stylesheet.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css",0,"sourcecode");
 		}
 
