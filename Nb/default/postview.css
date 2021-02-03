@@ -44,3 +44,5 @@
 .postview article .fd .ext{padding:0 .5em;border-radius:.5em;color:var(--forei);background:var(--fore)}
 .postview article .img{margin:.5em 0}
 .postview article .img img{display:block;width:100%}
+.postview article .img1{margin:.5em 0}
+.postview article .img1 img{}
