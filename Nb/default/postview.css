@@ -42,12 +42,10 @@
 .postview article .fd span{display:inline-block;vertical-align:top}
 .postview article .fd .na{padding-right:.5em;max-width:50%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 .postview article .fd .ext{padding:0 .5em;border-radius:.5em;color:var(--forei);background:var(--fore)}
-.postview article .img{margin:.5em 0}
 .postview article .img img{display:block;width:100%}
-.postview article .img1{margin:.5em 0;line-height:0}
-.postview article .img1 img{width:100%}
-.postview article .img1 div{display:inline-block;margin:0 1px}
-.postview article .img1 div:first-child{margin-left:0}
-.postview article .img1 div:last-child{margin-right:0}
+.postview article .img1{}
+.postview article .img1 img{margin:0 1px;width:100%}
+.postview article .img,
+.postview article .img1{margin:.5em 0;line-height:0;white-space:nowrap}
 .postview article .img p,
 .postview article .img1 p{text-align:center;line-height:initial}
