@@ -51,6 +51,24 @@ xu.t("postview",function(m,app){
 			xu.stylesheet.load("https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.2/codemirror.min.css",0,"sourcecode");
 		}
 
+		this.onclick=function(e){
+			for(var a,b,c,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
+				switch(p.tagName){
+				case "A":
+					if(a.className=="video"){
+						a=xu.doc.createElement("iframe");
+						a.src=a.href;
+						b=p.children[0];
+						b.appendChild(a);
+						a=p.parentNode;
+						a.replaceChild(p,b);
+						return false;
+					}
+					return;
+				}
+			}
+		};
+
 		return self;
 	};
 
