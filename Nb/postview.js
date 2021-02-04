@@ -61,7 +61,7 @@ xu.t("postview",function(m,app){
 						b=p.children[0];
 						b.appendChild(a);
 						a=p.parentNode;
-						a.replaceChild(p,b);
+						a.replaceChild(b,p);
 						return false;
 					}
 					return;
