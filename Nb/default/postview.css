@@ -55,3 +55,5 @@
 .postview article .fl img{margin:0}
 .postview article .sl div{overflow:auto}
 .postview article .sl img{width:auto;max-width:50%;vertical-align:middle}
+.postview article .video .i{text-align:center}
+.postview article .video img{max-width:100%}
