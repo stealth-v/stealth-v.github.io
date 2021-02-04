@@ -55,6 +55,7 @@
 .postview article .fl img{margin:0}
 .postview article .sl div{overflow:auto}
 .postview article .sl img{width:auto;max-width:50%;vertical-align:middle}
+.postview article .video{margin:.5em 0}
 .postview article .video .i{position:relative;text-align:center}
 .postview article .video iframe{position:absolute;left:0;top:0;width:100%;height:100%}
 .postview article .video img{max-width:100%}
