@@ -50,7 +50,7 @@
 .postview article .img1{margin:.5em 0;line-height:0;white-space:nowrap}
 .postview article .img p,
 .postview article .img1 p{text-align:center;line-height:initial}
-.postview article .fi{overflow:normal}
-.postview article .fi div{margin:0}
-.postview article .fi img{margin:0}
+.postview article .fl{overflow:normal}
+.postview article .fl div{margin:0}
+.postview article .fl img{margin:0}
 .postview article .sl img{width:auto}
