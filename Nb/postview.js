@@ -55,7 +55,7 @@ xu.t("postview",function(m,app){
 			for(var a,b,c,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 				switch(p.tagName){
 				case "A":
-					if(p.className=="video"){
+					if(p.parentNode.className=="video"){
 						a=xu.doc.createElement("iframe");
 						a.src=a.href;
 						b=p.children[0];
