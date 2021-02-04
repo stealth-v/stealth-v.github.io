@@ -44,13 +44,13 @@
 .postview article .fd .ext{padding:0 .5em;border-radius:.5em;color:var(--forei);background:var(--fore)}
 .postview article .img img{display:block;width:100%}
 .postview article .img1{overflow:hidden}
-.postview article .img1 .fi{overflow:normal}
-.postview article .img1 .fi div{margin:0}
-.postview article .img1 .fi img{margin:0}
-.postview article .img1 .sl img{width:auto}
 .postview article .img1 img{margin:1px;width:100%}
 .postview article .img1 div{margin:-1px}
 .postview article .img,
 .postview article .img1{margin:.5em 0;line-height:0;white-space:nowrap}
 .postview article .img p,
 .postview article .img1 p{text-align:center;line-height:initial}
+.postview article .fi{overflow:normal}
+.postview article .fi div{margin:0}
+.postview article .fi img{margin:0}
+.postview article .sl img{width:auto}
