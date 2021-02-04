@@ -57,7 +57,7 @@ xu.t("postview",function(m,app){
 				case "A":
 					if(p.parentNode.className=="video"){
 						a=xu.doc.createElement("iframe");
-						a.src=a.href;
+						a.src=p.href;
 						b=p.children[0];
 						b.appendChild(a);
 						a=p.parentNode;
