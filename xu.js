@@ -31,13 +31,10 @@ var xu={
 		current:0,
 		text:0,
 		apply:function(a){
-			var t=this,m=/lang=([^;]+)/.exec(xu.doc.cookie);
-			if(!a)a=m[1];
-			if(a){
-				z(a);
-				return;
-			}
-			for(var l=navigator.languages,i=0,c=l.length;i<c&&z(l[i]);i++){}
+			var t=this,m;
+			if(a)z(a);
+			else if(m=/lang=([^;]+)/.exec(xu.doc.cookie),m)z(m[1]);
+			else for(var l=navigator.languages,i=0,c=l.length;i<c&&z(l[i]);i++){}
 	
 			function z(a){
 				if(m=new RegExp("^("+a+"[^\t]*)\t(.*)","im").exec(t.set)){
