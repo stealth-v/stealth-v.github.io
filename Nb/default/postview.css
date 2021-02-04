@@ -53,4 +53,5 @@
 .postview article .fl{white-space:normal}
 .postview article .fl div{margin:0}
 .postview article .fl img{margin:0}
+.postview article .sl div{overflow:auto}
 .postview article .sl img{width:auto;max-width:100%;vertical-align:middle}
