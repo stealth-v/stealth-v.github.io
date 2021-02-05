@@ -2,7 +2,16 @@ xu.t("postview",function(m,app){
 	m.exports=function(){
 		var content=this,
 		code=this.querySelectorAll(".sourcecode"),
-		self={
+		aside=this.parentNode.querySelector("aside"),
+		on={
+			cc:function(){
+				xu.toggle(aside);
+			},sc:function(){
+				xu.toggle(sc);
+				xu.focus(sc.querySelector("[type=search"));
+			}
+		},
+		self={on:on,
 			freg:null,
 			unload:function(){
 				if(code.length){
