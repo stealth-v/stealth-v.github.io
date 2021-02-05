@@ -11,7 +11,7 @@ xu.t("postview",function(m,app){
 				xu.focus(sc.querySelector("[type=search"));
 			}
 		},
-		self={on:on,
+		self={on:on,freg:null,
 			freg:null,
 			unload:function(){
 				if(code.length){
