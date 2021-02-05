@@ -56,7 +56,7 @@
 .postview article .img1 p{text-align:center;line-height:initial}
 .postview article .fl{white-space:normal}
 .postview article .fl div{margin:0}
-.postview article .fl img{margin:0}
+.postview article .fl img{padding-right:0}
 .postview article .sl div{overflow:auto}
 .postview article .sl img{width:auto;max-width:50%;vertical-align:middle}
 .postview article .video{margin:.5em 0}
