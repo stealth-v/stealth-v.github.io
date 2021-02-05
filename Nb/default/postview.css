@@ -68,3 +68,7 @@
 .postview article .oglink img{float:left;padding-right:.5em;height:5em}
 .postview article .oglink .l{float:none;display:block;width:100%;height:auto}
 .postview article .oglink .u{color:var(--fore)}
+
+@media (min-width:601px){
+	.postview article .oglink .l{float:left;width:50%}
+}
