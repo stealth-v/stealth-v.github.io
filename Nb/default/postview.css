@@ -49,7 +49,7 @@
 .postview article .img img{display:block;width:100%}
 .postview article .img1{overflow:hidden}
 .postview article .img1 img{padding-right:1px;width:100%}
-.postview article .img1 img:last-child{padding-right:0}
+.postview article .img1 div{margin-right:-1px}
 .postview article .img,
 .postview article .img1{margin:.5em 0;line-height:0;white-space:nowrap}
 .postview article .img p,
