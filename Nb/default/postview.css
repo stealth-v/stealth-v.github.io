@@ -63,5 +63,8 @@
 .postview article .video .tag span{padding-right:.5em}
 .postview article .video .d,
 .postview article .video .tag{margin:.1em 0}
-.postview article .oglink{display:block}
+.postview article .oglink{display:block;margin:.5em 0}
+.postview article .oglink strong{display:block;margin:.2em 0;font-size:1.2em}
+.postview article .oglink img{float:left;padding-right:.5em;height:5em}
+.postview article .oglink .l{}
 .postview article .oglink .u{color:var(--fore)}
