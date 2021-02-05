@@ -61,3 +61,5 @@
 .postview article .video img{max-width:100%}
 .postview article .video .t{margin:.5em 0;font-size:1.5em}
 .postview article .video .tag span{padding-right:.5em}
+.postview article .video .d,
+.postview article .video .tag{margin:.1em 0}
