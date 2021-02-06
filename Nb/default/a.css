@@ -1,4 +1,4 @@
-:root{--fore:#36f;--forei:#fff;}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -50,6 +50,9 @@ nav .c{flex:4em 0}
 .uu input:not([type=radio]){flex:1;padding:0 .5em;border:0;background:none}
 .uu label,.uu button{position:relative}
 .uu label::before,.uu button::before{content:""}
+.sc{color:var(--foreColor)}
+.sc .sort label{align-items:baseline}
+.sc input[type=radio]{margin:0 .5em}
 
 aside{position:fixed;top:0;bottom:0;width:15em;line-height:2;background:#fff}
 aside:not(.on){left:-15em}
