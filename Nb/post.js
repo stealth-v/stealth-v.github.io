@@ -3,14 +3,10 @@ xu.t("post",function(m,app){
 		var content=this,
 		art=this.querySelector("article.t").cloneNode(true),
 		aside=this.parentNode.querySelector("aside"),
-		sc=this.querySelector(".sc"),
 		go=this.querySelector(".go"),
 		on={
 			cc:function(){
 				xu.toggle(aside);
-			},sc:function(){
-				xu.toggle(sc);
-				xu.focus(sc.querySelector("[type=search"));
 			},go:function(i){
 				xu.toggle(go);
 				if(i>0)xu.focus(go.querySelector("input"),i);
