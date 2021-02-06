@@ -1,4 +1,4 @@
-xu.t("postview",function(m,app){
+xu.t("mnu",function(m,app){
 	m.exports=function(){
 		var content=this,
 		sc=this.querySelector(".sc"),
