@@ -6,9 +6,6 @@ xu.t("postview",function(m,app){
 		on={
 			cc:function(){
 				xu.toggle(aside);
-			},sc:function(){
-				xu.toggle(sc);
-				xu.focus(sc.querySelector("[type=search"));
 			}
 		},
 		self={on:on,freg:null,
