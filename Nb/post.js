@@ -107,14 +107,6 @@ xu.t("post",function(m,app){
 			}
 			return false;
 		};
-		sc.onsubmit=function(){
-			var a=this.querySelector("[type=search]"),b;
-			if(b=a.value){
-				if(this.querySelector(":checked").value)b+="&s=1";
-				self.page("/?q="+b,1);
-			}
-			return false;
-		};
 		go.onsubmit=function(){
 			var a=this.querySelector("input"),b;
 			if(a.placeholder!=a.value){
