@@ -60,7 +60,7 @@
 .postview article .sl div{overflow:auto}
 .postview article .sl img{width:auto;max-width:50%;vertical-align:middle}
 .postview article .embed{margin:.5em 0}
-.postview article .embed .i{position:relative;text-align:center}
+.postview article .embed .i{position:relative;margin:auto;width:max-content;text-align:center}
 .postview article .embed iframe{position:absolute;left:0;top:0;width:100%;height:100%}
 .postview article .embed img{max-width:100%}
 .postview article .embed .t{margin:.5em 0;font-size:1.5em}
