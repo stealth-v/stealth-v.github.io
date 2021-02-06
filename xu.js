@@ -125,6 +125,7 @@ var xu={
 			var m=xu.module[name];
 			if(m.unload)m.unload();
 			delete xu.module[name];
+			if(target in this.app)this.app[target]=null;
 		};
 		x.prototype.refrash=function(){
 			for(var n in xu.module){

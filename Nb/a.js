@@ -3,12 +3,7 @@ xu.r(function(){
 	xu.lang.apply();
 
 	var module={},
-	sc=this.querySelector(".sc"),
 	on={
-		sc:function(){
-			xu.toggle(sc);
-			xu.focus(sc.querySelector("[type=search"));
-		}
 	},
 	app,x=xu.new(xu.body,app={
 		on:on,module:module,pjs:0,pskin:0,viewport:0,
