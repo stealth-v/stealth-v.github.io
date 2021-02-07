@@ -33,7 +33,6 @@ nav .c{flex:4em 0}
 .mn0 .tu{width:40%;min-height:2em;vertical-align:top;visibility:hidden}
 .mn0 .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
 .mn0 .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
-.mn0 .cc{color:#fff}
 .mn1{position:relative;height:4em}
 .mn1::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
 .mn1 header{height:2em}

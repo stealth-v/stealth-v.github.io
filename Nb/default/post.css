@@ -1,4 +1,5 @@
 .mnu{margin-bottom:-2em;padding-bottom:2em}
+.postlist .cc{color:#fff}
 .postlist article{position:relative;padding:0 0 .5em 0;cursor:pointer}
 .postlist article.t{display:none}
 .postlist article::before{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
