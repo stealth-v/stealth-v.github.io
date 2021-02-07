@@ -36,7 +36,7 @@ xu.t("post",function(m,app){
 					l.appendChild(art({
 						TITLE:k.TITLE,CONTENT:k.CONTENT,
 						"a.IMG":(k.CNTI>0?"<img src=\""+k.IMG+"?type=ffn300_300\">":""),
-						"a.DATE":d.getFullYear()+"-"+("0"+(d.getMonth()+1)).substr(-2)+"-"+("0"+d.getDate()).substr(-2),
+						"a.DATE":d.getFullYear()+"-"+("0"+(d.getMonth()+1)).substr(-2)+"-"+("0"+d.getDate()).substr(-2)+' '+('0'+d.getHours()).substr(-2)+':'+('0'+d.getMinutes()).substr(-2),
 						"a.NUM":k.NUM,
 						"a.VISC":k.VISC?"":" h",
 						"a.VISS":k.VISS?"":" h",
