@@ -5,6 +5,8 @@ a{color:inherit;text-decoration:none}
 a:hover,a.on{color:var(--fore)}
 input{position:relative}
 
+.hrb::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
+
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
 .mc button{color:inherit;background-color:transparent}
 .mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
@@ -34,7 +36,6 @@ nav .c{flex:4em 0}
 .mn0 .tt{z-index:-1;position:absolute;width:100%;top:0;bottom:0;background:#000;overflow:hidden}
 .mn0 .tt img{position:absolute;margin:auto;width:80%;min-width:20em;top:0;left:0;bottom:0;right:0}
 .mn1{position:relative;height:4em}
-.mn1::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
 .mn1 header{height:2em}
 .mn1 .logo span{font-size:1em}
 .mn1 [href="/subscribe"]{bottom:auto}
