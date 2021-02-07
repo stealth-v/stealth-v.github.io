@@ -63,11 +63,13 @@ var xu={
 			},path);
 			x.send();
 		};
-		x.prototype.procedure=function(dom,target,freg){
+		x.prototype.procedure=function(dom,target,freg,onload){
 			var t,a,wait,n=dom.getAttribute("data-module"),m=xu.module[n];
 
 			if(m){
 				if(m.exports){
+					if(onload)onload();
+
 					a=m.exports.call(dom);
 					if(target){
 						this.app[target]=a;
@@ -93,6 +95,7 @@ var xu={
 				m.exports.call(dom);
 				dom.onload=function(proc){
 					this.onload=null;
+					if(onload)onload();
 
 					proc(m,t.app);
 					if(m.reload)m.reload();
@@ -116,9 +119,16 @@ var xu={
 				};
 			}
 		};
-		x.prototype.load=function(freg,target){
-			for(var a=(freg||xu.body).querySelectorAll("[data-module]"),i=a.length-1;i>=0;i--){
-				this.procedure(a[i],target||a[i].getAttribute("data-target"),freg);
+		x.prototype.load=function(freg,target,onload){
+			var r,on,a=(freg||xu.body).querySelectorAll("[data-module]");
+			if(onload){
+				r=a.length;
+				on=function(){
+					if(--r<0)onload();
+				};
+			}
+			for(var i=a.length-1;i>=0;i--){
+				this.procedure(a[i],target||a[i].getAttribute("data-target"),freg,on);
 			}
 		};
 		x.prototype.unload=function(name){

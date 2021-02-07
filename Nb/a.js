@@ -57,7 +57,9 @@ xu.r(function(){
 
 	app.reload();
 	x.url_prefix=function(a){return app.pjs+a+".js"};
-	x.load();
+	x.load(function(){
+		console.log(1);
+	});
 
 	addEventListener("click",function(e){
 		for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
