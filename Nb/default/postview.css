@@ -7,7 +7,9 @@
 .postview article h6{margin:.5em 0}
 .postview article table{margin:1em 0;border-collapse:collapse}
 
-.postview article .aa{position:relative;margin-bottom:.5em;padding-bottom:.5em}
+.postview article .himg{position:relative}
+.postview article .himg img{position:absolute;margin:auto;top:0;bottom:0;width:100%}
+.postview article .aa{position:relative;margin-bottom:.5em;padding-bottom:.5em;min-height:2em}
 .postview article .aa::after{opacity:.3}
 
 .postview article .lay-table-1{border:2px solid #ddd}
