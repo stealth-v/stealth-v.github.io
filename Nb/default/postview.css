@@ -10,9 +10,9 @@
 .postview article .himg{position:relative}
 .postview article .himg img{z-index:-1;position:absolute;margin:auto;top:0;bottom:0;width:100%}
 .postview article .himg+div{margin-bottom:1.5em;color:#fff}
-.postview article .himg+div::after{border-top:0}
+.postview article .himg+div::after{border-top:0;height:100%;background:linear-gradient(#fff0,#ffff 1.5em,#fff);opacity:1}
 .postview article .hd{position:relative;margin-bottom:.5em}
-.postview article .hd::after{content:"";z-index:-1;position:absolute;top:100%;width:100%;height:100%;border-top:1px solid #fffe;background:linear-gradient(#fff0,#ffff 1.5em,#fff)}
+.postview article .hd::after{content:"";z-index:-1;position:absolute;top:100%;width:100%;border-top:1px solid;opacity:.3}
 .postview article .aa{padding-bottom:.5em;height:3.5em;line-height:2}
 .postview article .aa img{height:inherit;vertical-align:top}
 .postview article .aa::after{opacity:.3}
