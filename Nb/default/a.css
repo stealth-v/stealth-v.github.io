@@ -10,7 +10,7 @@ input{position:relative}
 .z{background:url(https://apx.kr/Nb/favicon.svg) no-repeat 50%/contain}
 .mc button{color:inherit;background-color:transparent}
 .mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
-.mc button:hover,.mc a:hover{background:#fff4}
+.mc button:hover,.mc a:hover{background-color:#fff4}
 .bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 .qk{position:absolute;border-radius:.5em 0 0 .5em;top:0;right:0;background:#fffa}
 .qk i{vertical-align:middle}
