@@ -50,14 +50,16 @@ xu.r(function(){
 
 	app.viewport=xu.head.querySelector("[name=viewport]");
 
-	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
+	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]"),c1;
 	app.pjs=r.src.replace(/[^\/]+$/,"");
 	app.pskin=app.pjs+a.getAttribute("data-skin")+"/";
 	a.removeAttribute("data-skin");
 
 	app.reload();
 	x.url_prefix=function(a){return app.pjs+a+".js"};
-	x.load(function(){
+	c1=xu.doc.createElement("style");
+	c1.textContent="img{display:none}";
+	x.load(0,0,function(){
 		console.log(1);
 	});
 
