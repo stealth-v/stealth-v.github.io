@@ -9,6 +9,7 @@
 
 .postview article .himg{position:relative}
 .postview article .himg img{z-index:-1;position:absolute;margin:auto;top:0;bottom:0;width:100%}
+.postview article .himg+div{color:#fff}
 .postview article .hd{margin-bottom:.5em}
 .postview article .aa{position:relative;padding-bottom:.5em;min-height:3em}
 .postview article .aa::after{opacity:.3}
