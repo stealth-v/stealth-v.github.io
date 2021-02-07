@@ -61,7 +61,7 @@ xu.r(function(){
 	c1.textContent="img{display:none}";
 	xu.head.appendChild(c1);
 	x.load(0,0,function(){
-		console.log(1);
+		xu.head.removeChild(c1);
 	});
 
 	addEventListener("click",function(e){
