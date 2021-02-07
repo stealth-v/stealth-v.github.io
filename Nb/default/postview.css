@@ -11,7 +11,8 @@
 .postview article .himg img{z-index:-1;position:absolute;margin:auto;top:0;bottom:0;width:100%}
 .postview article .himg+div{color:#fff}
 .postview article .hd{position:relative;margin-bottom:.5em}
-.postview article .aa{padding-bottom:.5em;min-height:3em}
+.postview article .aa{padding-bottom:.5em;height:3.5em;line-height:2}
+.postview article .aa img{height:inherit;vertical-align:top}
 .postview article .aa::after{opacity:.3}
 
 .postview article .lay-table-1{border:2px solid #ddd}
