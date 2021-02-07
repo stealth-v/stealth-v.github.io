@@ -1,4 +1,4 @@
-document.write('<style class="app-loading">img{display:none}</style>');
+document.write('<style class="app-loading">article img{display:none}</style>');
 xu.r(function(){
 	xu.lang.set+="\nko-KR	한국어,Korean";
 	xu.lang.apply();
