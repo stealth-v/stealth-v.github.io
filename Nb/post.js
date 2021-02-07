@@ -36,9 +36,7 @@ xu.t("post",function(m,app){
 					l.appendChild(art({
 						TITLE:k.TITLE,CONTENT:k.CONTENT,
 						"a.IMG":(k.CNTI>0?"<img src=\""+k.IMG+"?type=ffn300_300\">":""),
-						"a.YYYY":d.getFullYear(),
-						"a.MM":("0"+(d.getMonth()+1)).substr(-2),
-						"a.DD":("0"+d.getDate()).substr(-2),
+						"a.DATE":d.getFullYear()+"-"+("0"+(d.getMonth()+1)).substr(-2)+"-"+("0"+d.getDate()).substr(-2),
 						"a.NUM":k.NUM,
 						"a.VISC":k.VISC?"":" h",
 						"a.VISS":k.VISS?"":" h",
@@ -51,9 +49,7 @@ xu.t("post",function(m,app){
 					l.appendChild(art({
 						TITLE:"<span class=\"ll-empty\"></span>",CONTENT:"...",
 						"a.IMG":"",
-						"a.YYYY":"0000",
-						"a.MM":"00",
-						"a.DD":"00",
+						"a.DATE":"",
 						"a.NUM":"",
 						"a.VISC":" h",
 						"a.VISS":" h",
