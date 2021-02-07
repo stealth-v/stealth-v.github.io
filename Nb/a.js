@@ -59,6 +59,7 @@ xu.r(function(){
 	x.url_prefix=function(a){return app.pjs+a+".js"};
 	c1=xu.doc.createElement("style");
 	c1.textContent="img{display:none}";
+	xu.head.appendChild(c1);
 	x.load(0,0,function(){
 		console.log(1);
 	});

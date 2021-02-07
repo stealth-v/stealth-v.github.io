@@ -124,7 +124,7 @@ var xu={
 			if(onload){
 				r=a.length;
 				on=function(){
-					if(--r<0)onload();
+					if(--r<1)onload();
 				};
 			}
 			for(var i=a.length-1;i>=0;i--){
