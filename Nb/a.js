@@ -1,3 +1,4 @@
+document.write('<style class="app-loading">img{display:none}</style>');
 xu.r(function(){
 	xu.lang.set+="\nko-KR	한국어,Korean";
 	xu.lang.apply();
@@ -50,18 +51,15 @@ xu.r(function(){
 
 	app.viewport=xu.head.querySelector("[name=viewport]");
 
-	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]"),c1;
+	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
 	app.pskin=app.pjs+a.getAttribute("data-skin")+"/";
 	a.removeAttribute("data-skin");
 
 	app.reload();
 	x.url_prefix=function(a){return app.pjs+a+".js"};
-	c1=xu.doc.createElement("style");
-	c1.textContent="img{display:none}";
-	xu.head.appendChild(c1);
 	x.load(0,0,function(){
-		xu.head.removeChild(c1);
+		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
 	});
 
 	addEventListener("click",function(e){
