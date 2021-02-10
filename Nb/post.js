@@ -59,7 +59,7 @@ xu.t("post",function(m,app){
 					}));
 				}
 			},page:function(a,i){
-				history.pushState("","",a);
+				app.loc("","",a);
 				xu.post(function(s,e){
 					if(this.readyState==4){
 						if(this.response)self.reload(JSON.parse(this.response));

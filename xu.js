@@ -18,7 +18,7 @@ var xu={
 			var b=xu.style0=xu.doc.createElement("style");
 			b.textContent=".xu-loading{display:none}";
 			xu.head.appendChild(b);
-			for(var i=a.length-1;i>=0;i--)a[i]();
+			for(var c={},i=a.length-1;i>=0;i--)a[i](c);
 		}
 	})([]),
 	t:function(a,b){

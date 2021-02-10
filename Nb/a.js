@@ -1,12 +1,12 @@
 document.write('<style class="app-loading">article img{display:none}</style>');
-xu.r(function(){
+xu.r(function(v){
 	xu.lang.set+="\nko-KR	한국어,Korean";
 	xu.lang.apply();
 
 	var module={},
 	on={
 	},
-	app,x=xu.new(xu.body,app={
+	app,x=xu.new(xu.body,app=v.app={
 		on:on,module:module,pjs:0,pskin:0,viewport:0,
 		header:0,content:0,
 		reload:function(){
@@ -27,6 +27,9 @@ xu.r(function(){
 				}
 				x.refrash();
 			},path);
+		},
+		loc:function(a,b,c){
+			history.pushState(a,b,c);
 		},
 		page:function(rt,i){
 			var a,b,m=7,h=m/2|0;

@@ -1,4 +1,10 @@
-xu.r(function(){
+xu.r(function(v){
+	v.app.loc=function(a,b,c){
+		history.pushState(a,b,c);
+		parent.postMessage({
+			title:b
+		},"https://b.apx.kr");
+	};
 	parent.postMessage({
 		title:document.title,
 		favicon:document.querySelector("[rel=icon]").href
