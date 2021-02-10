@@ -68,7 +68,7 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 @media (min-width:401px){
 	.logo span{font-size:1.5em}
 	.mn0 header{padding:0 2em;top:.5em;bottom:4.5em}
-	[href="/subscribe"]{width:8em}
+	.subscribe{width:8em}
 }
 @media (min-width:760px){
 	.mn1{height:2em}
