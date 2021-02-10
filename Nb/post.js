@@ -109,7 +109,7 @@ xu.t("post",function(m,app){
 				b=a.value;
 				a=location.pathname+"?p="+b;
 				self.page(a,+b);
-				self.go();
+				self.on.go();
 			}
 			return false;
 		};
