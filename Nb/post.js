@@ -97,7 +97,7 @@ xu.t("post",function(m,app){
 				if(b==(m?+m[1]:1)){
 					self.on.go(b);
 				}else{
-					app.page(a,b);
+					self.page(a,b);
 				}
 				break;
 			}
@@ -107,8 +107,8 @@ xu.t("post",function(m,app){
 			var a=this.querySelector("input"),b;
 			if(a.placeholder!=a.value){
 				b=a.value;
-				a="/?p="+b;
-				app.page(a,+b);
+				a=location.pathname+"?p="+b;
+				self.page(a,+b);
 				self.go();
 			}
 			return false;
