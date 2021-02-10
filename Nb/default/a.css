@@ -41,7 +41,7 @@ nav .c{flex:4em 0}
 .mn1 .logo span{font-size:1em}
 .mn1 [href="/subscribe"]{bottom:auto}
 
-.cc{overflow:hidden;font-weight:bold;text-shadow:-1px -1px 0 #0008,1px -1px 0 #0008,-1px 1px 0 #0008,1px 1px 0 #0008}
+.cc{overflow:hidden;font-weight:bold}
 .cc a{display:inline-block;padding:0 .5em;width:auto;min-width:2em;line-height:2}
 .cc a::before{content:"";opacity:.3}
 .uu{z-index:1;position:absolute;left:0;right:0;background:#0008}
