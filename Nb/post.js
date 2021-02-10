@@ -97,7 +97,7 @@ xu.t("post",function(m,app){
 				if(b==(m?+m[1]:1)){
 					self.on.go(b);
 				}else{
-					self.page(a,b);
+					app.page(a,b);
 				}
 				break;
 			}
@@ -108,7 +108,7 @@ xu.t("post",function(m,app){
 			if(a.placeholder!=a.value){
 				b=a.value;
 				a="/?p="+b;
-				self.page(a,+b);
+				app.page(a,+b);
 				self.go();
 			}
 			return false;
