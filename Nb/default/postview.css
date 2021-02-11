@@ -15,7 +15,7 @@
 .postview article .hd::after{content:"";z-index:-1;position:absolute;top:100%;width:100%;border-top:1px solid;opacity:.3}
 .postview article .aa{padding-bottom:.5em;height:3.5em}
 .postview article .aa img{float:left;height:inherit;vertical-align:top}
-.postview article .aa button{min-width:4rem;color:inherit;text-shadow:inherit}
+.postview article .aa button{padding-right:.5em;min-width:4rem;color:inherit;text-align:left;text-shadow:inherit}
 .postview article .aa::after{opacity:.3}
 
 .postview article .lay-table-1{border:2px solid #ddd}
