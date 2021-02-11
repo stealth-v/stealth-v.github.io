@@ -6,7 +6,7 @@ xu.r(function(v){
 		},"https://b.apx.kr");
 	};
 	parent.postMessage({
-		path:location.pathname.replace(/.[^\/]+/,""),
+		href:location.href.replace(/.[^\/]+/,""),
 		title:document.title,
 		favicon:document.querySelector("[rel=icon]").href
 	},"https://b.apx.kr");
