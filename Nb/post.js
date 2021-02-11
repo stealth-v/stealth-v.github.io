@@ -72,8 +72,12 @@ xu.t("post",function(m,app){
 					}
 					return 1;
 				},a).send();
+			},v_page:function(){
+				var m=/p=(\d+)/.exec(location);
+				return m?+m[1]:1;
 			}
 		};
+		history.replaceState({header:"mnu.mn1",content:"post",p:self.v_page()},"",location);
 		art.removeAttribute("class");
 		art=xu.template(art);
 		this.onclick=function(e){
@@ -88,13 +92,12 @@ xu.t("post",function(m,app){
 		};
 		var navp=this.querySelectorAll(".navp");
 		navp[0].onclick=navp[1].onclick=function(e){
-			for(var a,b,m,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
+			for(var a,b,p=e.target,i=16;p&&i>0;p=p.parentNode,i--)
 			switch(p.constructor){
 			case HTMLAnchorElement:
 				a=p.getAttribute("href");
 				b=+/p=(\d+)/.exec(a)[1];
-				m=/p=(\d+)/.exec(location);
-				if(b==(m?+m[1]:1)){
+				if(b==self.v_page()){
 					self.on.go(b);
 				}else{
 					self.page(a,b);
