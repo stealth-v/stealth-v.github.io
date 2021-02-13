@@ -2,7 +2,8 @@ xu.r(function(v){
 	v.app.loc=function(a,b,c){
 		history.pushState(a,b,c);
 		parent.postMessage({
-			title:b
+			title:b,
+			href:location.pathname.replace(/.[^\/]+/,"")+location.search
 		},"https://b.apx.kr");
 	};
 	parent.postMessage({
