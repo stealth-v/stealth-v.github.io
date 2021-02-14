@@ -11,7 +11,7 @@ xu.t("mnu",function(m,app){
 		self={on:on,freg:null,
 		};
 		this.onclick=function(e){
-			for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
+			for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 				switch(p.tagName){
 				case "A":
 					switch(p.getAttribute("data-not-ready")){
@@ -21,7 +21,7 @@ xu.t("mnu",function(m,app){
 					break;
 				}
 			}
-		}
+		};
 		sc.onsubmit=function(){
 			if(app.content&&app.content.page){
 				var a=this.querySelector("[type=search]"),b;
