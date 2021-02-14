@@ -55,7 +55,7 @@ xu.r(function(v){
 				var z=xu.body.querySelector("["+b+"]");
 				if(z)return z.getAttribute(b);
 				else a;
-			})});
+			})},"https://b.apx.kr");
 		}
 	});
 
