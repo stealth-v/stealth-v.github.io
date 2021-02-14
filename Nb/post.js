@@ -85,7 +85,8 @@ xu.t("post",function(m,app){
 				switch(p.constructor){
 				case HTMLAnchorElement:
 					switch(p.getAttribute("data-not-ready")){
-					case "subscribe":app.NotReady("https://m.blog.naver.com/GuestbookList.nhn?blogId={data-id}");return false;
+					case "subscribe":app.NotReady("https://m.blog.naver.com/BuddyAddForm.nhn?blogId={data-id}&returnUrl={href}");return false;
+					case "guest":app.NotReady("https://m.blog.naver.com/GuestbookList.nhn?blogId={data-id}");return false;
 					}
 					break;
 				}

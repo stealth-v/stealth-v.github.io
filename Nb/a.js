@@ -51,8 +51,10 @@ xu.r(function(v){
 			},a,1)
 		},
 		NotReady:function(a){
-			parent.postMessage({a:"open",b:a.replace(/{([^}]+)}/g,(a,b)=>{
-				return xu.body.querySelector("["+b+"]").getAttribute(b);
+			parent.postMessage({a:"open",b:a.replace(/{([^}]+)}/g,function(a,b){
+				var z=xu.body.querySelector("["+b+"]");
+				if(z)return z.getAttribute(b);
+				else a;
 			})});
 		}
 	});
