@@ -71,7 +71,7 @@ xu.t("postview",function(m,app){
 						return false;
 					}
 					switch(p.getAttribute("data-not-ready")){
-					case "cmt":app.NotReady("https://m.blog.naver.com/CommentList.nhn?blogId={data-id}&logNo="+location.pathname.substr(1));return false;
+					case "cmt":app.NotReady("https://m.blog.naver.com/CommentList.nhn?blogId={data-id}&logNo={data-pid}");return false;
 					}
 					return;
 				}
