@@ -49,6 +49,11 @@ xu.r(function(v){
 					a.src=this.pskin+a+"+en-US.css";
 				}
 			},a,1)
+		},
+		NotReady:function(a){
+			parent.postMessage({a:"open",b:a.replace(/{([^}]+)}/g,(a,b)=>{
+				return xu.body.querySelector("["+b+"]").getAttribute(b);
+			})});
 		}
 	});
 
