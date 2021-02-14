@@ -82,15 +82,13 @@ xu.t("post",function(m,app){
 		art=xu.template(art);
 		this.onclick=function(e){
 			for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
-				switch(p.constructor){
-				case HTMLAnchorElement:
+				switch(p.tagName){
+				case "A":
 					switch(p.getAttribute("data-not-ready")){
 					case "subscribe":app.NotReady("https://m.blog.naver.com/BuddyAddForm.nhn?blogId={data-id}&returnUrl={href}");return false;
 					case "guest":app.NotReady("https://m.blog.naver.com/GuestbookList.nhn?blogId={data-id}");return false;
 					}
 					break;
-				}
-				switch(p.tagName){
 				case "ARTICLE":
 					a=p.querySelector("a");
 					if(a.textContent)a.click();
