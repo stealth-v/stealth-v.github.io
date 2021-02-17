@@ -18,7 +18,6 @@ xu.t("mnu",function(m,app){
 					switch(p.getAttribute("data-1")){
 					case "subscribe":app.NotReady("https://m.blog.naver.com/BuddyAddForm.nhn?blogId={data-id}&returnUrl={href}");return false;
 					case "guest":app.NotReady("https://m.blog.naver.com/GuestbookList.nhn?blogId={data-id}");return false;
-					case "postview":app.NotReady("https://m.blog.naver.com/{data-id}/{data-pid}","frm");return false;
 					}
 					break;
 				}
