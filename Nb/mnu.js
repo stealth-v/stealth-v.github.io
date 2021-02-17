@@ -14,7 +14,8 @@ xu.t("mnu",function(m,app){
 			for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 				switch(p.tagName){
 				case "A":
-					switch(p.getAttribute("data-not-ready")){
+					if(/#not-ready$/.test(p.href))
+					switch(p.getAttribute("data-1")){
 					case "subscribe":app.NotReady("https://m.blog.naver.com/BuddyAddForm.nhn?blogId={data-id}&returnUrl={href}");return false;
 					case "guest":app.NotReady("https://m.blog.naver.com/GuestbookList.nhn?blogId={data-id}");return false;
 					}
