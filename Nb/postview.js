@@ -70,8 +70,10 @@ xu.t("postview",function(m,app){
 						a.replaceChild(b,p);
 						return false;
 					}
-					switch(p.getAttribute("data-not-ready")){
+					if(/#not-ready$/.test(p.href))
+					switch(p.getAttribute("data-1")){
 					case "cmt":app.NotReady("https://m.blog.naver.com/CommentList.nhn?blogId={data-id}&logNo={data-pid}");return false;
+					case "postview":app.NotReady("https://m.blog.naver.com/{data-id}/{data-pid}","frm");return false;
 					}
 					return;
 				}
