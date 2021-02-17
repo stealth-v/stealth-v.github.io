@@ -50,8 +50,8 @@ xu.r(function(v){
 				}
 			},a,1)
 		},
-		NotReady:function(a){
-			parent.postMessage({a:"open",b:a.replace(/{([^}]+)}/g,function(a,b){
+		NotReady:function(a,c){
+			parent.postMessage({a:c||"open",b:a.replace(/{([^}]+)}/g,function(a,b){
 				var z=xu.body.querySelector("["+b+"]");
 				if(z)return z.getAttribute(b);
 				else a;
