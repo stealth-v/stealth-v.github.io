@@ -110,7 +110,7 @@ xu.t("post",function(m,app){
 			var a=this.querySelector("input"),b;
 			if(a.placeholder!=a.value){
 				b=a.value;
-				a=location.pathname+"?p="+b;
+				a="./?p="+b;
 				self.page(a,+b);
 				self.on.go();
 			}

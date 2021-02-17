@@ -27,7 +27,7 @@ xu.t("mnu",function(m,app){
 				var a=this.querySelector("[type=search]"),b;
 				if(b=a.value){
 					if(this.querySelector(":checked").value)b+="&s=1";
-					app.content.page("/?q="+b,1);
+					app.content.page("./?q="+b,1);
 				}
 			}
 			return false;
