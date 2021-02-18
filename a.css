@@ -10,6 +10,7 @@ input{position:relative}
 .link div{position:relative;height:2em}
 .link label{display:block}
 .link input{width:100%;background-color:transparent}
+.link input[type=checkbox],.link input[type=radio]{margin:0}
 .link [type=search]{padding-right:6.5em}
 .link [type=submit]{position:absolute;top:0;right:0;width:6em;background:transparent}
 .link label,.link input,.link button{border:0;height:100%}
