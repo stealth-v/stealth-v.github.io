@@ -12,6 +12,6 @@ xu.r(function(v){
 		favicon:document.querySelector("[rel=icon]").href
 	},"https://b.apx.kr");
 	function href(){
-		return location.pathname.replace(/.[^\/]+/,"").replace(/\/index.ps/,'/')+location.search;
+		return location.pathname.replace(/.[^\/]+|\.ps$/,"").replace(/\/index.ps$/,'/')+location.search;
 	}
 })
