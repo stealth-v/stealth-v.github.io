@@ -110,8 +110,8 @@ xu.t("post",function(m,app){
 			var a=this.querySelector("input"),b;
 			if(a.placeholder!=a.value){
 				b=a.value;
-				a="./?p="+b;
-				self.page(a,+b);
+				a=/c=[^&]+/.exec(location.search);
+				self.page("?p="+b+(a?"&"+a[0]:""),+b);
 				self.on.go();
 			}
 			return false;
