@@ -3,12 +3,15 @@ xu.r(function(v){
 		history.pushState(a,b,c);
 		parent.postMessage({
 			title:b,
-			href:location.pathname.replace(/.[^\/]+/,"")+location.search
+			href:href()
 		},"https://b.apx.kr");
 	};
 	parent.postMessage({
-		href:location.pathname.replace(/.[^\/]+/,"")+location.search,
+		href:href(),
 		title:document.title,
 		favicon:document.querySelector("[rel=icon]").href
 	},"https://b.apx.kr");
+	function href(){
+		return location.pathname.replace(/.[^\/]+/,"").replace(/\/index.ps/,'/')+location.search;
+	}
 })
