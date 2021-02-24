@@ -1,0 +1,7 @@
+.ll-subscribe::after{content:"SUBSCRIBE"}
+.ll-posts::after{content:"Posts"}
+.ll-forum::after{content:"Forum"}
+.ll-search::after{content:"Search"}
+.ll-empty::after{content:"No posts."}
+.ll-relate::after{content:"Related"}
+.ll-newest::after{content:"Newest"}

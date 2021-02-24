@@ -1,0 +1,88 @@
+.postview article p{margin:.25em 0}
+.postview article h1,
+.postview article h2,
+.postview article h3,
+.postview article h4,
+.postview article h5,
+.postview article h6{margin:.5em 0}
+.postview article table{margin:1em 0;border-collapse:collapse}
+
+.postview article .or{position:absolute;right:0}
+
+.postview article .himg{position:relative}
+.postview article .himg img{z-index:-1;position:absolute;margin:auto;top:0;bottom:0;width:100%}
+.postview article .himg+div{margin-bottom:1.5em;color:#fff;text-shadow:-1px -1px 0 #0008,1px -1px 0 #0008,-1px 1px 0 #0008,1px 1px 0 #0008}
+.postview article .himg+div::after{border-top:0;height:50vh;background:linear-gradient(#fff0,#ffff 1.5em,#fff);opacity:1}
+.postview article .hd{position:relative;margin-bottom:.5em}
+.postview article .hd::after{content:"";z-index:-1;position:absolute;top:100%;width:100%;border-top:1px solid;opacity:.3}
+.postview article .aa{padding-bottom:.5em;height:3.5em}
+.postview article .aa img{float:left;height:inherit;vertical-align:top}
+.postview article .aa a{display:inline-block;padding-right:.5em;min-width:4rem;color:inherit;text-shadow:inherit;line-height:2}
+.postview article .aa::after{opacity:.3}
+
+.postview article .lay-table-1{border:2px solid #ddd}
+.postview article .lay-table-0 td,
+.postview article .lay-table-1 td{border:1px solid #ddd}
+.postview article .lay-table-2{border:1px solid #ddd}
+.postview article .lay-table-2 td{border:1px dashed #ddd}
+.postview article .lay-table-3{border:solid #888;border-width:2px 0}
+.postview article .lay-table-3 tr{border:1px solid #ccc}
+.postview article .lay-table-3 tr:not(:first-child):last-child{border-top:3px double;border-color:inherit}
+.postview article .lay-table-1 tr:first-child,
+.postview article .lay-table-2 tr:first-child,
+.postview article .lay-table-3 tr:first-child{background:#f7f7f7}
+.postview article .lay-table-4{border:solid #888;border-width:1px 0}
+.postview article .lay-table-4 tr{border:solid #eee;border-width:1px 0}
+.postview article .lay-table-4 tr:first-child{border-top:0}
+.postview article .lay-table-4 tr:last-child{border-bottom:0}
+.postview article .lay-table-5{border-top:2px solid #444;border-bottom:1px solid #aaa}
+.postview article .lay-table-5 tr:first-child{border-bottom:1px solid #aaa}
+.postview article .lay-table-5 tr:nth-child(1n+3){border-top:1px solid #eee}
+.postview article .lay-table-6{border-bottom:1px solid #999}
+.postview article .lay-table-6 tr:first-child{border-bottom:2px solid #333}
+.postview article .lay-table-6 tr:not(:first-child){border-top:1px solid #eee}
+.postview article .lay-table-7 tr{border:solid #eee;border-width:1px 0}
+.postview article .lay-table-7 tr:nth-child(odd){background:#f7f7f7}
+.postview article .lay-table-7 tr:first-child{background:#e3e3e3}
+.postview article blockquote.default{}
+.postview article blockquote.line{}
+.postview article blockquote.bubble{}
+.postview article blockquote.underline{}
+.postview article blockquote.postit{}
+.postview article blockquote.corner{}
+.postview article .sourcecode{display:block;width:100%;box-sizing:border-box}
+.postview article .CodeMirror{margin:2px 0;border:solid;border-width:1px 0;height:auto}
+.postview article .fd{display:block;line-height:2}
+.postview article .fd span{display:inline-block;vertical-align:top}
+.postview article .fd .na{padding-right:.5em;max-width:50%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.postview article .fd .ext{padding:0 .5em;border-radius:.5em;color:var(--forei);background:var(--fore)}
+.postview article .img img{display:block;width:100%}
+.postview article .img1{overflow:hidden}
+.postview article .img1 img{padding-right:1px;width:100%}
+.postview article .img1 div{margin-right:-1px}
+.postview article .img,
+.postview article .img1{margin:.5em 0;line-height:0;white-space:nowrap}
+.postview article .img p,
+.postview article .img1 p{text-align:center;line-height:initial}
+.postview article .fl{white-space:normal}
+.postview article .fl div{margin:0}
+.postview article .fl img{box-sizing:border-box}
+.postview article .sl div{overflow:auto}
+.postview article .sl img{width:auto;max-width:50%;vertical-align:middle}
+.postview article .embed{margin:.5em 0}
+.postview article .embed .i{position:relative;margin:auto;width:max-content;max-width:100%;text-align:center;line-height:0}
+.postview article .embed iframe{position:absolute;left:0;top:0;width:100%;height:100%}
+.postview article .embed img{max-width:100%}
+.postview article .embed .t{margin:.5em 0;font-size:1.5em}
+.postview article .embed .tag span{padding-right:.5em}
+.postview article .embed .d,
+.postview article .embed .tag{margin:.1em 0}
+.postview article .oglink{display:block;margin:.5em 0;overflow:auto}
+.postview article .oglink strong{display:block;margin:.2em 0;font-size:1.2em}
+.postview article .oglink img{float:left;padding-right:.5em;height:5em}
+.postview article .oglink .l{float:none;display:block;padding-right:0;width:100%;height:auto}
+.postview article .oglink .u{color:var(--fore)}
+
+@media (min-width:601px){
+	.postview article .oglink .l{float:left;padding-right:.5em;width:50%}
+}

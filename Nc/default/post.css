@@ -1,0 +1,22 @@
+.mnu{margin-bottom:-2em;padding-bottom:2em}
+.postlist .cc{color:#fff}
+.postlist article{position:relative;padding:0 0 .5em 0;cursor:pointer}
+.postlist article.t{display:none}
+.postlist article::before{content:"";border-top:1px solid #ccc;position:absolute;right:.5em;bottom:.4em;left:.5em}
+.postlist article i{font-size:.8em;font-style:normal}
+.postlist article i:not(:empty){padding:0 .2em}
+.postlist article a{position:absolute;top:0;right:.5em;font-size:.7em;font-weight:normal;text-align:right}
+.postlist article div{line-height:1.5;overflow:hidden}
+.postlist article div:not(.i0){padding-right:10em}
+.postlist article div:not(.i0) .photo
+.postlist article div:not(.i0) .photo+i{display:none}
+.postlist article h1{margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.postlist article h1 em{color:var(--fore);font-style:normal}
+.postlist article p{position:relative;margin:0;font-size:5em;overflow:hidden;text-overflow:ellipsis}
+.postlist article p span{position:absolute;right:0;left:0;font-size:1rem;overflow:hidden}
+.postlist article img{position:absolute;margin:auto;padding:.8em;border-radius:1em;top:0;right:0;bottom:0;max-width:10em;max-height:100%;box-sizing:border-box}
+.postlist .navp{display:flex;height:2em;line-height:2;text-align:center}
+.postlist .navp a{flex:1;position:relative;padding:0;border:0;background:none}
+.postlist .navp a::before{content:""}
+.postlist .navp label{}
+.postlist .navp input{padding:0;width:100%;text-align:center}
