@@ -32,7 +32,7 @@ xu.t("post",function(m,app){
 				for(var d,k,i=0,c=j.length;i<c;i++){
 					k=j[i];
 					d=new Date(k.DATE);
-	
+
 					l.appendChild(art({
 						TITLE:k.TITLE,CONTENT:k.CONTENT,
 						"a.IMG":(k.CNTI>0?"<img src=\""+k.IMG+"?type=ffn300_300\">":""),
@@ -66,9 +66,9 @@ xu.t("post",function(m,app){
 						else self.reload([]);
 						self.update(i,a);
 					}else if(e){
-	
+
 					}else{
-	
+
 					}
 					return 1;
 				},a).send();
