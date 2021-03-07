@@ -22,3 +22,4 @@ input{position:relative}
 i[class]:empty{margin-right:.4em;padding-left:2em}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%/contain}
+i.nmu{background:url('https://api.iconify.design/mdi:menu.svg') no-repeat 50% 50%/contain}
