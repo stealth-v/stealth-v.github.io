@@ -9,6 +9,7 @@ input{position:relative}
 
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em;vertical-align:top}
+i.usrp{background:url('https://api.iconify.design/ant-design:user-add-outlined.svg') no-repeat 50% 50%/contain}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%/contain}
 i.mnu{background:url('https://api.iconify.design/mdi:menu.svg') no-repeat 50% 50%/contain}
