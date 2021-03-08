@@ -5,6 +5,8 @@ a{color:inherit;text-decoration:none}
 a:hover,a.on{color:var(--fore)}
 input{position:relative}
 
+.z{background:url(https://g.apx.kr/favicon.svg) no-repeat 50%/contain}
+
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em;vertical-align:top}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
@@ -27,6 +29,7 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
+.mn0 header{height:2em}
 .mn0 [name=menu]{}
 .mn0 [name=menu] i{padding-left:1em;font-size:2em}
 .mn0 [name=menu] span{}
