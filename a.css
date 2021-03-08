@@ -1,4 +1,4 @@
-:root{--foreColor:#000;--fore:#36f;--forei:#fff;}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;--mnu-size:2em}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -29,7 +29,8 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
-.mn0 header{height:2em}
+.mn0 header{height:var(--mnu-size)}
+.mn0 .z{float:left;width:var(--mnu-size);height:inherit}
 .mn0 [name=menu]{}
 .mn0 [name=menu] i{padding-left:1em;font-size:2em}
 .mn0 [name=menu] span{}
