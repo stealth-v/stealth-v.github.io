@@ -1,9 +1,10 @@
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
-a:hover{color:#36f}
-
+a:hover,a.on{color:var(--fore)}
 input{position:relative}
+
 .logo,.nav{display:inline-block;min-width:4em;height:3em;text-align:center;vertical-align:top}
 .logo img{width:auto;height:100%}
 .nav{padding:1em 0;width:10em;height:1em;line-height:1}
@@ -18,6 +19,9 @@ input{position:relative}
 .link .ico{position:relative;display:inline-block;height:1.6em;width:2em}
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
+
+.mn0 [name=menu]{font-size:2em}
+.mn0 [name=menu] i{margin-right:.4em;padding-left:1em}
 
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em}
