@@ -1,4 +1,4 @@
-:root{--foreColor:#000;--fore:#36f;--forei:#fff;--mnu-size:2em}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;--mnu-size:2em;--mnu-clr:#fff}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -7,6 +7,13 @@ input{position:relative}
 
 .z{background:url(https://g.apx.kr/favicon.svg) no-repeat 50%/contain}
 .bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
+.mc button{color:inherit;background-color:transparent}
+.mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
+.mc button:hover,.mc a:hover{background-color:#fff4}
+.qk{position:absolute;border-radius:.5em 0 0 .5em;top:0;right:0;background:#fffa}
+.qk i{vertical-align:middle}
+.qk button{background:none}
+.qk button,.qk a{float:left}
 
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em;vertical-align:top}
@@ -30,6 +37,7 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
+.mnu{background:var(--mnu-clr)}
 .mn0 header{height:var(--mnu-size)}
 .mn0 .z{float:left;margin-right:.2em;width:var(--mnu-size);height:inherit}
 .mn0 button{padding:0;border:0;height:inherit;background:none;vertical-align:top}

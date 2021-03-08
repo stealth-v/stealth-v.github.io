@@ -8,14 +8,34 @@ input{position:relative}
 .hrb::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
 
 .z{background:url(https://g.apx.kr/favicon.svg) no-repeat 50%/contain}
+.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 .mc button{color:inherit;background-color:transparent}
 .mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
 .mc button:hover,.mc a:hover{background-color:#fff4}
-.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 .qk{position:absolute;border-radius:.5em 0 0 .5em;top:0;right:0;background:#fffa}
 .qk i{vertical-align:middle}
 .qk button{background:none}
 .qk button,.qk a{float:left}
+
+i.l{margin-right:.4em}
+i[class]:empty{padding-left:2em}
+i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
+i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-repeat 50% 50%/contain}
+i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}
+i.search{background:url('https://api.iconify.design/ic:baseline-search.svg') no-repeat 50% 50%/contain}
+i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
+i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
+i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
+i.note{background:url('https://api.iconify.design/fxemoji:emptynote.svg') no-repeat 50% 50%/contain}
+i.list{background:url('https://api.iconify.design/emojione:clipboard.svg?color=%23fff') no-repeat 50% 50%/contain}
+i.cat{background:url('https://api.iconify.design/emojione:cat.svg') no-repeat 50% 50%/contain}
+i.photo{background:url('https://api.iconify.design/openmoji:picture.svg') no-repeat 50% 50%/contain}
+i.up{background:url('https://api.iconify.design/emojione-v1:up-right-arrow.svg') no-repeat 50% 50%/contain}
+i.sparkle{background:url('https://api.iconify.design/emojione-v1:sparkles.svg') no-repeat 50% 50%/contain}
+i.cmt{background:url('https://api.iconify.design/emojione-v1:two-speech-bubbles.svg') no-repeat 50% 50%/contain}
+i.page{background:url('https://api.iconify.design/carbon:page-scroll.svg') no-repeat 50% 50%/contain}
+i.download{background:url('https://api.iconify.design/flat-color-icons:download.svg') no-repeat 50% 50%/contain}
+i.wand{background:url('https://api.iconify.design/twemoji:magic-wand.svg') no-repeat 50% 50%/contain}
 
 .logo{position:relative;padding-right:1em;vertical-align:top}
 .logo img{width:auto;height:100%;border-radius:50%;box-sizing:border-box;vertical-align:middle}
@@ -76,23 +96,3 @@ aside [name]{border:0;height:2em;font-size:1em;background:none}
 	.mn1 header{height:inherit}
 	.mn1 nav{position:absolute;top:0;left:10em;right:13em;bottom:0;height:2em}
 }
-
-i.l{margin-right:.4em}
-i[class]:empty{padding-left:2em}
-i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
-i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-repeat 50% 50%/contain}
-i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}
-i.search{background:url('https://api.iconify.design/ic:baseline-search.svg') no-repeat 50% 50%/contain}
-i.dots-v{background:url('https://api.iconify.design/mdi:dots-vertical.svg') no-repeat 50% 50%/contain}
-i.caret-l{background:url('https://api.iconify.design/bi:caret-left.svg') no-repeat 50% 50%/contain}
-i.folder{background:url('https://api.iconify.design/fxemoji:openfolder.svg') no-repeat 50% 50%/contain}
-i.note{background:url('https://api.iconify.design/fxemoji:emptynote.svg') no-repeat 50% 50%/contain}
-i.list{background:url('https://api.iconify.design/emojione:clipboard.svg?color=%23fff') no-repeat 50% 50%/contain}
-i.cat{background:url('https://api.iconify.design/emojione:cat.svg') no-repeat 50% 50%/contain}
-i.photo{background:url('https://api.iconify.design/openmoji:picture.svg') no-repeat 50% 50%/contain}
-i.up{background:url('https://api.iconify.design/emojione-v1:up-right-arrow.svg') no-repeat 50% 50%/contain}
-i.sparkle{background:url('https://api.iconify.design/emojione-v1:sparkles.svg') no-repeat 50% 50%/contain}
-i.cmt{background:url('https://api.iconify.design/emojione-v1:two-speech-bubbles.svg') no-repeat 50% 50%/contain}
-i.page{background:url('https://api.iconify.design/carbon:page-scroll.svg') no-repeat 50% 50%/contain}
-i.download{background:url('https://api.iconify.design/flat-color-icons:download.svg') no-repeat 50% 50%/contain}
-i.wand{background:url('https://api.iconify.design/twemoji:magic-wand.svg') no-repeat 50% 50%/contain}
