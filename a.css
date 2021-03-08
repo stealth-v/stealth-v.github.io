@@ -31,8 +31,8 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 
 .mnu{}
 .mn0 header{height:var(--mnu-size)}
-.mn0 .z{float:left;margin-right:.2em;width:var(--mnu-size);height:inherit}
+.mn0 .z{float:left;width:var(--mnu-size);height:inherit}
 .mn0 button{padding:0;border:0;height:inherit;background:none;vertical-align:top}
-.mn0 [name=menu]{}
-.mn0 [name=menu] i{padding-left:1em;font-size:1.5em;vertical-align:middle}
+.mn0 [name=menu]{padding-right:.2em}
+.mn0 [name=menu] i{padding-left:1em;font-size:2em;vertical-align:middle}
 .mn0 [name=menu] span{font-size:1.5em;vertical-align:middle;text-shadow:#0007 1px 1px 0}
