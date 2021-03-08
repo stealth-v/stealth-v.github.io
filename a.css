@@ -19,7 +19,8 @@ input{position:relative}
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
-i[class]:empty{margin-right:.4em;padding-left:2em}
+i.l{margin-right:.4em}
+i[class]:empty{padding-left:2em}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%/contain}
 i.mnu{background:url('https://api.iconify.design/mdi:menu.svg') no-repeat 50% 50%/contain}
