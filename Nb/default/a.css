@@ -18,7 +18,7 @@ input{position:relative}
 .qk button,.qk a{float:left}
 
 i.l{padding-left:2em}
-i.lr{padding-left:2em;margin-right:.4em}
+i.lr{margin-right:.4em;padding-left:2em}
 i.scan{background:url('https://api.iconify.design/flat-ui:search.svg') no-repeat 50% 50%/contain}
 i.content{background:url('https://api.iconify.design/flat-ui:picture.svg') no-repeat 50% 50%/contain}
 i.forum{background:url('https://api.iconify.design/noto:test-tube.svg') no-repeat 50% 50%/contain}

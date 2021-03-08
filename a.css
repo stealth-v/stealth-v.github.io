@@ -7,8 +7,8 @@ input{position:relative}
 
 .z{background:url(https://g.apx.kr/favicon.svg) no-repeat 50%/contain}
 
-i.l{margin-right:.4em}
-i[class]:empty{padding-left:2em;vertical-align:top}
+i.l{padding-left:2em}
+i.lr{margin-right:.2em;padding-left:2em}
 i.usrp{background:url('https://api.iconify.design/ant-design:user-add-outlined.svg') no-repeat 50% 50%/contain}
 i.scan{background:url('https://api.iconify.design/ant-design:security-scan-outlined.svg?color=%23fff') no-repeat 50% 50%/contain}
 i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%/contain}
@@ -36,4 +36,5 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 .mn0 button{padding:0;border:0;height:inherit;background:none;vertical-align:top}
 .mn0 i{padding-left:1em;font-size:2em;vertical-align:middle}
 .mn0 [name=menu]{padding-right:.2em}
+.mn0 [name=menu] i{vertical-align:top}
 .mn0 [name=menu] span{font-size:1.5em;vertical-align:middle;text-shadow:#0007 1px 1px 0}
