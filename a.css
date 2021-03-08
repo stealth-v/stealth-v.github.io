@@ -6,6 +6,7 @@ a:hover,a.on{color:var(--fore)}
 input{position:relative}
 
 .z{background:url(https://g.apx.kr/favicon.svg) no-repeat 50%/contain}
+.bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
 
 i.l{margin-right:.4em}
 i[class]:empty{padding-left:2em;vertical-align:top}
@@ -31,6 +32,7 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 
 .mn0 header{height:var(--mnu-size)}
 .mn0 .z{float:left;width:var(--mnu-size);height:inherit}
+.mn0 button{padding:0;border:0;width:2rem;background:none}
 .mn0 [name=menu]{}
 .mn0 [name=menu] i{padding-left:1em;font-size:2em}
 .mn0 [name=menu] span{}
