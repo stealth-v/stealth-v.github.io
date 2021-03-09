@@ -40,3 +40,5 @@ i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50
 .mn0 [name=mnu] i{vertical-align:top}
 .mn0 [name=mnu] span{font-size:1.5em;vertical-align:middle;text-shadow:#0007 1px 1px 0}
 .mn0 [name=usr]{width:var(--mnu-size)}
+
+aside button{vertical-align:top}
