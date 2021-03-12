@@ -8,7 +8,7 @@ input{position:relative}
 .hrb::after{content:"";z-index:-1;position:absolute;left:0;bottom:-1px;right:0;border-top:1px solid;opacity:.5}
 
 .z{background:url(https://apx.kr/favicon.svg) no-repeat 50%/contain}
-.mc button{color:inherit;background-color:transparent}
+.mc button{color:inherit;background-color:transparent;vertical-align:top}
 .mc button,.mc a{position:relative;padding:0;border:0;height:2em;min-width:2em;font-size:1em}
 .mc button:hover,.mc a:hover{background-color:#fff4}
 .bm ::before{position:absolute;border:1px solid currentColor;top:2px;right:2px;bottom:2px;left:2px;opacity:.5}
