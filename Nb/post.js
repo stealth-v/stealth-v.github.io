@@ -100,7 +100,7 @@ xu.t("post",function(m,app){
 				if(b==self.v_page()){
 					self.on.go(b);
 				}else{
-					self.page("?a=1"+a.substr(1),b);
+					self.page("?a=1&"+a.substr(1),b);
 				}
 				break;
 			}
