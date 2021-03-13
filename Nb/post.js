@@ -85,7 +85,7 @@ xu.t("post",function(m,app){
 				switch(p.tagName){
 				case "ARTICLE":
 					a=p.querySelector("a");
-					if(a.textContent)open(a.href+".ps","_self");
+					if(a.textContent)open(a.href,"_self");
 					return;
 				}
 			}
