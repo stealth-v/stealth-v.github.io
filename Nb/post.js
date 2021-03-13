@@ -71,7 +71,7 @@ xu.t("post",function(m,app){
 
 					}
 					return 1;
-				},"?a=1&"+a.substr(1));
+				},a.replace("?","?a=1&"));
 			},v_page:function(){
 				var m=/p=(\d+)/.exec(location);
 				return m?+m[1]:1;
