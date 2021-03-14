@@ -39,14 +39,14 @@ xu.r(function(v){
 		},
 		ctl:function(a,b){return xu.post(b,this.pjs+a)},
 		src:function(a,b){return xu.script.new(this.pjs+a+".js",b)},
-		css:function(a,b){return xu.stylesheet.new(this.pskin+a+".css",b)},
+		css:function(a,b){return xu.stylesheet.new(this.pjs+a+".css",b)},
 		cssl:function(a,b){
-			return xu.stylesheet.new(this.pskin+a+"+"+xu.lang.current+".css",function(a,e){
+			return xu.stylesheet.new(this.pjs+a+"+"+xu.lang.current+".css",function(a,e){
 				if(b)b(a,e);
 
 				if(e){
 					a.onerror=null;
-					a.src=this.pskin+a+"+en-US.css";
+					a.src=this.pjs+a+"+en-US.css";
 				}
 			},a,1)
 		}
