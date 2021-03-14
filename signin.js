@@ -10,8 +10,8 @@ xu.t("signin",function(m,app){
 	var css,jsbn,rsa;
 	m.task=function(fin){
 		css=app.css("signin",done);
-		jsbn=app.script("jsbn",done);
-		rsa=app.script("rsa",done);
+		jsbn=app.src("jsbn",done);
+		rsa=app.src("rsa",done);
 
 		function done(){
 			if(css&&jsbn&&rsa)fin();
