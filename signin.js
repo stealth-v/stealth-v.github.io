@@ -6,22 +6,17 @@ xu.t("signin",function(m,app){
 		};
 		this.onsubmit=function(e){
 			var u=e.target.elements;
+			xu.post(function(){
 
-			console.log(u[0].value,u[1].value);
+			},"/signin.ps").send(u[0].value+"\t"+u[1].value);
 			return false;
 		};
 		return self;
 	};
 
-	var css,jsbn,rsa;
+	var css;
 	m.task=function(fin){
-		css=app.css("signin",done);
-		jsbn=app.src("jsbn",done);
-		rsa=app.src("rsa",done);
-
-		function done(){
-			if(css&&jsbn&&rsa)fin();
-		}
+		css=app.css("signin",fin);
 	};
 	m.unload=function(){
 		xu.stylesheet.delete(css);
