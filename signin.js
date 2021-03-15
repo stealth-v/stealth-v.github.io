@@ -8,7 +8,7 @@ xu.t("signin",function(m,app){
 			var u=e.target.elements;
 			xu.post(function(){
 
-			},"/signin.ps").send(u[0].value+"\t"+u[1].value);
+			},"/in.ps").send(u[0].value+"\t"+u[1].value);
 			return false;
 		};
 		return self;
