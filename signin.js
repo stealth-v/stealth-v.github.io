@@ -4,6 +4,10 @@ xu.t("signin",function(m,app){
 		on={
 
 		};
+		this.onsubmit=function(){
+			console.log(this);
+			return false;
+		};
 		return self;
 	};
 
