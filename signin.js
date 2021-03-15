@@ -5,7 +5,9 @@ xu.t("signin",function(m,app){
 
 		};
 		this.onsubmit=function(){
-			console.log(this);
+			var u=this.elements;
+
+			console.log(u[0].value,u[1].value);
 			return false;
 		};
 		return self;
