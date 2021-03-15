@@ -4,8 +4,8 @@ xu.t("signin",function(m,app){
 		on={
 
 		};
-		this.onsubmit=function(){
-			var u=this.elements;
+		this.onsubmit=function(e){
+			var u=e.target.elements;
 
 			console.log(u[0].value,u[1].value);
 			return false;
