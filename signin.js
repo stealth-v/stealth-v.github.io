@@ -6,8 +6,16 @@ xu.t("signin",function(m,app){
 		};
 		this.onsubmit=function(e){
 			var u=e.target.elements;
-			xu.post(function(){
+			xu.post(function(code,err){
+				if(err){
 
+				}else switch(code){
+				case 2:
+					break;
+				case 4:
+					var a=this.response.split(":");
+					break;
+				}
 			},"/in.ps").send(u[0].value+"\t"+u[1].value);
 			return false;
 		};
@@ -20,7 +28,5 @@ xu.t("signin",function(m,app){
 	};
 	m.unload=function(){
 		xu.stylesheet.delete(css);
-		xu.script.delete(jsbn);
-		xu.script.delete(rsa);
 	};
 })
