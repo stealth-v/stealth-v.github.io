@@ -340,7 +340,7 @@ var xu={
 			case HTMLButtonElement:
 			case HTMLInputElement:
 			case HTMLSelectElement:
-				return this.ncall(b,p,e);
+				return xu.ncall(b,p,e);
 			}
 		};
 	},
