@@ -6,4 +6,4 @@
 .xu-dropdown input+span{z-index:-2}
 .xu-dropdown input:checked+span{z-index:-1}
 .xu-dropdown span{position:absolute;left:2em;right:0;height:2em;line-height:2;background:var(--backColor)}
-.xu-dropdown button{position:absolute;top:0;right:0;padding:0;border:0;width:2em;height:2em;font-size:1em}
+.xu-dropdown button{position:absolute;top:0;right:0;padding:0;border:0;width:2em;height:2em;font-size:1em;background:none}
