@@ -32,7 +32,7 @@ xu.t("signin",function(m,app){
 		xu.clk(this,on);
 		return self;
 
-		function NC(){
+		function NC(k){
 			xu.get(function(s,e){
 				if(e){
 
@@ -45,7 +45,7 @@ xu.t("signin",function(m,app){
 					});
 					content.querySelector("form").appendChild(re0);
 				}
-			},"https://rcaptcha.nid.naver.com/question?key=er8wSDAGH8QwfT&svc=nid");
+			},"https://rcaptcha.nid.naver.com/question?key="+k+"&svc=nid");
 		}
 	};
 
