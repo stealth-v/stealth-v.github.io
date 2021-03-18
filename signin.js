@@ -1,7 +1,7 @@
 xu.t("signin",function(m,app){
 	m.exports=function(){
 		var content=this,
-		re=xu.template(this.querySelector(".re.t").cloneNode(true)),
+		re=xu.template(this.querySelector(".re.xu-temp").cloneNode(true)),
 		ex0,
 		on={
 			ss:function(){
