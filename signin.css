@@ -1,6 +1,6 @@
 .signin .ss{position:relative;min-height:2em}
 .signin form label{position:relative;display:block}
 .signin form .u label{height:3em;line-height:.4}
-.signin form .u input{padding:0 .5em;border:0;border-bottom:1px solid;width:100%;height:2em;font-size:1em;background:none;box-sizing:border-box}
-.signin form .u input:focus{outline:1px solid;outline-offset:-.4em}
+.signin form .u input{padding:0 .4em;border:0;border-bottom:1px solid;width:100%;height:2em;font-size:1em;background:none;box-sizing:border-box}
+.signin form .u input:focus{border-bottom:2px solid var(--fore);outline:0}
 .signin form .s button{width:100%}
