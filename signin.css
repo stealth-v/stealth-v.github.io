@@ -5,4 +5,4 @@
 .signin form .u label{height:4em;line-height:1}
 .signin form .u input{padding:0 .4em;border:0;border-bottom:1px solid;width:100%;height:2em;font-size:1em;background:none;box-sizing:border-box}
 .signin form .u input:focus{border-bottom:2px solid var(--fore);outline:0}
-.signin form .s button{width:100%;height:3em;font-size:1em;color:var(--forei);background:var(--fore)}
+.signin form .s button{border:0;width:100%;height:3em;font-size:1em;color:var(--forei);background:var(--fore)}
