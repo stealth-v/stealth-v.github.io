@@ -215,7 +215,7 @@ var xu={
 	got:function(a){
 		var x=new XMLHttpRequest();
 		if(a){
-			x.onreadystatechange=function(){a.call(x,x.status/100|2)};
+			x.onreadystatechange=function(){a.call(x,x.status/100|0)};
 			x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
 		}
 		return x;
