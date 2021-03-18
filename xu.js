@@ -212,10 +212,18 @@ var xu={
 	newId:function(){
 		return (Date.now()+this.increment++).toString(36);
 	},
+	xhr:function(a){
+		var x=new XMLHttpRequest();
+		if(a){
+			x.onreadystatechange=function(){a.call(x,x.status/100|0,x.readyState)};
+			x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
+		}
+		return x;
+	},
 	got:function(a){
 		var x=new XMLHttpRequest();
 		if(a){
-			x.onreadystatechange=function(){a.call(x,x.status/100|0)};
+			x.onload=function(){a.call(x,x.status/100|0)};
 			x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
 		}
 		return x;
