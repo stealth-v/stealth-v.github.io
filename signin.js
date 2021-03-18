@@ -3,7 +3,7 @@ xu.t("signin",function(m,app){
 		var content=this,
 		on={
 			ss:function(){
-				xu.toggle(this.querySelector(".ss"));
+				xu.toggle(content.querySelector(".ss"));
 			}
 		};
 		this.onsubmit=function(e){
