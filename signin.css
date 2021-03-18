@@ -5,5 +5,5 @@
 .signin .ss input{margin:.5em;width:1em;height:1em;font-size:1em;visibility:hidden}
 .signin .ss input+span{z-index:-2}
 .signin .ss input:checked+span{z-index:-1}
-.signin .ss span{position:absolute;left:2em;right:0;height:2em;line-height:2}
+.signin .ss span{position:absolute;left:2em;right:0;height:2em;line-height:2;background:var(--backColor)}
 .signin .ss button{position:absolute;top:0;right:0}
