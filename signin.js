@@ -31,8 +31,8 @@ xu.t("signin",function(m,app){
 		return self;
 
 		function NC(){
-			xu.get(function(code,err){
-				if(err){
+			xu.get(function(s,e){
+				if(e){
 
 				}else{
 					var a=JSON.parse(this.response).receiptData;

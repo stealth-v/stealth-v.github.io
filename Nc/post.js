@@ -61,16 +61,13 @@ xu.t("post",function(m,app){
 			},page:function(a,i){
 				app.loc("","",a);
 				xu.post(function(s,e){
-					if(this.readyState==4){
+					if(e){
+
+					}else{
 						if(this.response)self.reload(JSON.parse(this.response));
 						else self.reload([]);
 						self.update(i,a);
-					}else if(e){
-	
-					}else{
-	
 					}
-					return 1;
 				},a).send();
 			},v_page:function(){
 				var m=/p=(\d+)/.exec(location);
