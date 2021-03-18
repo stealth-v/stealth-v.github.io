@@ -1,4 +1,4 @@
 .signin .ss{position:relative;min-height:2em}
 .signin form label{position:relative;display:block;height:3em}
-.signin form .u input{position:absolute;border:0;padding:0 .4em;left:0;right:0;bottom:0;height:2em;font-size:1em}
+.signin form .u input{border:0;padding:0 .4em;width:100%;height:2em;font-size:1em;box-sizing:border-box}
 .signin form .s button{width:100%}
