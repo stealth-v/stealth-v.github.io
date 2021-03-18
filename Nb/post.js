@@ -1,7 +1,7 @@
 xu.t("post",function(m,app){
 	m.exports=function(){
 		var content=this,
-		art=xu.template(this.querySelector("article.t").cloneNode(true)),
+		art=xu.template(this.querySelector("article.xu-temp").cloneNode(true)),
 		aside=this.parentNode.querySelector("aside"),
 		go=this.querySelector(".go"),
 		on={
