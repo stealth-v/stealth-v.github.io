@@ -17,6 +17,11 @@ xu.t("signin",function(m,app){
 
 				}else switch(code){
 				case 2:
+					if(re0){
+						re0.parentNode.removeChild(re0);
+						re0=0;
+					}
+
 					break;
 				case 4:
 					var a=this.response.split(":"),b=content.querySelector(".ss :checked").value
@@ -38,7 +43,7 @@ xu.t("signin",function(m,app){
 
 				}else{
 					var a=JSON.parse(this.response).receiptData;
-					if(re0)re0.remove();
+					if(re0)re0.parentNode.removeChild(re0);
 					re0=re({
 						SRC:a.image,
 						Q:a.question
