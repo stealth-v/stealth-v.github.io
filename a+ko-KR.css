@@ -1,3 +1,4 @@
+.ll-id::after{content:"사용자 로그인"}
 .ll-id::after{content:"아이디"}
 .ll-pw::after{content:"패스워드"}
 .ll-keep::after{content:"세션유지"}
