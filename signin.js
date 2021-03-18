@@ -2,7 +2,7 @@ xu.t("signin",function(m,app){
 	m.exports=function(){
 		var content=this,
 		re=xu.template(this.querySelector(".re.xu-temp").cloneNode(true)),
-		ex0,
+		re0,
 		on={
 			ss:function(){
 				xu.toggle(content.querySelector(".ss"));
