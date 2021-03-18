@@ -1,4 +1,5 @@
 .signin .ss{position:relative;min-height:2em}
+.signin form{margin:auto;max-width:320px}
 .signin form label{position:relative;display:block;height:2em;line-height:2}
 .signin form label i{font-style:normal}
 .signin form .u label{height:4em;line-height:1}
