@@ -15,6 +15,8 @@ i.web{background:url('https://api.iconify.design/mdi:web.svg') no-repeat 50% 50%
 i.mnu{background:url('https://api.iconify.design/mdi:menu.svg') no-repeat 50% 50%/contain}
 i.md{background:url('https://api.iconify.design/mdi:menu-down.svg') no-repeat 50% 50%/contain}
 i.put1{background:url('https://api.iconify.design/carbon:object-storage.svg') no-repeat 50% 50%/contain}
+i.brand-google{background:url('https://api.iconify.design/logos:google-icon.svg') no-repeat 50% 50%/contain}
+i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg') no-repeat 50% 50%/contain}
 
 .logo,.nav{display:inline-block;width:2em;height:2em}
 .logo img{width:auto;height:100%}
