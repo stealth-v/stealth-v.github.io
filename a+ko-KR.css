@@ -1,4 +1,4 @@
-.ll-id::after{content:"User ID"}
-.ll-pw::after{content:"Password"}
-.ll-keep::after{content:"Remember"}
-.ll-signin::after{content:"Sign in"}
+.ll-id::after{content:"아이디"}
+.ll-pw::after{content:"패스워드"}
+.ll-keep::after{content:"세션유지"}
+.ll-signin::after{content:"로그인"}
