@@ -3,6 +3,7 @@ xu.t("signin",function(m,app){
 		var content=this,
 		re=xu.template(this.querySelector(".re.xu-temp").cloneNode(true)),
 		re0,
+		qbody="",
 		on={
 			ss:function(){
 				xu.toggle(content.querySelector(".ss"));
@@ -10,7 +11,7 @@ xu.t("signin",function(m,app){
 		};
 		this.onsubmit=function(e){
 			var u=e.target.querySelectorAll("input"),body=u[0].value+"\t"+u[1].value+"\t"+(u[2].checked?"1":"");
-			if(u[3])body+="\t"+u[3].value;
+			if(u[3])body+="\t"+u[3].value+"\t"+qbody;
 			xu.post(function(code,err){
 				if(err){
 
@@ -20,7 +21,8 @@ xu.t("signin",function(m,app){
 				case 4:
 					var a=this.response.split(":"),b=content.querySelector(".ss :checked").value
 					switch(b){
-					case "N":NC();break;
+					case "N":qbody=a[0]+"\t"+a[1];NC(a[1]);break;
+					default:qbody="";
 					}
 					break;
 				}
