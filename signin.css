@@ -1,7 +1,7 @@
 .signin .ss{position:relative}
 .signin .ss.on{}
 .signin .ss.on label{height:2em}
-.signin .ss label{height:0em}
+.signin .ss label{display:block;height:0em}
 .signin .ss input{z-index:-1}
 .signin .ss input:checked{z-index:auto}
 .signin .ss span{position:absolute;width:100%;height:inherit}
