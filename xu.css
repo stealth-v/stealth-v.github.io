@@ -1,3 +1,4 @@
+.xu-temp{display:none}
 .xu-dropdown.on label{height:2em}
 .xu-dropdown:not(.on) input:not(:checked){visibility:hidden}
 .xu-dropdown label{display:block;height:0em}
