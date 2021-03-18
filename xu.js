@@ -150,9 +150,9 @@ var xu={
 		return a.replace(/^data-0/,"");
 	},
 	template:function(src){
-		var cls=re.className.replace(/\s?t\s?/,""),o,y=xu.doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+		var cls=src.className.replace(/\s?t\s?/,""),o,y=xu.doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
 
-		if(cls)re.className=cls;
+		if(cls)src.className=cls;
 		else src.removeAttribute("class");
 
 		y.appendChild(src);
