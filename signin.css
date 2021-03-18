@@ -1,3 +1,4 @@
+.signin .h{border-bottom:var(--mnu-hr-color);height:2em;line-height:2;box-sizing:border-box}
 .signin .h h1{margin:0}
 .signin .ss{position:relative;min-height:2em}
 .signin .w{margin:auto;max-width:320px}
