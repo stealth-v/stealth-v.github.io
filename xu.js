@@ -146,14 +146,20 @@ var xu={
 			return new x(content,app);
 		}
 	})(),
+	prefix0:function(a){
+		return a.replace(/^data-0/,"");
+	},
 	template:function(src){
-		var o,y=xu.doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+		var cls=re.className.replace(/\s?t\s?/,""),o,y=xu.doc.createElement("div"),rep=[],rx=/([^%]+)|(%[^%]+)%/g;
+
+		if(cls)re.className=cls;
+		else src.removeAttribute("class");
 
 		y.appendChild(src);
 		o=y.querySelectorAll("*");
 
 		for(var i=0,c=o.length;i<c;i++){
-			for(var attr=o[i].attributes,j=0,d=attr.length;j<d;j++)trs([i,attr[j].name],attr[j].value);
+			for(var attr=o[i].attributes,j=0,d=attr.length;j<d;j++)trs([i,xu.prefix0(attr[j].name)],attr[j].value);
 
 			for(var p=o[i].childNodes,j=0,d=p.length;j<d;j++)
 			switch(p[j].constructor){

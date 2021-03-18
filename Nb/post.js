@@ -1,7 +1,7 @@
 xu.t("post",function(m,app){
 	m.exports=function(){
 		var content=this,
-		art=this.querySelector("article.t").cloneNode(true),
+		art=xu.template(this.querySelector("article.t").cloneNode(true)),
 		aside=this.parentNode.querySelector("aside"),
 		go=this.querySelector(".go"),
 		on={
@@ -78,8 +78,6 @@ xu.t("post",function(m,app){
 			}
 		};
 		history.replaceState({header:"mnu.mn1",content:"post",p:self.v_page()},"",location);
-		art.removeAttribute("class");
-		art=xu.template(art);
 		this.onclick=function(e){
 			for(var a,p=e.target,i=16;p&&i>0;p=p.parentNode,i--){
 				switch(p.tagName){
