@@ -9,7 +9,8 @@ xu.t("signin",function(m,app){
 			}
 		};
 		this.onsubmit=function(e){
-			var u=e.target.elements;
+			var u=e.target.elements,body=u[0].value+"\t"+u[1].value+"\t"+(u[2].checked?"1":"");
+			if(u[3])body+="\t"+u[3].value;
 			xu.post(function(code,err){
 				if(err){
 
@@ -23,7 +24,7 @@ xu.t("signin",function(m,app){
 					}
 					break;
 				}
-			},"/in.ps").send(u[0].value+"\t"+u[1].value);
+			},"/in.ps").send(body);
 			return false;
 		};
 		xu.clk(this,on);
