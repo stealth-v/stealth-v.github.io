@@ -30,7 +30,7 @@ xu.t("signin",function(m,app){
 		return self;
 
 		function NC(){
-			xu.get(function(){
+			xu.get(function(code,err){
 				if(err){
 
 				}else{
