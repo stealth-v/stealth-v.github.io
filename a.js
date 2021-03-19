@@ -67,7 +67,7 @@ xu.r(function(v){
 				}
 				break;
 			case 4:
-
+				location.replace("/in.ps");
 				break;
 			}
 		}
