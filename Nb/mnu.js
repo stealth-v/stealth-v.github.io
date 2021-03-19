@@ -8,7 +8,7 @@ xu.t("mnu",function(m,app){
 				xu.focus(sc.querySelector("[type=search"));
 			}
 		},
-		self={on:on,freg:null,
+		self={on:on,freg:null
 		};
 		this.onclick=function(e){
 			for(var p=e.target,i=16;p&&i>0;p=p.parentNode,i--){

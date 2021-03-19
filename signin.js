@@ -8,6 +8,7 @@ xu.t("signin",function(m,app){
 			ss:function(){
 				xu.toggle(content.querySelector(".ss"));
 			}
+		},self={on:on,freg:null
 		};
 		this.onsubmit=function(e){
 			var u=e.target.querySelectorAll("input"),body=u[0].value+"\t"+u[1].value+"\t"+(u[2].checked?"1":"");
