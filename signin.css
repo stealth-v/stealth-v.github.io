@@ -1,6 +1,6 @@
 .signin .h{border-bottom:1px solid var(--mnu-hr-color);height:2em;line-height:2;box-sizing:border-box}
 .signin .h .home{float:left;width:2em;height:2em}
-.signin .h h1{margin:0;font-size:1em}
+.signin .h h1{margin:0;padding-left:.4em;font-size:1em;overflow:auto}
 .signin .ss{position:relative;min-height:2em}
 .signin .w{margin:auto;max-width:320px}
 .signin form label{position:relative;display:block;height:2em;line-height:2}
