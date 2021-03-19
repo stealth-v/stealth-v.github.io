@@ -12,16 +12,15 @@ xu.t("signin",function(m,app){
 		this.onsubmit=function(e){
 			var u=e.target.querySelectorAll("input"),body=u[0].value+"\t"+u[1].value+"\t"+(u[2].checked?"1":"");
 			if(u[3])body+="\t"+u[3].value+"\t"+qbody;
-			xu.post(function(code,err){
-				if(err){
+			xu.post(function(s,e){
+				if(e){
 
-				}else switch(code){
+				}else switch(s){
 				case 2:
 					if(re0){
 						re0.parentNode.removeChild(re0);
 						re0=0;
 					}
-
 					break;
 				case 4:
 					var a=this.response.split(":"),b=content.querySelector(".ss :checked").value

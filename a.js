@@ -5,6 +5,9 @@ xu.r(function(v){
 
 	var module={},
 	on={
+		usr:function(){
+			app.sign_state(app.res_profile);
+		}
 	},
 	app,x=xu.new(xu.body,app=v.app={
 		on:on,module:module,pjs:0,viewport:0,
@@ -49,6 +52,24 @@ xu.r(function(v){
 					a.src=this.pjs+a+"+en-US.css";
 				}
 			},a,1)
+		},
+		sign_state:function(a){xu.post(a,"/in.ps?b=p").send()},
+		res_profile:function(s,e){
+			if(e){
+
+			}else switch(s){
+			case 2:
+				var a=this.response.split(":");
+				if(a==0){
+
+				}else{
+					console.log(a);
+				}
+				break;
+			case 4:
+
+				break;
+			}
 		}
 	});
 
