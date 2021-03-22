@@ -59,7 +59,7 @@ xu.r(function(v){
 
 			}else switch(s){
 			case 2:
-				var a=this.response.split(":");
+				var a=this.response.split("	");
 				if(a==0){
 
 				}else{
