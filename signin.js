@@ -13,7 +13,7 @@ xu.t("signin",function(m,app){
 		this.onsubmit=function(e){
 			var u=e.target.querySelectorAll("input"),body=u[0].value+"\t"+u[1].value+"\t"+(u[2].checked?"1":"");
 			if(u[3])body+="\t"+u[3].value+"\t"+qbody;
-			xu.post(function(s,e){
+			xu.post(function(s,e){var a,b;
 				if(e){
 
 				}else switch(s){
@@ -22,9 +22,16 @@ xu.t("signin",function(m,app){
 						re0.parentNode.removeChild(re0);
 						re0=0;
 					}
+					a=this.response.split("\t");
+					if(a==0){
+						
+					}else{
+						app.new_profile(a[0],a[1],a[2]);
+						location.replace("/index.ps");
+					}
 					break;
 				case 4:
-					var a=this.response.split(":"),b=content.querySelector(".ss :checked").value
+					a=this.response.split(":"),b=content.querySelector(".ss :checked").value;
 					switch(b){
 					case "N":qbody=a[0]+"\t"+a[1];NC(a[1]);break;
 					default:qbody="";

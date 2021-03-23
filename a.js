@@ -54,6 +54,11 @@ xu.r(function(v){
 			},a,1)
 		},
 		sign_state:function(a){xu.post(a,"/in.ps?b=p").send()},
+		new_profile:function(id,n,p){
+			sessionStorage.a=id;
+			sessionStorage.n=n;
+			sessionStorage.p=p;
+		},
 		res_profile:function(s,e){
 			if(e){
 
@@ -61,13 +66,10 @@ xu.r(function(v){
 			case 2:
 				var a=this.response.split("	");
 				if(a==0){
-
+					location.replace("/in.ps");
 				}else{
-					console.log(a);
+					app.new_profile(a[0],a[1],a[2]);
 				}
-				break;
-			case 4:
-				location.replace("/in.ps");
 				break;
 			}
 		}
