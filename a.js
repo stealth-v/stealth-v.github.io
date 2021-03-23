@@ -5,9 +5,6 @@ xu.r(function(v){
 
 	var module={},
 	on={
-		usr:function(){
-			app.sign_state(app.res_profile);
-		}
 	},
 	app,x=xu.new(xu.body,app=v.app={
 		on:on,module:module,pjs:0,viewport:0,
@@ -53,11 +50,36 @@ xu.r(function(v){
 				}
 			},a,1)
 		},
-		sign_state:function(a){xu.post(a,"/in.ps?b=p").send()},
-		new_profile:function(id,n,p){
-			sessionStorage.a=id;
-			sessionStorage.n=n;
-			sessionStorage.p=p;
+		sign_state:function(a,b,p){xu.post(a,"/in.ps?b="+b,p).send()},
+		sign_state1:function(s,e,p){
+			if(e){
+
+			}else switch(s){
+			case 2:
+				xu.toggle(p);
+				break;
+			case 4:
+				app.set_profile();
+				location.href="/in.ps";
+				break;
+			}
+		},
+		set_profile:function(id,n,p){
+			if(id){
+				sessionStorage.setItem("a",id);
+				sessionStorage.setItem("n",n);
+				sessionStorage.setItem("p",p);
+			}else{
+				sessionStorage.removeItem("a");
+				sessionStorage.removeItem("n");
+				sessionStorage.removeItem("p");
+			}
+		},
+		get_profile:function(){
+			var a=sessionStorage.getItem("a");
+			if(a)return [a,
+				sessionStorage.getItem("n"),
+				sessionStorage.getItem("p")];
 		},
 		res_profile:function(s,e){
 			if(e){
@@ -77,7 +99,7 @@ xu.r(function(v){
 
 	app.viewport=xu.head.querySelector("[name=viewport]");
 
-	var r=xu.html.querySelector("[src$='a.js']"),a=xu.body.querySelector("[data-skin]");
+	var r=xu.html.querySelector("[src$='a.js']");
 	app.pjs=r.src.replace(/[^\/]+$/,"");
 
 	app.reload();

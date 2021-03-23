@@ -212,32 +212,32 @@ var xu={
 	newId:function(){
 		return (Date.now()+this.increment++).toString(36);
 	},
-	xhr:function(a){
+	xhr:function(a,p){
 		var x=new XMLHttpRequest();
 		if(a){
-			x.onreadystatechange=function(){a.call(x,x.status/100|0,x.readyState)};
-			x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
+			x.onreadystatechange=function(){a.call(x,x.status/100|0,x.readyState,p)};
+			x.ontimeout=x.onerror=function(e){a.call(x,0,e,p)};
 		}
 		return x;
 	},
-	got:function(a){
+	got:function(a,p){
 		var x=new XMLHttpRequest();
 		if(a){
-			x.onload=function(){a.call(x,x.status/100|0)};
-			x.ontimeout=x.onerror=function(e){a.call(x,0,e)};
+			x.onload=function(){a.call(x,x.status/100|0,0,p)};
+			x.ontimeout=x.onerror=function(e){a.call(x,0,e,p)};
 		}
 		return x;
 	},
-	get:function(a,b,c){
-		var x=this.got(a);
+	get:function(a,b,p,c){
+		var x=this.got(a,p);
 		x.open("GET",b,true);
 		if(c)return x;
 		else x.send();
 	},
-	post:function(a,b,c){
-		var x=this.got(a);
+	post:function(a,b,p,c){
+		var x=this.got(a,p);
 		x.open("POST",b,true);
-		if(c!==null)x.setRequestHeader("Content-Type",c||"application/x-www-form-urlencoded");
+		if(c!==undefined)x.setRequestHeader("Content-Type",c||"application/x-www-form-urlencoded");
 		return x;
 	},
 	rpc:function(a,b,c){
@@ -362,10 +362,11 @@ var xu={
 		if(b)a.placeholder=b;
 		a.focus();
 	},
+	peek:function(a){return /\bon\b/.test(a.className)},
 	toggle0:0,
 	toggle:function(z,f){
 		var a=z.className,b=this.toggle0;
-		if(f||/ on$/.test(a)){
+		if(f||/\bon\b/.test(a)){
 			z.className=a.replace(/\son/g,"");
 			this.toggle0=0;
 		}else{
