@@ -2,26 +2,13 @@ xu.t("mnu",function(m,app){
 	m.exports=function(){
 		var content=this,
 		sc=this.querySelector(".sc"),
-		usr=this.querySelector(".usr"),
 		on={
 			sc:function(){
 				xu.toggle(sc);
 				xu.focus(sc.querySelector("[type=search"));
-			},
-			usr:function(){
-				if(xu.peek(usr))xu.toggle(usr);
-				else app.sign_state(app.sign_state1,"q",usr);
 			}
 		},
-		self={on:on,freg:null,
-			reload:function(){
-				var a=app.get_profile();
-				if(a){
-					usr.style.background=a[2];
-				}else{
-					usr.removeAttribute("style");
-				}
-			}
+		self={on:on,freg:null
 		};
 
 		this.onclick=function(e){
