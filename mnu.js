@@ -33,7 +33,7 @@ xu.t("mnu",function(m,app){
 				}else switch(s){
 				case 2:
 					xu.toggle(usr,1);
-					app.reset_profile();
+					app.set_profile();
 					break;
 				}
 			}
