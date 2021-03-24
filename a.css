@@ -44,7 +44,9 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 [name=mnu] span{font-size:1.5em;vertical-align:middle;text-shadow:#0007 1px 1px 0}
 .mn0 [name=usr]{width:var(--mnu-size);background:center/contain}
 .mn0 [name=usr][style] i{display:none}
-.mn0 .usr{position:absolute;padding-top:var(--mnu-size);width:100%;max-width:320px;max-height:0%;top:0;right:0;bottom:0}
+.mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;bottom:0}
 .mn0 .usr.on{max-height:100%}
+.mn0 .usr [name=mnu]{float:right}
+.mn0 .usr .h{height:var(--mnu-size)}
 
 aside button{vertical-align:top}
