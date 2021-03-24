@@ -5,15 +5,11 @@ xu.t("mnu",function(m,app){
 		on={
 			usr:function(){
 				if(xu.peek(usr))xu.toggle(usr);
-				else app.sign_state(app.sign_state1,"q",usr);
+				else app.sign_state(app.sign_toggle,"q",usr);
 			}
 		},
 		self={on:on,freg:null,
-			reload:function(){
-				this.reset_profile();
-			},
-			reset_profile:function(){
-				var a=app.get_profile();
+			reset_profile:function(a){
 				if(a){
 					usr.style.background=a[2];
 				}else{
@@ -21,6 +17,7 @@ xu.t("mnu",function(m,app){
 				}
 			}
 		};
+		this.reset_profile();
 		return self;
 	};
 })

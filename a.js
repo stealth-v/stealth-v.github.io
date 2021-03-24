@@ -51,16 +51,29 @@ xu.r(function(v){
 			},a,1)
 		},
 		sign_state:function(a,b,p){xu.post(a,"/in.ps?b="+b,p).send()},
-		sign_state1:function(s,e,p){
+		sign_toggle:function(s,e,p){
 			if(e){
 
 			}else switch(s){
 			case 2:
-				xu.toggle(p);
+				if(p)xu.toggle(p);
 				break;
 			case 4:
 				app.set_profile();
 				location.href="/in.ps";
+				break;
+			}
+		},
+		sign_profile:function(s,e){
+			if(e){
+
+			}else switch(s){
+			case 2:
+				var a=this.response.split("	");
+				if(a!=0){
+					app.set_profile(a[0],a[1],a[2]);
+					app.reset_profile(a);
+				}
 				break;
 			}
 		},
@@ -81,19 +94,8 @@ xu.r(function(v){
 				sessionStorage.getItem("n"),
 				sessionStorage.getItem("p")];
 		},
-		res_profile:function(s,e){
-			if(e){
-
-			}else switch(s){
-			case 2:
-				var a=this.response.split("	");
-				if(a==0){
-					location.replace("/in.ps");
-				}else{
-					app.new_profile(a[0],a[1],a[2]);
-				}
-				break;
-			}
+		reset_profile:function(a){
+			this.header.reset_profile(a);
 		}
 	});
 
@@ -105,6 +107,9 @@ xu.r(function(v){
 	app.reload();
 	x.url_prefix=function(a){return app.pjs+a+".js"};
 	x.load(0,0,function(){
+		var a=app.get_profile();
+		if(a)app.reset_profile(a);
+		else app.sign_state(app.sign_profile,"q",usr);
 		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
 	});
 
