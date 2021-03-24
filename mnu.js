@@ -11,7 +11,7 @@ xu.t("mnu",function(m,app){
 				else app.sign_state(app.sign_toggle,"q",usr);
 			},
 			out:function(){
-				xu.post(this.out1,"/out.ps","").send();
+				xu.post(self.out1,"/out.ps","").send();
 			},
 			out1:function(s,e){
 				if(e){

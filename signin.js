@@ -22,12 +22,12 @@ xu.t("signin",function(m,app){
 						re0.parentNode.removeChild(re0);
 						re0=0;
 					}
-					a=this.response.split("\t");
-					if(a==0){
-
-					}else{
+					if(this.response){
+						a=this.response.split("\t");
 						app.set_profile(a[0],a[1],a[2]);
 						location.replace("/index.ps");
+					}else{
+
 					}
 					break;
 				case 4:
