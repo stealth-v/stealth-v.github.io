@@ -15,6 +15,7 @@ xu.t("mnu",function(m,app){
 			reset_profile:function(a){
 				if(a){
 					content.querySelector("[name=usr]").style.backgroundImage="url("+a[2]+")";
+					if(usp0)usr.removeChild(usp0);
 					usr.insertBefore(usp0=usp({UN:a[1]}),usr.children[0]);
 				}else{
 					usr.removeAttribute("style");
