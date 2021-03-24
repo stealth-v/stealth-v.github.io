@@ -12,15 +12,6 @@ xu.t("mnu",function(m,app){
 			},
 			out:function(){
 				xu.post(self.out1,"/out.ps","").send();
-			},
-			out1:function(s,e){
-				if(e){
-	
-				}else switch(s){
-				case 2:
-					app.reset_profile();
-					break;
-				}
 			}
 		},
 		self={on:on,freg:null,
@@ -33,6 +24,16 @@ xu.t("mnu",function(m,app){
 					usr.removeAttribute("style");
 					usr.removeChild(usp0);
 					usp0=0;
+				}
+			},
+			out1:function(s,e){
+				if(e){
+	
+				}else switch(s){
+				case 2:
+					xu.toggle(usr,1);
+					app.reset_profile();
+					break;
 				}
 			}
 		};
