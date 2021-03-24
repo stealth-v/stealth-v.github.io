@@ -49,6 +49,6 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 .usr.on{max-height:100%}
 .mn0 .usr [name=usr]{float:right;height:var(--mnu-size)}
 .mn0 .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
-.mn0 .usr .h{margin-right:var(--mnu-size);padding-left:.4em;height:var(--mnu-size);line-height:2}
+.mn0 .usr .h{margin:0 var(--mnu-size);padding-left:.4em;height:var(--mnu-size);line-height:2}
 
 aside button{vertical-align:top}
