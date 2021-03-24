@@ -2,6 +2,8 @@ xu.t("mnu",function(m,app){
 	m.exports=function(){
 		var content=this,
 		usr=this.querySelector(".usr"),
+		usp=xu.template(usr.querySelector(".xu-temp")),
+		usp0,
 		on={
 			usr:function(){
 				var a=sessionStorage.getItem("a");
@@ -13,8 +15,11 @@ xu.t("mnu",function(m,app){
 			reset_profile:function(a){
 				if(a){
 					content.querySelector("[name=usr]").style.backgroundImage="url("+a[2]+")";
+					usr.insertBefore(usp0=usp({UN:a[1]}),usr.children[0]);
 				}else{
 					usr.removeAttribute("style");
+					usr.removeChild(usp0);
+					usp0=0;
 				}
 			}
 		};
