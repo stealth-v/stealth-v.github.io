@@ -64,17 +64,17 @@ xu.r(function(v){
 				break;
 			}
 		},
-		sign_profile:function(s,e){
+		sign_profile:function(s,e){var a;
 			if(e){
 
 			}else switch(s){
 			case 2:
-				var a=this.response.split("	");
-				if(a==0){
-					app.set_profile();
-				}else{
+				if(this.response){
+					a=this.response.split("	");
 					app.set_profile(a[0],a[1],a[2]);
 					app.reset_profile(a);
+				}else{
+					app.set_profile();
 				}
 				break;
 			}
