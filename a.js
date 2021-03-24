@@ -70,7 +70,9 @@ xu.r(function(v){
 			}else switch(s){
 			case 2:
 				var a=this.response.split("	");
-				if(a!=0){
+				if(a==0){
+					app.set_profile();
+				}else{
 					app.set_profile(a[0],a[1],a[2]);
 					app.reset_profile(a);
 				}
