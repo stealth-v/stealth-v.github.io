@@ -34,6 +34,7 @@ xu.t("mnu",function(m,app){
 				case 2:
 					xu.toggle(usr,1);
 					app.set_profile();
+					app.reset_profile();
 					break;
 				}
 			}
