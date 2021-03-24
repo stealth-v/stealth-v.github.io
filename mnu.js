@@ -4,7 +4,7 @@ xu.t("mnu",function(m,app){
 		usr=this.querySelector(".usr"),
 		on={
 			usr:function(){
-				var a=sessionStorage.removeItem("a");
+				var a=sessionStorage.getItem("a");
 				if(a)xu.toggle(usr);
 				else app.sign_state(app.sign_toggle,"q",usr);
 			}
