@@ -4,7 +4,8 @@ xu.t("mnu",function(m,app){
 		usr=this.querySelector(".usr"),
 		on={
 			usr:function(){
-				if(xu.peek(usr))xu.toggle(usr);
+				var a=app.get_profile();
+				if(a)xu.toggle(usr);
 				else app.sign_state(app.sign_toggle,"q",usr);
 			}
 		},
