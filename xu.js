@@ -99,10 +99,7 @@ var xu={
 					proc(m,t.app);
 					if(m.reload)m.reload();
 					if(m.task)m.task(fin);
-					else{
-						fin();
-						if(onload)onload();
-					}
+					else fin();
 
 					function fin(){
 						for(var a,b,ex=m.exports,i=wait.length-1;i>=0;i--){
