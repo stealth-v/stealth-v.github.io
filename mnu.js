@@ -9,6 +9,18 @@ xu.t("mnu",function(m,app){
 				var a=sessionStorage.getItem("a");
 				if(a)xu.toggle(usr);
 				else app.sign_state(app.sign_toggle,"q",usr);
+			},
+			out:function(){
+				xu.post(this.out1,"/out.ps","").send();
+			},
+			out1:function(s,e){
+				if(e){
+	
+				}else switch(s){
+				case 2:
+					app.reset_profile();
+					break;
+				}
 			}
 		},
 		self={on:on,freg:null,
