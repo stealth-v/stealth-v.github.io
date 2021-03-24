@@ -11,7 +11,7 @@ xu.t("mnu",function(m,app){
 		self={on:on,freg:null,
 			reset_profile:function(a){
 				if(a){
-					content.querySelector("[name=usr]").style.background="url("+a[2]+")";
+					content.querySelector("[name=usr]").style.backgroundImage="url("+a[2]+")";
 				}else{
 					usr.removeAttribute("style");
 				}
