@@ -95,12 +95,14 @@ var xu={
 				m.exports.call(dom);
 				dom.onload=function(proc){
 					this.onload=null;
-					if(onload)onload();
 
 					proc(m,t.app);
 					if(m.reload)m.reload();
 					if(m.task)m.task(fin);
-					else fin();
+					else{
+						fin();
+						if(onload)onload();
+					}
 
 					function fin(){
 						for(var a,b,ex=m.exports,i=wait.length-1;i>=0;i--){
@@ -114,6 +116,8 @@ var xu={
 								t.app[target]=b;
 								if(b)b.freg=freg;
 							}
+
+							if(onload)onload();
 						}
 					}
 				};

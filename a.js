@@ -111,6 +111,8 @@ xu.r(function(v){
 		if(a)app.reset_profile(a);
 		else app.sign_state(app.sign_profile,"p");
 		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
+		a=xu.doc.querySelector("[autofocus]");
+		if(a)a.focus();
 	});
 
 	addEventListener("click",function(e){
