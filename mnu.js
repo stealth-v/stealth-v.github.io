@@ -24,6 +24,9 @@ xu.t("mnu",function(m,app){
 				}
 			}
 		};
+		var a=app.get_profile();
+		if(a)app.reset_profile(a);
+		app.sign_state(app.sign_profile,"p");
 		return self;
 	};
 })

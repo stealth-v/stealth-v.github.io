@@ -109,9 +109,6 @@ xu.r(function(v){
 	app.reload();
 	x.url_prefix=function(a){return app.pjs+a+".js"};
 	x.load(0,0,function(){
-		var a=app.get_profile();
-		if(a)app.reset_profile(a);
-		app.sign_state(app.sign_profile,"p");
 		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
 		a=xu.doc.querySelector("[autofocus]");
 		if(a)a.focus();
