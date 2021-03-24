@@ -109,7 +109,7 @@ xu.r(function(v){
 	x.load(0,0,function(){
 		var a=app.get_profile();
 		if(a)app.reset_profile(a);
-		else app.sign_state(app.sign_profile,"p",usr);
+		else app.sign_state(app.sign_profile,"p");
 		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
 	});
 
