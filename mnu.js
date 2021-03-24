@@ -16,12 +16,13 @@ xu.t("mnu",function(m,app){
 		},
 		self={on:on,freg:null,
 			reset_profile:function(a){
+				var pf=content.querySelector("[name=usr]");
 				if(a){
-					content.querySelector("[name=usr]").style.backgroundImage="url("+a[2]+")";
+					pf.style.backgroundImage="url("+a[2]+")";
 					if(usp0)usr.removeChild(usp0);
 					usr.insertBefore(usp0=usp({UN:a[1]}),usr.children[0]);
 				}else{
-					usr.removeAttribute("style");
+					pf.removeAttribute("style");
 					usr.removeChild(usp0);
 					usp0=0;
 				}
