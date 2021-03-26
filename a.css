@@ -35,7 +35,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
 .mnu{}
-.mnu .rm{float:right}
+.mnu .rm{float:right;height:inherit}
 .mnu .rm button{width:var(--mnu-size)}
 .mn0 header{height:var(--mnu-size)}
 .mn0 .z{float:left;width:var(--mnu-size);height:inherit;color:transparent;overflow:hidden}
