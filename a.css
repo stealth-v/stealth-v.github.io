@@ -44,7 +44,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 nav,
 .mn0 form,
 .mn0 label,
-.mn0 input{display:inline;border:0;height:inherit;font-size:1em;background:none}
+.mn0 input{display:inline;border:0;height:inherit;font-size:1em;background-color:transparent}
 .mn0 button{padding:0;border:0;height:inherit;background:none;vertical-align:top;white-space:nowrap}
 .mn0 i{padding-left:1em;font-size:2em;vertical-align:middle}
 .mn0 [name=mnu]{width:6rem}
