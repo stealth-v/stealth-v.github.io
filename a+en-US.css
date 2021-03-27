@@ -1,6 +1,6 @@
 .ll-title::after{content:"FunnyWeb"}
 .ll-signin::after{content:"Sign in"}
+.ll-signin-s::after{content:"Submit"}
 .ll-id::after{content:"Username"}
 .ll-pw::after{content:"Password"}
 .ll-keep::after{content:"Remember"}
-.ll-signin::after{content:"Submit"}
