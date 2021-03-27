@@ -1,4 +1,5 @@
-.ll-h1::after{content:"Sign in"}
+.ll-title::after{content:"FunnyWeb"}
+.ll-signin::after{content:"Sign in"}
 .ll-id::after{content:"Username"}
 .ll-pw::after{content:"Password"}
 .ll-keep::after{content:"Remember"}

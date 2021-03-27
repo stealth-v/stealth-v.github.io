@@ -44,12 +44,4 @@ xu.t("mnu",function(m,app){
 		app.sign_state(app.sign_profile,"p");
 		return self;
 	};
-
-	var css1;
-	m.task=function(fin){
-		css1=app.cssl("mnu",fin);
-	};
-	m.unload=function(){
-		xu.stylesheet.delete(css1);
-	};
 })
