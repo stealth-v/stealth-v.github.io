@@ -45,7 +45,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 i{font-size:2em;vertical-align:middle}
 .mn0 [name=mnu]{width:6rem}
 .mn0 [name=mnu] i{vertical-align:top}
-.mn0 [name=mnu] .t{font-size:1.5em;vertical-align:middle;text-shadow:#0007 1px 1px 0}
+.mn0 [name=mnu] .t{font-size:1.5em;font-style:normal;vertical-align:middle;text-shadow:#0007 1px 1px 0}
 .mn0 [name=usr]{background:center/contain}
 .mn0 [name=usr][style] i{display:none}
 .mn0 .md{padding-left:1em}
