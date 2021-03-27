@@ -68,6 +68,6 @@ aside.on .g{margin-left:0px}
 aside button{vertical-align:top}
 aside i{font-style:normal}
 aside a{padding-left:.4em;display:block;line-height:2}
-aside .g{margin-left:240px;width:240px;height:100%;background:var(--backColor);box-shadow:0 0 1px var(--shwColor2)}
+aside .g{margin-left:-240px;width:240px;height:100%;background:var(--backColor);box-shadow:0 0 1px var(--shwColor2)}
 aside [name=mnu]{padding:0;border:0;position:absolute;width:100%;top:0;right:0;bottom:0;left:240px;background:none}
 aside .category{box-shadow:0 0 1px var(--shwColor2)}
