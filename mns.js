@@ -11,7 +11,7 @@ xu.t("mns",function(m,app){
 
 	var css1;
 	m.task=function(fin){
-		css1=app.cssl("mne",fin);
+		css1=app.cssl("mns",fin);
 	};
 	m.unload=function(){
 		xu.stylesheet.delete(css1);
