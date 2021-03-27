@@ -368,7 +368,7 @@ var xu={
 	toggle:function(z,f){
 		var a=z.className,b=this.toggle0;
 		if(f||/\bon\b/.test(a)){
-			z.className=a.replace(/\son/g,"");
+			z.className=a.replace(/\s?\bon/g,"");
 			if(!z.className)z.removeAttribute("class");
 			this.toggle0=0;
 		}else{
