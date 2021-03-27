@@ -1,7 +1,6 @@
 xu.t("mns",function(m,app){
 	m.exports=function(){
 		var content=this,
-		mne=xu.template(this.querySelector(".mne")),
 		on={
 		},
 		self={on:on,freg:null,
