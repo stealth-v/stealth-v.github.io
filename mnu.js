@@ -1,10 +1,14 @@
 xu.t("mnu",function(m,app){
 	m.exports=function(){
 		var content=this,
+		aside=this.querySelector("aside"),
 		usr=this.querySelector(".usr"),
 		usp=xu.template(usr.querySelector(".xu-temp")),
 		usp0,
 		on={
+			mnu:function(){
+				xu.toggle(aside);
+			},
 			usr:function(){
 				var a=sessionStorage.getItem("a");
 				if(a)xu.toggle(usr);
