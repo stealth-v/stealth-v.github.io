@@ -369,10 +369,11 @@ var xu={
 		var a=z.className,b=this.toggle0;
 		if(f||/\bon\b/.test(a)){
 			z.className=a.replace(/\son/g,"");
+			if(!z.className)z.removeAttribute("class");
 			this.toggle0=0;
 		}else{
 			if(b)this.toggle(b,1);
-			z.className+=" on";
+			z.className=(z.className+" on").trim();
 			this.toggle0=z;
 		}
 	},
