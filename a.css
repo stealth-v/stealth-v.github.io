@@ -42,13 +42,12 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 label,
 .mn0 input{border:0;height:inherit;font-size:1em;background:none}
 .mn0 button{padding:0;border:0;height:inherit;background:none;vertical-align:top;white-space:nowrap}
-.mn0 i{font-size:2em;vertical-align:middle}
+.mn0 i{padding-left:1em;font-size:2em;vertical-align:middle}
 .mn0 [name=mnu]{width:6rem}
 .mn0 [name=mnu] i{vertical-align:top}
-.mn0 [name=mnu] .t{font-size:1.5em;font-style:normal;vertical-align:middle;text-shadow:#0007 1px 1px 0}
+.mn0 [name=mnu] .t{padding:0;font-size:1.5em;font-style:normal;vertical-align:middle;text-shadow:#0007 1px 1px 0}
 .mn0 [name=usr]{background:center/contain}
 .mn0 [name=usr][style] i{display:none}
-.mn0 .md{padding-left:1em}
 .mn0 .sch{border-bottom:2px solid #eee}
 .mn0 .sch input{width:15em}
 .mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px #0008,0 0 16px #0004;overflow:hidden}
