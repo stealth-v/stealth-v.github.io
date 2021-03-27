@@ -1,4 +1,4 @@
-:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--mnu-size:2rem;--mnu-hr-color:#ccc;}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--shwColor1:#0004;--shwColor2:#0008;--mnu-size:2rem;--mnu-hr-color:#ccc;}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -56,16 +56,16 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 nav i{padding:0;font-size:1em}
 .mn0 .sch{border-bottom:2px solid #eee}
 .mn0 .sch input{width:15em}
-.mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px #0008,0 0 16px #0004;overflow:hidden}
+.mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px var(--shwColor2),0 0 16px var(--shwColor1);overflow:hidden}
 .mn0 .usr.on{max-height:100%}
 .mn0 .usr [name=usr]{float:right;height:var(--mnu-size)}
 .mn0 .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
 .mn0 .usr .h{margin:0 var(--mnu-size);padding-left:.4em;height:var(--mnu-size);line-height:2}
 
-aside{position:absolute;top:var(--mnu-size);left:0;bottom:0;right:100%;background:#0004;overflow:hidden}
+aside{position:absolute;top:var(--mnu-size);left:0;bottom:0;right:100%;background:var(--shwColor1);overflow:hidden}
 aside.on{right:0}
 aside.on .g{margin-left:0px}
 aside button{vertical-align:top}
 aside i{font-style:normal}
 aside a{display:block}
-aside .g{margin-left:240px;width:240px;background:#fff}
+aside .g{margin-left:240px;width:240px;height:100%;background:var(--backColor);box-shadow:0 0 1px var(--shwColor2)}
