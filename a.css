@@ -62,8 +62,8 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
 .mn0 .usr .h{margin:0 var(--mnu-size);padding-left:.4em;height:var(--mnu-size);line-height:2}
 
-aside{margin-top:1px;position:absolute;top:var(--mnu-size);left:0;bottom:0;right:100%;background:var(--shwColor1);overflow:hidden}
-aside.on{right:0%}
+aside{margin-top:1px;position:absolute;top:var(--mnu-size);left:0;bottom:0;right:100%;background:#0000;overflow:hidden}
+aside.on{right:0%;background:var(--shwColor1)}
 aside.on .g{margin-left:0px}
 aside button{vertical-align:top}
 aside i{font-style:normal}
