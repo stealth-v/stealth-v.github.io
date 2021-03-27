@@ -36,6 +36,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 
 .mnu{box-shadow:0 0px 1px #0008}
 .mn0 .z{float:left;width:var(--mnu-size);height:inherit;color:transparent;overflow:hidden}
+.mn0 .z i{font-size:1em}
 .mnu .rm{float:right;height:inherit}
 .mnu .rm button{width:var(--mnu-size)}
 .mn0 header{height:var(--mnu-size)}
