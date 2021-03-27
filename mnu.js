@@ -1,7 +1,7 @@
 xu.t("mnu",function(m,app){
 	m.exports=function(){
 		var content=this,
-		aside=body.querySelector("aside"),
+		aside=xu.body.querySelector("aside"),
 		usr=this.querySelector(".usr"),
 		usp=xu.template(usr.querySelector(".xu-temp")),
 		usp0,
