@@ -3,7 +3,7 @@ xu.t("mnu",function(m,app){
 		var content=this,
 		aside=xu.body.querySelector("aside"),
 		usr=this.querySelector(".usr"),
-		usp=xu.template(usr.querySelector(".xu-temp")),
+		usp=xu.template(usr.querySelector(".usr .xu-temp")),
 		sch=this.querySelector(".sch"),
 		usp0,
 		on={
