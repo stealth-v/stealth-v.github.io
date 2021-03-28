@@ -54,9 +54,9 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 [name=usr][style] i{display:none}
 .mn0 nav a{display:inline-block;padding:0 .5em;line-height:2}
 .mn0 nav i{padding:0;font-size:1em;vertical-align:top}
-.mn0 .sch{position:absolute;top:var(--mnu-size);left:0;right:0}
-.mn0 .sch.on{}
-.mn0 .sch form{padding-right:2em;height:var(--mnu-size);background:var(--backColor)}
+.mn0 .sch{position:absolute;top:var(--mnu-size);left:0;right:0;overflow:hidden}
+.mn0 .sch.on form{margin-top:0em}
+.mn0 .sch form{margin-top:-2em;padding-right:2em;height:var(--mnu-size);background:var(--backColor)}
 .mn0 .sch button{position:absolute;right:0}
 .mn0 .sch .scl{border-bottom:2px solid #eee}
 .mn0 .sch .scl input{width:100%}
