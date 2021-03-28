@@ -4,6 +4,7 @@ xu.t("mnu",function(m,app){
 		aside=xu.body.querySelector("aside"),
 		usr=this.querySelector(".usr"),
 		usp=xu.template(usr.querySelector(".xu-temp")),
+		sch=this.querySelector(".sch"),
 		usp0,
 		on={
 			mnu:function(){
@@ -16,6 +17,9 @@ xu.t("mnu",function(m,app){
 			},
 			out:function(){
 				xu.post(self.out1,"/out.ps","").send();
+			},
+			schp:function(){
+				xu.toggle(sch);
 			}
 		},
 		self={on:on,freg:null,
