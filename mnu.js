@@ -18,7 +18,7 @@ xu.t("mnu",function(m,app){
 			out:function(){
 				xu.post(self.out1,"/out.ps","").send();
 			},
-			schp:function(){
+			sch:function(){
 				xu.toggle(sch);
 			}
 		},
