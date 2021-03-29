@@ -60,7 +60,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mn0 .sch button{position:absolute;right:0}
 .mn0 .sch .scl{border-bottom:2px solid #eee}
 .mn0 .sch .scl input{width:100%}
-.mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px var(--shwColor2),0 0 16px var(--shwColor1);overflow:hidden}
+.mn0 .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px var(--shwColor2),0 0 16px var(--shwColor1);overflow:hidden;box-shadow:0 0 1px}
 .mn0 .usr.on{max-height:100%}
 .mn0 .usr [name=usr]{float:right;height:var(--mnu-size)}
 .mn0 .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
@@ -77,5 +77,7 @@ aside [name=mnu]{padding:0;border:0;position:absolute;width:100%;top:0;right:0;b
 aside .category{box-shadow:0 0 1px var(--shwColor2)}
 
 @media (min-width:640px){
-	.mn0 .usr [name=usrp]{display:none}
+	.mn0 [name=sch]{display:none}
+	.mn0 .sch{width:240px;top:0;right:var(--mnu-size);left:auto;box-shadow:none}
+	.mn0 .sch form{margin:0}
 }
