@@ -22,7 +22,7 @@ xu.t("signin",function(m,app){
 						re0.parentNode.removeChild(re0);
 						re0=0;
 					}
-					if(this.response){
+					if(/^1\t/.test(this.response)){
 						a=this.response.split("\t");
 						app.set_profile(a[0],a[1],a[2]);
 						location.replace("/index.ps");
