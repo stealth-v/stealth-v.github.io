@@ -23,7 +23,7 @@ xu.t("signin",function(m,app){
 						re0=0;
 					}
 					if(/^1\t/.test(this.response)){
-						a=this.response.split("\t");
+						a=this.response.split("	");
 						app.set_profile(a[1],a[2],a[3]);
 						location.replace("/index.ps");
 					}else{

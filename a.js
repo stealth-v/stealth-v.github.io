@@ -69,9 +69,9 @@ xu.r(function(v){
 
 			}else switch(s){
 			case 2:
-				if(this.response){
+				if(/^1\t/.test(this.response)){
 					a=this.response.split("	");
-					app.set_profile(a[0],a[1],a[2]);
+					app.set_profile(a[1],a[2],a[3]);
 					app.reset_profile(a);
 				}else{
 					app.set_profile();
