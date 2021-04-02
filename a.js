@@ -96,8 +96,8 @@ xu.r(function(v){
 				sessionStorage.getItem("n"),
 				sessionStorage.getItem("p")];
 		},
-		reset_profile:function(a){
-			if(this.header)this.header.reset_profile(a[1],a[2]);
+		reset_profile:function(id,nn,pi){
+			if(this.header)this.header.reset_profile(nn,pi);
 		}
 	});
 
