@@ -72,7 +72,7 @@ xu.r(function(v){
 				if(/^1\t/.test(this.response)){
 					a=this.response.split("	");
 					app.set_profile(a[1],a[2],a[3]);
-					app.reset_profile(a);
+					app.reset_profile(a[2],a[3]);
 				}else{
 					app.set_profile();
 				}
