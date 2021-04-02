@@ -25,7 +25,7 @@ xu.t("mnu",function(m,app){
 		self={on:on,freg:null,
 			reset_profile:function(nn,pi){
 				var pf=content.querySelector("[name=usr]");
-				if(a){
+				if(nn){
 					pf.style.backgroundImage="url("+pi+")";
 					if(usp0)usr.removeChild(usp0);
 					usr.insertBefore(usp0=usp({UN:nn}),usr.children[0]);
