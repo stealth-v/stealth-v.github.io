@@ -62,7 +62,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mnu .sch .scl input{width:100%}
 .mnu .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;overflow:hidden;box-shadow:0 0 1px var(--shwColor)}
 .mnu .usr.on{max-height:100%}
-.mnu .usr [name=usr]{float:right;height:var(--mnu-size)}
+.mnu .usr [name=usr]{float:right;width:var(--mnu-size);height:var(--mnu-size)}
 .mnu .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
 .mnu .usr .h{margin:0 var(--mnu-size);padding-left:.4em;height:var(--mnu-size);background:var(--backColor);line-height:2}
 
