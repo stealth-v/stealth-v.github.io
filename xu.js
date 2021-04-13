@@ -81,7 +81,10 @@ var xu={
 				wait=[];
 				m=xu.module[n]={
 					src:xu.script.new(this.url_prefix?this.url_prefix(n):n,function(a,e){
-						if(e)delete xu.module[n];
+						if(e){
+							delete xu.module[n];
+							onload(e);
+						}
 					}),
 					exports:function(){
 						this.className=(this.className+" xu-loading").trim();

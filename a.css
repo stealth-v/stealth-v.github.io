@@ -1,4 +1,4 @@
-:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--shwColor1:#0004;--shwColor2:#0008;--mnu-size:2rem;--mnu-hr-color:#ccc;}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--backColorT:#0004;--shwColor:#ccc;--mnu-size:2rem;--mnu-hr-color:#ccc;}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -35,18 +35,18 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .itxt b{position:absolute;bottom:-2px;width:100%;border-bottom:2px solid}
 .btn b{position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #fff;border-radius:.8em;background:#237;box-sizing:border-box}
 
-.mnu{box-shadow:0 0px 1px #0008}
+.mnu{height:var(--mnu-size);box-shadow:0 0px 1px #0008}
 .mnu .z{float:left;width:var(--mnu-size);height:inherit;color:transparent;overflow:hidden}
 .mnu .z i{font-size:1em}
 .mnu .t{padding:0;font-size:1.5em;vertical-align:middle;text-shadow:#888 1px 1px 1px}
 .mnu .rm{position:absolute;top:0;right:0;height:inherit;background:var(--backColor)}
 .mnu .rm button{width:var(--mnu-size)}
-.mnu header{height:var(--mnu-size)}
+.mnu header{height:inherit}
 .mnu a,
 .mnu nav,
 .mnu label,
 .mnu input{display:inline;border:0;height:inherit;font-size:1em;background-color:transparent}
-.mnu button{padding:0;border:0;height:inherit;background:none;vertical-align:top;white-space:nowrap}
+.mnu button{padding:0;border:0;height:inherit;background-color:transparent;vertical-align:top;white-space:nowrap}
 .mnu i{padding-left:1em;font-size:2em;font-style:normal;vertical-align:middle}
 .mnu [name=mnu]{width:6rem}
 .mnu [name=mnu] i{vertical-align:top}
@@ -60,24 +60,23 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mnu .sch button{position:absolute;right:0;width:var(--mnu-size)}
 .mnu .sch .scl{border-bottom:2px solid #eee}
 .mnu .sch .scl input{width:100%}
-.mnu .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;box-shadow:0 0 1px var(--shwColor2),0 0 16px var(--shwColor1);overflow:hidden;box-shadow:0 0 1px}
+.mnu .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;overflow:hidden;box-shadow:0 0 1px var(--shwColor)}
 .mnu .usr.on{max-height:100%}
 .mnu .usr [name=usr]{float:right;height:var(--mnu-size)}
 .mnu .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
 .mnu .usr .h{margin:0 var(--mnu-size);padding-left:.4em;height:var(--mnu-size);background:var(--backColor);line-height:2}
 
 aside{margin-top:1px;position:absolute;top:var(--mnu-size);left:0;bottom:0;right:100%;background:#0000;overflow:hidden}
-aside.on{right:0%;background:var(--shwColor1)}
+aside.on{right:0%;background:var(--backColorT)}
 aside.on .g{margin-left:0px}
 aside button{vertical-align:top}
 aside i{font-style:normal}
 aside a{padding-left:.4em;display:block;line-height:2}
-aside .g{margin-left:-240px;width:100%;height:100%;max-width:240px;background:var(--backColor);box-shadow:0 0 1px var(--shwColor2)}
+aside .g{margin-left:-240px;width:100%;height:100%;max-width:240px;background:var(--backColor);box-shadow:0 0 1px var(--shwColor)}
 aside [name=mnu]{padding:0;border:0;position:absolute;width:100%;top:0;right:0;bottom:0;left:240px;background:none}
-aside .category{box-shadow:0 0 1px var(--shwColor2)}
+aside .category{box-shadow:0 0 1px var(--shwColor)}
 
 @media (min-width:640px){
-	.mnu [name=sch]{display:none}
 	.mnu .sch{width:240px;top:0;right:var(--mnu-size);left:auto;box-shadow:none}
 	.mnu .sch form{margin:0}
 }
