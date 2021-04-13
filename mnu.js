@@ -11,8 +11,7 @@ xu.t("mnu",function(m,app){
 				xu.toggle(aside);
 			},
 			usr:function(){
-				var a=sessionStorage.getItem("a");
-				if(a)xu.toggle(usr);
+				if(sessionStorage.getItem("a"))xu.toggle(usr);
 				else app.sign_state(app.sign_toggle,"q",usr);
 			},
 			out:function(){
