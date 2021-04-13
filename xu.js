@@ -101,6 +101,7 @@ var xu={
 
 					proc(m,t.app);
 
+					if(m.reload)try{m.reload()}catch(e){}
 					try{
 						if(m.task)m.task(fin);
 						else fin();
@@ -121,8 +122,7 @@ var xu={
 								if(b)b.freg=freg;
 							}
 
-							if(m.onload)try{m.onload()}catch(e){}
-							if(m.reload)try{m.reload()}catch(e){}
+							if(b.onload)try{b.onload()}catch(e){}
 
 							if(onload)onload();
 						}
