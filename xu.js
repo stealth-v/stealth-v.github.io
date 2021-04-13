@@ -100,9 +100,13 @@ var xu={
 					this.onload=null;
 
 					proc(m,t.app);
-					if(m.reload)m.reload();
-					if(m.task)m.task(fin);
-					else fin();
+
+					try{
+						if(m.task)m.task(fin);
+						else fin();
+					}catch(e){
+						fin();
+					}
 
 					function fin(){
 						for(var a,b,ex=m.exports,i=wait.length-1;i>=0;i--){
@@ -116,6 +120,9 @@ var xu={
 								t.app[target]=b;
 								if(b)b.freg=freg;
 							}
+
+							if(m.onload)try{m.onload()}catch(e){}
+							if(m.reload)try{m.reload()}catch(e){}
 
 							if(onload)onload();
 						}

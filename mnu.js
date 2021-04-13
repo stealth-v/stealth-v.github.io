@@ -47,9 +47,11 @@ xu.t("mnu",function(m,app){
 				}
 			}
 		};
-		var a=app.get_profile();
-		if(a)app.reset_profile(a[0],a[1],a[2]);
-		app.sign_state(app.sign_profile,"p");
+		self.onload=function(){
+			var a=app.get_profile();
+			if(a)app.reset_profile(a[0],a[1],a[2]);
+			app.sign_state(app.sign_profile,"p");
+		};
 		return self;
 	};
 })
