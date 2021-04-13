@@ -1,4 +1,4 @@
-:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--backColorT:#0004;--shwColor:#888;--mnu-size:2rem;--mnu-hr-color:#ccc;}
+:root{--foreColor:#000;--fore:#36f;--forei:#fff;--backColor:#fff;--backColorT:#0004;--shwColor1:#ccc;--shwColor2:#888;--mnu-size:2rem;--mnu-hr-color:#ccc;}
 body{margin:0}
 iframe{border:0}
 a{color:inherit;text-decoration:none}
@@ -60,7 +60,7 @@ i.brand-naver{background:url('https://api.iconify.design/vs:naver-square.svg?col
 .mnu .sch button{position:absolute;right:0;width:var(--mnu-size)}
 .mnu .sch .scl{border-bottom:2px solid #eee}
 .mnu .sch .scl input{width:100%}
-.mnu .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;overflow:hidden;box-shadow:0 0 1px var(--shwColor)}
+.mnu .usr{position:absolute;width:100%;max-width:320px;max-height:0%;top:0;right:0;overflow:hidden;box-shadow:0 0 1px var(--shwColor2)}
 .mnu .usr.on{max-height:100%}
 .mnu .usr [name=usr]{float:right;width:var(--mnu-size);height:var(--mnu-size)}
 .mnu .usr [name=out]{float:left;width:var(--mnu-size);height:var(--mnu-size)}
@@ -72,9 +72,9 @@ aside.on .g{margin-left:0px}
 aside button{vertical-align:top}
 aside i{font-style:normal}
 aside a{padding-left:.4em;display:block;line-height:2}
-aside .g{margin-left:-240px;width:100%;height:100%;max-width:240px;background:var(--backColor);box-shadow:0 0 1px var(--shwColor)}
+aside .g{margin-left:-240px;width:100%;height:100%;max-width:240px;background:var(--backColor);box-shadow:1px 0 1px var(--shwColor2)}
 aside [name=mnu]{padding:0;border:0;position:absolute;width:100%;top:0;right:0;bottom:0;left:240px;background:none}
-aside .category{box-shadow:0 0 1px var(--shwColor)}
+aside .category{box-shadow:0 0 1px var(--shwColor1)}
 
 @media (min-width:640px){
 	.mnu .sch{width:240px;top:0;right:var(--mnu-size);left:auto;box-shadow:none}
