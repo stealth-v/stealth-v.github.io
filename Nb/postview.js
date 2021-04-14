@@ -9,7 +9,6 @@ xu.t("postview",function(m,app){
 			}
 		},
 		self={on:on,freg:null,
-			freg:null,
 			unload:function(){
 				if(code.length){
 					xu.script.unload("sourcecode");

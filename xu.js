@@ -346,8 +346,8 @@ var xu={
 		}
 	},
 	ncall:function(a,p,e){
-		var g=/[^;]+/g,m,q,r;
-		while(m=g.exec(p.name)){
+		var g=/[^;]+/g,n=p.name||p.getAttribute("data-name"),m,q,r;
+		while(m=g.exec(n)){
 			m=m[0].split(" ");
 			if(q=a[m.shift()]){
 				m.push(e);

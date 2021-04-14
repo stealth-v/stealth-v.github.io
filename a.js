@@ -110,7 +110,7 @@ xu.r(function(v){
 	x.url_prefix=function(a){return app.pjs+a+".js"};
 	x.load(0,0,function(){
 		xu.head.removeChild(xu.doc.querySelector("style.app-loading"));
-		a=xu.doc.querySelector("[autofocus]");
+		var a=xu.doc.querySelector("[autofocus]");
 		if(a)a.focus();
 	});
 
