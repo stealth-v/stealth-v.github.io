@@ -56,7 +56,7 @@ xu.r(function(v){
 
 			}else switch(s){
 			case 2:
-				if(p)xu.toggle(p);
+				if(p)xu.float(p,0,1);
 				break;
 			case 4:
 				app.set_profile();
@@ -121,9 +121,12 @@ xu.r(function(v){
 				xu.ncall(on,p,e);
 				z(app.header);
 				z(app.content);
-				break;
+				return;
+			case HTMLDivElement:
+				if(xu.ncall(on,p,e))return;
 			}
 		}
+		xu.float(0,0,e);
 		function z(a){if(a)xu.ncall(a.on,p,e)}
 	});
 })

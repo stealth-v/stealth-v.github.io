@@ -8,17 +8,17 @@ xu.t("mnu",function(m,app){
 		usp0,
 		on={
 			mnu:function(){
-				xu.toggle(aside);
+				xu.float(aside,0,1);
 			},
 			usr:function(){
-				if(sessionStorage.getItem("a"))xu.toggle(usr);
+				if(sessionStorage.getItem("a"))xu.float(usr,0,1);
 				else app.sign_state(app.sign_toggle,"q",usr);
 			},
 			out:function(){
 				xu.post(self.out1,"/out.ps","").send();
 			},
 			sch:function(){
-				xu.toggle(sch);
+				xu.float(sch,0,1);
 			}
 		},
 		self={on:on,freg:null,
@@ -39,7 +39,7 @@ xu.t("mnu",function(m,app){
 	
 				}else switch(s){
 				case 2:
-					xu.toggle(usr,1);
+					xu.float(usr,1,1);
 					app.set_profile();
 					app.reset_profile();
 					break;
