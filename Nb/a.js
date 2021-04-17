@@ -79,9 +79,12 @@ xu.r(function(v){
 				xu.ncall(on,p,e);
 				z(app.header);
 				z(app.content);
-				break;
+				return;
+			case HTMLDivElement:
+				if(xu.ncall(on,p,e))return;
 			}
 		}
+		xu.float(0,0,e);
 		function z(a){if(a)xu.ncall(a.on,p,e)}
 	});
 })

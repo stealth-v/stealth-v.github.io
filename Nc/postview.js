@@ -5,7 +5,7 @@ xu.t("postview",function(m,app){
 		aside=this.parentNode.querySelector("aside"),
 		on={
 			cc:function(){
-				xu.toggle(aside);
+				xu.float(aside,0,1);
 			}
 		},
 		self={on:on,freg:null,

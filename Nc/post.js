@@ -6,9 +6,9 @@ xu.t("post",function(m,app){
 		go=this.querySelector(".go"),
 		on={
 			cc:function(){
-				xu.toggle(aside);
+				xu.float(aside,0,1);
 			},go:function(i){
-				xu.toggle(go);
+				xu.float(go,0,1);
 				if(i>0)xu.focus(go.querySelector("input"),i);
 			}
 		},

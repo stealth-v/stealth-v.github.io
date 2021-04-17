@@ -4,7 +4,7 @@ xu.t("mnu",function(m,app){
 		sc=this.querySelector(".sc"),
 		on={
 			sc:function(){
-				xu.toggle(sc);
+				xu.float(sc,0,1);
 				xu.focus(sc.querySelector("[type=search"));
 			}
 		},
